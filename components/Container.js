@@ -8,3 +8,5 @@ const Container = styled.div`
   margin: 0 auto;
   box-sizing: content-box;
 `
+
+export default Container
