@@ -72,6 +72,7 @@ const LogoAndTitle = styled.a`
 
   &:hover {
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    color: black;
 
     ${LogoWrapper} img {
       transform: rotate(240deg);
