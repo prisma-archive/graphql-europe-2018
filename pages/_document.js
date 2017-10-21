@@ -10,7 +10,7 @@ injectGlobal`
   body {
     margin: 0;
     padding: 0;
-    font-family: 'Proxima Nova';
+    font-family: 'proxima-nova';
     font-size: 18px;
     overflow-x: hidden;
     overflow-y: auto;
@@ -25,6 +25,10 @@ injectGlobal`
   a {
     color: ${lighten(0.2, specialRed)};
   }
+`
+
+const typeKitScript = `
+  try{Typekit.load({ async: true });}catch(e){}
 `
 
 export default class MyDocument extends Document {
@@ -47,6 +51,8 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <script src="https://use.typekit.net/fkv8pfd.js" />
+          <script dangerouslySetInnerHtml={{ __html: typeKitScript }} />
         </body>
       </html>
     )
