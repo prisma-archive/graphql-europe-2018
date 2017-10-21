@@ -8,6 +8,8 @@ const globalStyles = css`
     padding: 0;
     font-family: 'Proxima Nova';
     font-size: 18px;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   *, *:before, *:after {

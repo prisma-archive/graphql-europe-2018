@@ -51,6 +51,7 @@ export default JoinUsIntro
 
 const Wrapper = styled.section`
   position: relative;
+  overflow: hidden;
   padding-top: ${rem(70)};
   padding-bottom: ${rem(30)};
 `
