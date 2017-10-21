@@ -23,10 +23,6 @@ injectGlobal`
   a {
     color: ${lighten(0.2, specialRed)};
 
-    &:visited {
-      color: ${lighten(0.1, specialRed)};
-    }
-
     &:hover {
       color: ${darken(0.1, specialRed)};
     }
