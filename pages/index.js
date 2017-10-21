@@ -1,7 +1,7 @@
-import Navbar from 'components/Navbar'
+import JoinUsIntro from '../sections/JoinUsIntro'
 
 export default () => (
   <div>
-    <Navbar />
+    <JoinUsIntro />
   </div>
 )

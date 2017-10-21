@@ -84,7 +84,6 @@ const ButtonItem = BaseItem.extend`
   border-radius: ${rem(22.5)};
   background: ${specialRed};
   color: white;
-  box-sizing: border-box;
   transition:
     background 100ms ease-out,
     transform 100ms ease-out;

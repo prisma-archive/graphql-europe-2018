@@ -45,7 +45,7 @@ const Wrapper = styled.div`
   background: linear-gradient(180deg, white 0%, rgba(255, 255, 255, 0) 100%);
 `
 
-const FlexWrapper = styled.div`
+const FlexWrapper = styled.nav`
   display: flex;
   justify-content: space-between;
 `
