@@ -1,1 +1,7 @@
-export default () => <div>Get Ticket</div>
+import Navbar from 'components/Navbar'
+
+export default () => (
+  <div>
+    <Navbar />
+  </div>
+)
