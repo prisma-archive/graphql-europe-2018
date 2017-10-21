@@ -22,10 +22,6 @@ injectGlobal`
 
   a {
     color: ${lighten(0.2, specialRed)};
-
-    &:hover {
-      color: ${darken(0.1, specialRed)};
-    }
   }
 `
 
