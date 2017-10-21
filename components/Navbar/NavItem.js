@@ -33,7 +33,7 @@ const Wrapper = styled.div`
   line-height: ${rem(40)};
   margin-right: ${rem(20)};
 
-  &:last-item {
+  &:last-child {
     margin-right: 0;
   }
 `
