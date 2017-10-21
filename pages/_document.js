@@ -10,7 +10,7 @@ injectGlobal`
   body {
     margin: 0;
     padding: 0;
-    font-family: 'proxima-nova';
+    font-family: "proxima-nova", sans-serif;
     font-size: 18px;
     overflow-x: hidden;
     overflow-y: auto;
@@ -27,10 +27,6 @@ injectGlobal`
   }
 `
 
-const typeKitScript = `
-  try{Typekit.load({ async: true });}catch(e){}
-`
-
 export default class MyDocument extends Document {
   static getInitialProps ({ renderPage }) {
     const sheet = new ServerStyleSheet()
@@ -44,15 +40,15 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <title>GraphQL Europe 2018</title>
-          <meta charset="UTF-8" />
+          <meta charSet="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <script src="https://use.typekit.net/fkv8pfd.js" />
+          <script dangerouslySetInnerHTML={{ __html: 'try{Typekit.load({ async: true });}catch(e){}' }} />
           {this.props.styleTags}
         </Head>
         <body>
           <Main />
           <NextScript />
-          <script src="https://use.typekit.net/fkv8pfd.js" />
-          <script dangerouslySetInnerHtml={{ __html: typeKitScript }} />
         </body>
       </html>
     )
