@@ -42,6 +42,7 @@ export default Navbar
 const Wrapper = styled.div`
   width: 100%;
   height: ${rem(navHeight)};
+  background: linear-gradient(180deg, white 0%, rgba(255, 255, 255, 0) 100%);
 `
 
 const FlexWrapper = styled.div`
