@@ -24,11 +24,13 @@ const BaseButton = styled.button`
   cursor: pointer;
   transition:
     background 100ms ease-out,
+    color 100ms ease-out,
     transform 100ms ease-out;
 
   &:hover,
   &:focus {
     background: ${darken(0.15, specialRed)};
+    color: ${darken(0.07, 'white')};
   }
 
   &:focus {

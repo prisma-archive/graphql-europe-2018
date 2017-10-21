@@ -66,6 +66,8 @@ const LinkItem = BaseItem.extend`
 
   &:hover,
   &:focus {
+    color: ${almostBlack};
+
     &:after {
       width: calc(100% - ${rem(20)});
     }
@@ -86,11 +88,13 @@ const ButtonItem = BaseItem.extend`
   color: white;
   transition:
     background 100ms ease-out,
+    color 100ms ease-out,
     transform 100ms ease-out;
 
   &:hover,
   &:focus {
     background: ${darken(0.15, specialRed)};
+    color: ${darken(0.07, 'white')};
   }
 
   &:active {
