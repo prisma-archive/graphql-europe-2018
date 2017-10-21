@@ -25,19 +25,11 @@ const JoinTheCommunity = () => (
 
 export default JoinTheCommunity
 
-const Wrapper = styled.section`
-`
+const Wrapper = styled.section``
 
 const Content = styled.div`
   padding-top: ${rem(90)};
   padding-bottom: ${rem(90)};
-`
-
-const Title = styled.h1`
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: ${rem(45)};
-  font-weight: 800;
 `
 
 const Description = styled.p`
