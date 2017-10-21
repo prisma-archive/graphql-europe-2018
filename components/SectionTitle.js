@@ -10,6 +10,7 @@ const spacingTypes = {
 }
 
 const SectionTitle = styled.h1`
+  margin-top: 0;
   margin-bottom: ${p => rem(spacingTypes[ p.spacing || 'normal' ])};
 
   line-height: ${rem(19)};
