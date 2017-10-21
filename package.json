@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "dev": "next",
+    "dev": "next --port 4004",
     "build": "next build && next export",
-    "start": "next start"
+    "start": "next start  --port 4004"
   },
   "dependencies": {
     "next": "^4.1.2",
