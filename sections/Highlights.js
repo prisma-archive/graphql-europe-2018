@@ -8,6 +8,7 @@ import GraphBg from 'components/GraphBg'
 import SectionTitle from 'components/SectionTitle'
 import SectionSeparator from 'components/SectionSeparator'
 import VideoHighlight from 'components/VideoHighlight'
+import FactsRow from 'components/FactsRow'
 
 const gridGutter = 34 / 2 // half of desired value
 
@@ -69,6 +70,8 @@ const Highlights = () => (
             </GridItem>
           ))}
         </Grid>
+
+        <FactsRow />
 
       </Content>
     </Container>
