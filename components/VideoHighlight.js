@@ -1,7 +1,8 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Tilt from 'react-tilt'
 
 import rem from 'utils/rem'
+import { mobile, desktop } from 'utils/media'
 import { PlayButton } from 'components/Icons'
 
 const VideoHighlight = ({
@@ -9,7 +10,7 @@ const VideoHighlight = ({
   title,
   description,
 }) => (
-  <Tilt options={{ max: 13, scale: 1.01 }} style={{ transformStyle: 'preserve-3d' }}>
+  <Tilt options={{ max: 13, scale: 1.01 }}>
     <Wrapper>
       <ImageWrapper url={imageUrl}>
         <img src={imageUrl} />
@@ -32,11 +33,16 @@ const Wrapper = styled.div`
   position: relative;
   width: 100%;
   height: ${rem(332)};
+
   border-radius: ${rem(5)};
   overflow: hidden;
   background: black;
   box-shadow: ${rem(8)} ${rem(8)} ${rem(22)} rgba(0, 0, 0, 0.14);
   transform-style: preserve-3d;
+
+  ${mobile(css`
+    height: ${rem(251)};
+  `)}
 `
 
 const ImageWrapper = styled.div`

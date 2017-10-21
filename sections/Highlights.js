@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 
 import rem from 'utils/rem'
 import { specialRed } from 'utils/colors'
+import { mobile, desktop } from 'utils/media'
 import Container from 'components/Container'
 import GraphBg from 'components/GraphBg'
 import SectionTitle from 'components/SectionTitle'
@@ -78,7 +79,6 @@ export default Highlights
 
 const Wrapper = styled.section`
   position: relative;
-  height: 1200px;
   overflow: hidden;
 `
 
@@ -111,16 +111,23 @@ const Grid = styled.div`
 
 const GridItem = styled.div`
   display: inline-block;
-  width: 33.333%;
   padding: ${rem(gridGutter)};
 
-  &:nth-last-child(-n+3) {
-    padding-bottom: 0;
-  }
+  ${desktop(css`
+    width: 33.333%;
 
-  &:nth-child(-n+3) {
-    padding-top: 0;
-  }
+    &:nth-last-child(-n+3) {
+      padding-bottom: 0;
+    }
+
+    &:nth-child(-n+3) {
+      padding-top: 0;
+    }
+  `)}
+
+  ${mobile(css`
+    width: 100%;
+  `)}
 `
 
 const Fill = styled.div`
