@@ -1,7 +1,11 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheet, css } from 'styled-components'
+import { ServerStyleSheet, css, injectGlobal } from 'styled-components'
+import lighten from 'polished/lib/color/lighten'
+import darken from 'polished/lib/color/darken'
 
-const globalStyles = css`
+import { specialRed } from 'utils/colors'
+
+injectGlobal`
   html,
   body {
     margin: 0;
@@ -14,6 +18,18 @@ const globalStyles = css`
 
   *, *:before, *:after {
     box-sizing: border-box;
+  }
+
+  a {
+    color: ${lighten(0.2, specialRed)};
+
+    &:visited {
+      color: ${lighten(0.1, specialRed)};
+    }
+
+    &:hover {
+      color: ${darken(0.1, specialRed)};
+    }
   }
 `
 
@@ -30,7 +46,6 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <title>GraphQL Europe 2018</title>
-          <style dangerouslySetInnerHTML={{ __html: globalStyles }} />
           {this.props.styleTags}
         </Head>
         <body>
