@@ -1,11 +1,8 @@
 export const PlayButton = () => (
-  <svg width="49px" height="48px" viewBox="0 0 49 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-    <title>Play-button</title>
-    <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-      <g stroke="#FFFFFF">
-        <ellipse strokeWidth="2" cx="24.5" cy="24" rx="24.5" ry="24"></ellipse>
-        <polygon points="21 16 21 33 32 24.5"></polygon>
-      </g>
+  <svg xmlns="http://www.w3.org/2000/svg" width="39" height="39">
+    <g fill="none" fillRule="evenodd" stroke="#FFF" transform="translate(-42.000000, -1816.000000) translate(25.000000, 1025.000000) translate(0.000000, 605.000000) translate(18.100559, 187.793296)">
+      <ellipse cx="18.5" cy="18" strokeWidth="2" rx="18.5" ry="18"/>
+      <path d="M16 12v12.8l8.2-6.4z"/>
     </g>
   </svg>
 )
