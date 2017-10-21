@@ -8,11 +8,10 @@ const globalStyles = css`
     padding: 0;
     font-family: 'Proxima Nova';
     font-size: 18px;
-    box-sizing: border-box;
   }
 
   *, *:before, *:after {
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
 `
 
