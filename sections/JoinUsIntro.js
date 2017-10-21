@@ -9,11 +9,10 @@ import Button from 'components/Button'
 
 const JoinUsIntro = () => (
   <Wrapper>
-    <GraphBg
-      rotate={40}
-      top={-140}
-      right={-40}
-    />
+
+    <GraphBgWrapper>
+      <GraphBg rotate={40} />
+    </GraphBgWrapper>
 
     <NavbarFloater>
       <Navbar />
@@ -54,6 +53,12 @@ const Wrapper = styled.section`
   overflow: hidden;
   padding-top: ${rem(70)};
   padding-bottom: ${rem(30)};
+`
+
+const GraphBgWrapper = styled.div`
+  position: absolute;
+  top: ${rem(-140)};
+  right: ${rem(-40)};
 `
 
 const NavbarFloater = styled.div`
