@@ -63,7 +63,7 @@ const Highlights = () => (
 
         <Grid>
           {videos.map((v, i) => (
-            <GridItem>
+            <GridItem key={i}>
               <VideoHighlight {...v} />
             </GridItem>
           ))}

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Tilt from 'react-tilt'
 
 import rem from 'utils/rem'
 import { PlayButton } from 'components/Icons'
@@ -8,19 +9,21 @@ const VideoHighlight = ({
   title,
   description,
 }) => (
-  <Wrapper>
-    <ImageWrapper url={imageUrl}>
-      <img src={imageUrl} />
-    </ImageWrapper>
+  <Tilt options={{ max: 13, scale: 1.01 }} style={{ transformStyle: 'preserve-3d' }}>
+    <Wrapper>
+      <ImageWrapper url={imageUrl}>
+        <img src={imageUrl} />
+      </ImageWrapper>
 
-    <Content>
-      <IconWrapper><PlayButton /></IconWrapper>
-      <TextsWrapper>
-        <Title>{title}</Title>
-        <Speaker>{description}</Speaker>
-      </TextsWrapper>
-    </Content>
-  </Wrapper>
+      <Content>
+        <IconWrapper><PlayButton /></IconWrapper>
+        <TextsWrapper>
+          <Title>{title}</Title>
+          <Speaker>{description}</Speaker>
+        </TextsWrapper>
+      </Content>
+    </Wrapper>
+  </Tilt>
 )
 
 export default VideoHighlight
@@ -64,11 +67,12 @@ const Content = styled.div`
   min-height: ${rem(80)};
   display: flex;
   align-items: flex-start;
-  transform: translateZ(20px);
 
   padding-left: ${rem(24)};
   padding-right: ${rem(60)};
   padding-bottom: ${rem(24)};
+
+  transform: translateZ(50px);
 `
 
 const IconWrapper = styled.div`
