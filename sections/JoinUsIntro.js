@@ -63,8 +63,9 @@ const GraphBgWrapper = styled.div`
   transform: rotateZ(40deg);
 
   ${mobile(css`
-    top: ${rem(-140)};
-    right: ${rem(-40)};
+    top: ${rem(-220)};
+    right: ${rem(-310)};
+    transform: scale(0.7) rotateZ(130deg) rotateX(180deg) rotateY(180deg);
   `)}
 `
 
@@ -85,6 +86,10 @@ const Title = styled.h1`
   margin-bottom: 0;
   font-size: ${rem(45)};
   font-weight: 800;
+
+  ${mobile(css`
+    font-size: ${rem(25)};
+  `)}
 `
 
 const Description = styled.p`
@@ -94,6 +99,11 @@ const Description = styled.p`
   max-width: ${rem(620)};
   line-height: 1.5;
   color: ${textLightGrey};
+
+  ${mobile(css`
+    margin-top: ${rem(25)};
+    font-size: ${rem(15)};
+  `)}
 `
 
 const Meta = styled.div`
