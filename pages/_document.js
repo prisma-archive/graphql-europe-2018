@@ -14,6 +14,8 @@ injectGlobal`
     font-size: 18px;
     overflow-x: hidden;
     overflow-y: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   *, *:before, *:after {
