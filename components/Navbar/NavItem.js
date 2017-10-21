@@ -7,6 +7,27 @@ import { almostBlack, specialRed } from 'utils/colors'
 
 const height = 40
 
+const NavItem = ({ children, isButtonStyle = false, href, ...props }) => {
+  let Item = LinkItem
+  if (isButtonStyle) {
+    Item = ButtonItem
+  }
+
+  return (
+    <Link to={href}>
+      <Wrapper {...props}>
+        <Item
+          isButtonStyle={isButtonStyle}
+          href={href}
+          children={children}
+        />
+      </Wrapper>
+    </Link>
+  )
+}
+
+export default NavItem
+
 const Wrapper = styled.div`
   height: ${rem(40)};
   line-height: ${rem(40)};
@@ -77,25 +98,3 @@ const ButtonItem = BaseItem.extend`
     transform: scale(0.95);
   }
 `
-
-
-const NavItem = ({ children, isButtonStyle = false, href, ...props }) => {
-  let Item = LinkItem
-  if (isButtonStyle) {
-    Item = ButtonItem
-  }
-
-  return (
-    <Link to={href}>
-      <Wrapper {...props}>
-        <Item
-          isButtonStyle={isButtonStyle}
-          href={href}
-          children={children}
-        />
-      </Wrapper>
-    </Link>
-  )
-}
-
-export default NavItem
