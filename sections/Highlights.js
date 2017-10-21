@@ -51,11 +51,11 @@ const Highlights = () => (
       <SectionSeparator />
 
       <TopGraphBgWrapper>
-        <GraphBg rotate={-70} />
+        <GraphBg />
       </TopGraphBgWrapper>
 
       <LowerGraphBgWrapper>
-        <GraphBg rotate={-70} />
+        <GraphBg />
       </LowerGraphBgWrapper>
 
       <Content>
@@ -89,12 +89,14 @@ const TopGraphBgWrapper = styled.div`
   position: absolute;
   top: ${rem(40)};
   left: ${rem(-140)};
+  transform: rotateZ(-70deg);
 `
 
 const LowerGraphBgWrapper = styled.div`
   position: absolute;
   bottom: ${rem(40)};
   right: ${rem(-140)};
+  transform: rotateZ(-70deg);
 `
 
 const Content = styled.div`

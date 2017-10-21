@@ -1,7 +1,8 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import rem from 'utils/rem'
 import { textLightGrey, specialRed } from 'utils/colors'
+import { mobile } from 'utils/media'
 import Navbar from 'components/Navbar'
 import GraphBg from 'components/GraphBg'
 import Container from 'components/Container'
@@ -11,7 +12,7 @@ const JoinUsIntro = () => (
   <Wrapper>
 
     <GraphBgWrapper>
-      <GraphBg rotate={40} />
+      <GraphBg />
     </GraphBgWrapper>
 
     <NavbarFloater>
@@ -59,6 +60,12 @@ const GraphBgWrapper = styled.div`
   position: absolute;
   top: ${rem(-140)};
   right: ${rem(-40)};
+  transform: rotateZ(40deg);
+
+  ${mobile(css`
+    top: ${rem(-140)};
+    right: ${rem(-40)};
+  `)}
 `
 
 const NavbarFloater = styled.div`
