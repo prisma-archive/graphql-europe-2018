@@ -15,7 +15,7 @@ const Navbar = () => (
       <FlexWrapper>
 
         <Start>
-          <Link to="/">
+          <Link href="/">
             <LogoAndTitle href="/">
               <LogoWrapper><Logo /></LogoWrapper>
               <Title>GraphQL-Europe</Title>

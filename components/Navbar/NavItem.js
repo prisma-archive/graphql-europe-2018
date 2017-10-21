@@ -14,7 +14,7 @@ const NavItem = ({ children, isButtonStyle = false, href, ...props }) => {
   }
 
   return (
-    <Link to={href}>
+    <Link href={href}>
       <Wrapper {...props}>
         <Item
           isButtonStyle={isButtonStyle}
