@@ -7,6 +7,7 @@ const globalStyles = css`
     margin: 0;
     padding: 0;
     font-family: 'Proxima Nova';
+    font-size: 18px;
     box-sizing: border-box;
   }
 
