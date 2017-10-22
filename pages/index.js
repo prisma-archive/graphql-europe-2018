@@ -4,6 +4,7 @@ import Highlights from '../sections/Highlights'
 import CallForPapers from '../sections/CallForPapers'
 import Speakers from '../sections/Speakers'
 import WantToSponsor from '../sections/WantToSponsor'
+import TicketsGraphBgWrapper from '../sections/TicketsGraphBgWrapper'
 import GetYourTicket from '../sections/GetYourTicket'
 import CoOrganizedBy from '../sections/CoOrganizedBy'
 import Sponsors from '../sections/Sponsors'
@@ -16,8 +17,12 @@ export default () => (
     <CallForPapers />
     <Speakers />
     <WantToSponsor />
-    <GetYourTicket />
-    <CoOrganizedBy />
-    <Sponsors />
+
+    <TicketsGraphBgWrapper>
+      {/* These 3 section share one bg */}
+      <GetYourTicket />
+      <CoOrganizedBy />
+      <Sponsors />
+    </TicketsGraphBgWrapper>
   </div>
 )
