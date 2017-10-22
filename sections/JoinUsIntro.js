@@ -11,6 +11,7 @@ import Navbar from 'components/Navbar'
 import GraphBg from 'components/GraphBg'
 import Container from 'components/Container'
 import SectionContent from 'components/SectionContent'
+import { DesktopTextBreak, MobileTextBreak } from 'components/TextBreak'
 import Button from 'components/Button'
 
 const JoinUsIntro = () => (
@@ -26,7 +27,7 @@ const JoinUsIntro = () => (
 
     <Container>
       <SectionContent>
-        <Title>Join us for Europe’s biggest<br />GraphQL-dedicated conference</Title>
+        <Title>Join us for Europe’s biggest<DesktopTextBreak/> GraphQL-<MobileTextBreak />dedicated conference</Title>
         <Description>
           GraphQL-Europe is a non-profit GraphQL conference in Europe with speakers from all around the world. Learn about GraphQL best practices from industry experts and become part of the thriving GraphQL community. GraphQL-Europe is organized by Graph.Cool and Honeypot.
         </Description>

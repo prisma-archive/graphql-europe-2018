@@ -10,7 +10,7 @@ import SectionContent from 'components/SectionContent'
 import SectionSeparator from 'components/SectionSeparator'
 import VideoHighlight from 'components/VideoHighlight'
 import FactsRow from 'components/FactsRow'
-import MobileTextBreak from 'components/MobileTextBreak'
+import { MobileTextBreak } from 'components/TextBreak'
 
 const gridGutter = 34 / 2 // half of desired value
 
