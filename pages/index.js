@@ -4,6 +4,7 @@ import Highlights from '../sections/Highlights'
 import CallForPapers from '../sections/CallForPapers'
 import Speakers from '../sections/Speakers'
 import WantToSponsor from '../sections/WantToSponsor'
+import GetYourTicket from '../sections/GetYourTicket'
 
 export default () => (
   <div>
@@ -13,5 +14,6 @@ export default () => (
     <CallForPapers />
     <Speakers />
     <WantToSponsor />
+    <GetYourTicket />
   </div>
 )
