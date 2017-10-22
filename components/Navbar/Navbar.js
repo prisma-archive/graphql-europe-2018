@@ -1,12 +1,14 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Link from 'next/link'
 
 import rem from 'utils/rem'
+import { mobile } from 'utils/media'
 import Container from 'components/Container'
 import Logo from 'components/Logo'
-import NavItem from './NavItem'
+import NavbarLinks from './NavbarLinks'
 
 const logoHeight = 35
+const largeLogoHeight = 45
 const navHeight = 69
 
 const Navbar = () => (
@@ -24,12 +26,7 @@ const Navbar = () => (
         </Start>
 
         <End>
-          <NavItem href="/#">2017</NavItem>
-          <NavItem href="/#">Attend</NavItem>
-          <NavItem href="/#">Speak</NavItem>
-          <NavItem href="/#">Sponsor</NavItem>
-          <NavItem href="/#">Team</NavItem>
-          <NavItem href="/#" isButtonStyle={true}>Register</NavItem>
+          <NavbarLinks />
         </End>
 
       </FlexWrapper>
@@ -51,27 +48,25 @@ const FlexWrapper = styled.nav`
 `
 
 const Start = styled.div`
-  height: 100%;
+  height: ${rem(navHeight)};
 `
 
 const End = styled.div`
   height: ${rem(navHeight)};
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
 `
 
 const LogoAndTitle = styled.a`
-  display: block;
   height: 100%;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
+
   text-decoration: none;
   color: black;
   text-shadow: 0 0 0 transparent;
   transition: text-shadow 150ms ease-out;
 
   &:hover {
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
     color: black;
 
     ${LogoWrapper} img {
@@ -82,11 +77,14 @@ const LogoAndTitle = styled.a`
 
 const LogoWrapper = styled.span`
   display: inline-block;
-  vertical-align: middle;
 
   img {
     height: ${rem(logoHeight)};
     transition: transform 300ms ease-out;
+
+    ${mobile(css`
+      height: ${rem(largeLogoHeight)};
+    `)}
   }
 `
 
@@ -95,4 +93,8 @@ const Title = styled.h3`
   margin-left: ${rem(10)};
   font-size: ${rem(20)};
   font-weight: 600;
+
+  ${mobile(css`
+    display: none;
+  `)}
 `

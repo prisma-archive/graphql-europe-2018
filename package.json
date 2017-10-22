@@ -9,6 +9,7 @@
     "polished": "^1.8.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-onclickout": "^2.0.8",
     "react-tilt": "^0.1.4",
     "styled-components": "^2.2.1"
   },

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import darken from 'polished/lib/color/darken'
 
 import rem from 'utils/rem'
+import { mobile } from 'utils/media'
 import { almostBlack, specialRed } from 'utils/colors'
 
 const height = 40
@@ -36,6 +37,15 @@ const Wrapper = styled.div`
   &:last-child {
     margin-right: 0;
   }
+
+  ${mobile(css`
+    margin-right: 0;
+    margin-bottom: ${rem(5)};
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  `)}
 `
 
 const BaseItem = styled.a`
@@ -77,6 +87,22 @@ const LinkItem = BaseItem.extend`
     opacity: 0.5;
     transform: scale(0.95);
   }
+
+  ${mobile(css`
+    /* Full width on mobile so it's easier to choose */
+    width: 100%;
+
+    &:hover,
+    &:focus {
+      color: ${almostBlack};
+      background: #f0f0f0;
+
+      &:after {
+        /* remove line effect on mobile */
+        width: 0;
+      }
+    }
+  `)}
 `
 
 const ButtonItem = BaseItem.extend`
