@@ -8,8 +8,9 @@ import Logo from 'components/Logo'
 import NavbarLinks from './NavbarLinks'
 
 const logoHeight = 35
-const largeLogoHeight = 45
+const mobileLogoHeight = 50
 const navHeight = 69
+const mobileNavHeight = 79
 
 const Navbar = () => (
   <Wrapper>
@@ -40,6 +41,10 @@ const Wrapper = styled.div`
   width: 100%;
   height: ${rem(navHeight)};
   background: linear-gradient(180deg, white 0%, rgba(255, 255, 255, 0) 100%);
+
+  ${mobile(css`
+    height: ${rem(mobileNavHeight)};
+  `)}
 `
 
 const FlexWrapper = styled.nav`
@@ -49,10 +54,18 @@ const FlexWrapper = styled.nav`
 
 const Start = styled.div`
   height: ${rem(navHeight)};
+
+  ${mobile(css`
+    height: ${rem(mobileNavHeight)};
+  `)}
 `
 
 const End = styled.div`
   height: ${rem(navHeight)};
+
+  ${mobile(css`
+    height: ${rem(mobileNavHeight)};
+  `)}
 `
 
 const LogoAndTitle = styled.a`
@@ -83,7 +96,7 @@ const LogoWrapper = styled.span`
     transition: transform 300ms ease-out;
 
     ${mobile(css`
-      height: ${rem(largeLogoHeight)};
+      height: ${rem(mobileLogoHeight)};
     `)}
   }
 `
