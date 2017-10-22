@@ -10,7 +10,7 @@ const Speakers = () => (
     <Container>
       <SectionContent>
         <SectionTitle spacing="large">
-          Speakers 2018
+          Speakers 2018 - placeholder -
         </SectionTitle>
       </SectionContent>
     </Container>
