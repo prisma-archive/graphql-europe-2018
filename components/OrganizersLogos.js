@@ -1,6 +1,7 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import rem from 'utils/rem'
+import { mobile } from 'utils/media'
 import { X } from 'components/Icons'
 
 const OrganizersLogos = () => (
@@ -26,9 +27,22 @@ const FlexWrapper = styled.div`
 
 const XWrapper = styled.div`
   margin: 0 ${rem(30)};
+
+  ${mobile(css`
+    margin: 0 ${rem(15)};
+
+    svg {
+      width: ${rem(30)};
+      height: auto;
+    }
+  `)}
 `
 
 const LogoImage = styled.img`
   display: inline-block;
   height: ${rem(50)};
+
+  ${mobile(css`
+    height: ${rem(30)};
+  `)}
 `

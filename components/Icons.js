@@ -34,8 +34,8 @@ export const MenuIcon = () => (
 )
 
 export const X = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="35">
-    <g fill="none" fillRule="evenodd" stroke="#D6D6D6" strokeWidth=".8">
+  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="35" viewBox="0 0 40 35">
+    <g fill="none" fillRule="evenodd" stroke="#D6D6D6" strokeWidth="1">
       <path d="M.7 34.4L39 .8M39 34.4L.8.8" />
     </g>
   </svg>
