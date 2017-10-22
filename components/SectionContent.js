@@ -5,12 +5,12 @@ import { mediumSectionSpace, largeSectionSpace } from 'utils/sizes'
 import { mobile } from 'utils/media'
 
 const SectionContent = styled.div`
-  padding-top: ${rem(largeSectionSpace)};
-  padding-bottom: ${rem(largeSectionSpace)};
+  padding-top: ${p => p.noPaddingTop ? '' : rem(largeSectionSpace)};
+  padding-bottom: ${p => p.noPaddingBottom ? '' : rem(largeSectionSpace)};
 
   ${mobile(css`
-    padding-top: ${rem(mediumSectionSpace)};
-    padding-bottom: ${rem(mediumSectionSpace)};
+    padding-top: ${p => p.noPaddingTop ? '' : rem(mediumSectionSpace)};
+    padding-bottom: ${p => p.noPaddingBottom ? '' : rem(mediumSectionSpace)};
   `)}
 `
 
