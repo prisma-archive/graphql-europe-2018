@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import darken from 'polished/lib/color/darken'
 import lighten from 'polished/lib/color/lighten'
 import Link from 'next/link'
@@ -8,6 +8,8 @@ import { specialRed } from 'utils/colors'
 import { resetButton } from 'utils/reset'
 
 const height = 45
+const disabledBg = '#D6D6D6'
+const disabledColor = '#999'
 
 const BaseButton = styled.button`
   ${resetButton}
@@ -22,6 +24,7 @@ const BaseButton = styled.button`
   background: ${specialRed};
   color: white;
   cursor: pointer;
+  user-select: none;
   transition:
     background 100ms ease-out,
     color 100ms ease-out,
@@ -40,6 +43,21 @@ const BaseButton = styled.button`
   &:active {
     transform: scale(0.95);
   }
+
+  ${p => p.disabled ? css`
+    background: ${disabledBg};
+    color: ${disabledColor};
+    cursor: default;
+
+    &:hover {
+      background: ${disabledBg};
+      color: ${disabledColor};
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+  ` : ''}
 `
 
 const LinkButton = BaseButton.withComponent('a')
