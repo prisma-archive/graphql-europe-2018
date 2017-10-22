@@ -2,10 +2,15 @@ import styled, { css } from 'styled-components'
 
 import rem from 'utils/rem'
 import { textLightGrey, specialRed } from 'utils/colors'
+import {
+  navHeight,
+  mobileNavHeight,
+} from 'utils/sizes'
 import { mobile } from 'utils/media'
 import Navbar from 'components/Navbar'
 import GraphBg from 'components/GraphBg'
 import Container from 'components/Container'
+import SectionContent from 'components/SectionContent'
 import Button from 'components/Button'
 
 const JoinUsIntro = () => (
@@ -20,7 +25,7 @@ const JoinUsIntro = () => (
     </NavbarFloater>
 
     <Container>
-      <Content>
+      <SectionContent>
         <Title>Join us for Europe’s biggest<br />GraphQL-dedicated conference</Title>
         <Description>
           GraphQL-Europe is a non-profit GraphQL conference in Europe with speakers from all around the world. Learn about GraphQL best practices from industry experts and become part of the thriving GraphQL community. GraphQL-Europe is organized by Graph.Cool and Honeypot.
@@ -41,7 +46,7 @@ const JoinUsIntro = () => (
           <Button>Get Ticket</Button>
         </ButtonWrapper>
 
-      </Content>
+      </SectionContent>
     </Container>
 
   </Wrapper>
@@ -52,8 +57,11 @@ export default JoinUsIntro
 const Wrapper = styled.section`
   position: relative;
   overflow: hidden;
-  padding-top: ${rem(70)};
-  padding-bottom: ${rem(30)};
+  padding-top: ${rem(navHeight)};
+
+  ${mobile(css`
+    padding-top: ${rem(mobileNavHeight)};
+  `)}
 `
 
 const GraphBgWrapper = styled.div`
@@ -74,11 +82,6 @@ const NavbarFloater = styled.div`
   top: 0;
   left: 0;
   right: 0;
-`
-
-const Content = styled.div`
-  padding-top: ${rem(90)};
-  padding-bottom: ${rem(90)};
 `
 
 const Title = styled.h1`

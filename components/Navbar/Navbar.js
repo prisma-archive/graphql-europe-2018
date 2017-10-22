@@ -3,14 +3,13 @@ import Link from 'next/link'
 
 import rem from 'utils/rem'
 import { mobile } from 'utils/media'
+import { navHeight, mobileNavHeight } from 'utils/sizes'
 import Container from 'components/Container'
 import Logo from 'components/Logo'
 import NavbarLinks from './NavbarLinks'
 
 const logoHeight = 35
 const mobileLogoHeight = 50
-const navHeight = 69
-const mobileNavHeight = 79
 
 const Navbar = () => (
   <Wrapper>

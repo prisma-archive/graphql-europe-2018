@@ -5,12 +5,14 @@ import { mobile } from 'utils/media'
 import { bgLightGrey } from 'utils/colors'
 import Container from 'components/Container'
 import SectionTitle from 'components/SectionTitle'
+import SectionContent from 'components/SectionContent'
 import Button from 'components/Button'
 
 const CallForPapers = () => (
   <Wrapper>
     <Container>
-      <Content>
+      <SectionContent>
+      <FlexWrapper>
 
         <ImageWrapper>
           <img src="/static/cpa.png" />
@@ -30,7 +32,8 @@ const CallForPapers = () => (
           </ButtonWrapper>
         </Texts>
 
-      </Content>
+      </FlexWrapper>
+      </SectionContent>
     </Container>
   </Wrapper>
 )
@@ -39,16 +42,14 @@ export default CallForPapers
 
 const Wrapper = styled.section`
   position: relative;
-  padding: ${rem(90)} 0;
   background: ${bgLightGrey};
 
   ${mobile(css`
     margin-left: 0;
-    padding: ${rem(45)} 0;
   `)}
 `
 
-const Content = styled.div`
+const FlexWrapper = styled.div`
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
@@ -62,7 +63,7 @@ const Texts = styled.div`
   ${mobile(css`
     width: 100%;
     margin-left: 0;
-    padding: ${rem(45)} 0;
+    padding: ${rem(45)} 0 0 0;
   `)}
 `
 

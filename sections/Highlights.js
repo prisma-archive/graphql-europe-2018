@@ -6,9 +6,11 @@ import { mobile, desktop } from 'utils/media'
 import Container from 'components/Container'
 import GraphBg from 'components/GraphBg'
 import SectionTitle from 'components/SectionTitle'
+import SectionContent from 'components/SectionContent'
 import SectionSeparator from 'components/SectionSeparator'
 import VideoHighlight from 'components/VideoHighlight'
 import FactsRow from 'components/FactsRow'
+import MobileTextBreak from 'components/MobileTextBreak'
 
 const gridGutter = 34 / 2 // half of desired value
 
@@ -58,9 +60,9 @@ const Highlights = () => (
         <GraphBg />
       </LowerGraphBgWrapper>
 
-      <Content>
+      <SectionContent>
         <SectionTitle spacing="large">
-          Highlights from GraphQL-Europe 2017
+          Highlights from <MobileTextBreak />GraphQL-Europe 2017
         </SectionTitle>
 
         <Grid>
@@ -73,7 +75,7 @@ const Highlights = () => (
 
         <FactsRow />
 
-      </Content>
+      </SectionContent>
     </Container>
   </Wrapper>
 )
@@ -97,12 +99,6 @@ const LowerGraphBgWrapper = styled.div`
   bottom: ${rem(40)};
   right: ${rem(-140)};
   transform: rotateZ(-70deg);
-`
-
-const Content = styled.div`
-  position: relative;
-  padding-top: ${rem(90)};
-  padding-bottom: ${rem(90)};
 `
 
 const Grid = styled.div`
@@ -133,10 +129,4 @@ const GridItem = styled.div`
   ${mobile(css`
     width: 100%;
   `)}
-`
-
-const Fill = styled.div`
-  width: 100%;
-  height: 40px;
-  background: #000;
 `
