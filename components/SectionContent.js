@@ -5,7 +5,6 @@ import { mediumSectionSpace, largeSectionSpace } from 'utils/sizes'
 import { mobile } from 'utils/media'
 
 const SectionContent = styled.div`
-  position: relative;
   padding-top: ${rem(largeSectionSpace)};
   padding-bottom: ${rem(largeSectionSpace)};
 
