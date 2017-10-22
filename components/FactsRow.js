@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 
 import rem from 'utils/rem'
 import { specialRed, textLightGrey } from 'utils/colors'
+import { mediumSectionSpace, largeSectionSpace } from 'utils/sizes'
 import { mobile } from 'utils/media'
 import { Box, Human, Prize } from 'components/Icons'
 
@@ -68,8 +69,12 @@ const FactDesc = styled.div`
 `
 
 const Wrapper = styled.section`
-  padding-top: ${rem(90)};
+  padding-top: ${rem(largeSectionSpace)};
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
+
+  ${mobile(css`
+    padding-top: ${rem(mediumSectionSpace)};
+  `)}
 `
