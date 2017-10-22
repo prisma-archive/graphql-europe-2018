@@ -5,6 +5,7 @@ import CallForPapers from '../sections/CallForPapers'
 import Speakers from '../sections/Speakers'
 import WantToSponsor from '../sections/WantToSponsor'
 import GetYourTicket from '../sections/GetYourTicket'
+import CoOrganizedBy from '../sections/CoOrganizedBy'
 
 export default () => (
   <div>
@@ -15,5 +16,6 @@ export default () => (
     <Speakers />
     <WantToSponsor />
     <GetYourTicket />
+    <CoOrganizedBy />
   </div>
 )
