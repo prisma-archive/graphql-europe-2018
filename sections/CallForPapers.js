@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import retinaImage from 'polished/lib/mixins/retinaImage'
 
 import rem from 'utils/rem'
 import { mobile } from 'utils/media'
@@ -68,8 +69,9 @@ const Texts = styled.div`
 `
 
 const ImageWrapper = styled.div`
+  ${retinaImage('/static/cpa', 'cover', 'png', undefined, '@2x')}
+
   flex: 1 1 auto;
-  background: url('/static/cpa.png') center center no-repeat;
   background-size: cover;
   text-indent: -99999px;
 
