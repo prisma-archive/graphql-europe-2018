@@ -6,18 +6,28 @@ import { mobile, desktop } from 'utils/media'
 import Container from 'components/Container'
 import Newsletter from 'components/Newsletter'
 
-const Highlights = () => (
+const Footer = () => (
   <Wrapper>
     <Container>
       <Newsletter />
     </Container>
+
+    <LowerFooter>
+      <Container>
+        Footer placeholder until we finilized the design.
+      </Container>
+    </LowerFooter>
   </Wrapper>
 )
 
-export default Highlights
+export default Footer
 
 const Wrapper = styled.footer`
-  position: relative;
-  overflow: hidden;
   border-top: 1px solid #f1f1f1;
+`
+
+const LowerFooter = styled.div`
+  border-top: 1px solid #f1f1f1;
+  padding: ${rem(40)} 0;
+  color: #bbb;
 `
