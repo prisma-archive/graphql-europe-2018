@@ -8,6 +8,7 @@ import TicketsGraphBgWrapper from '../sections/TicketsGraphBgWrapper'
 import GetYourTicket from '../sections/GetYourTicket'
 import CoOrganizedBy from '../sections/CoOrganizedBy'
 import Sponsors from '../sections/Sponsors'
+import Footer from '../sections/Footer'
 
 export default () => (
   <div>
@@ -24,5 +25,7 @@ export default () => (
       <CoOrganizedBy />
       <Sponsors />
     </TicketsGraphBgWrapper>
+
+    <Footer />
   </div>
 )

@@ -11,7 +11,7 @@ const height = 45
 const disabledBg = '#D6D6D6'
 const disabledColor = '#999'
 
-const BaseButton = styled.button`
+export const BaseButton = styled.button`
   ${resetButton}
 
   display: inline-block;
