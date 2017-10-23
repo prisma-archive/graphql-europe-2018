@@ -1,4 +1,5 @@
 {
+  "version": "0.0.1",
   "scripts": {
     "dev": "node server",
     "build": "cross-env NODE_ENV=production next build && next export && cp _redirects out",
