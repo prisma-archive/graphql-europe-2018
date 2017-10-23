@@ -39,7 +39,6 @@ const Wrapper = styled.section`
   ${mobile(css`
     height: auto;
     padding: ${rem(45)} 0;
-    text-align: center;
   `)}
 `
 
@@ -71,7 +70,7 @@ const Form = styled.form`
 
   ${mobile(css`
     margin-left: 0;
-    margin-top: ${rem(40)};
+    margin-top: ${rem(20)};
   `)}
 `
 
@@ -90,9 +89,8 @@ const Button = BaseButton.extend`
   }
 
   ${mobile(css`
-    display: block;
-    width: 100%;
-    border-radius: 0 0 ${rem(5)} ${rem(5)};
+    padding-left: ${rem(15)};
+    padding-right: ${rem(15)};
   `)}
 `
 
@@ -129,12 +127,6 @@ const Input = styled.input`
     border-color: #aaa;
     background: #fafafa;
   }
-
-  ${mobile(css`
-    border-radius: ${rem(5)} ${rem(5)} 0 0;
-    border: 1px solid #cacaca;
-    border-bottom: none;
-  `)}
 `
 
 const Label = styled.label`
