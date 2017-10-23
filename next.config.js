@@ -3,6 +3,7 @@ module.exports = {
     {
       '/': { page: '/' },
       '/code-of-conduct': { page: '/code-of-conduct' },
+      '/imprint': { page: '/imprint' },
     }
   )
 }
