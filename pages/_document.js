@@ -37,7 +37,7 @@ export default class MyDocument extends Document {
 
   render () {
     return (
-      <html>
+      <html lang="en">
         <Head>
           <title>GraphQL Europe 2018</title>
           <meta charSet="UTF-8" />

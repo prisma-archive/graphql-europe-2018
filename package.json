@@ -4,6 +4,11 @@
     "build": "next build && next export && cp _redirects out",
     "start": "next start  --port 4004"
   },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
   "dependencies": {
     "next": "^4.1.2",
     "polished": "^1.8.1",

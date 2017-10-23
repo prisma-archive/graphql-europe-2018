@@ -15,7 +15,8 @@ const Newsletter = () => (
     <Form>
       <Field>
         <InputWrapper>
-          <Input placeholder="Add your email" />
+          <Label htmlFor="nl-email">Email</Label>
+          <Input id="nl-email" placeholder="Add your email" />
         </InputWrapper>
         <Button>Sign up</Button>
       </Field>
@@ -134,4 +135,13 @@ const Input = styled.input`
     border: 1px solid #cacaca;
     border-bottom: none;
   `)}
+`
+
+const Label = styled.label`
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
 `
