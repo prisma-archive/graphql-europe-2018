@@ -7,9 +7,9 @@ import { X } from 'components/Icons'
 const OrganizersLogos = () => (
   <Wrapper>
     <FlexWrapper>
-      <LogoImage src="/static/honeypot.svg" alt="Honeypot" />
+      <LogoImage src="/static/logos/honeypot.svg" alt="Honeypot" />
       <XWrapper><X /></XWrapper>
-      <LogoImage src="/static/graphcool.svg" alt="Graphcool" />
+      <LogoImage src="/static/logos/graphcool.svg" alt="Graphcool" />
     </FlexWrapper>
   </Wrapper>
 )

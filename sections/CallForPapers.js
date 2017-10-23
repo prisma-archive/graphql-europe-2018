@@ -16,7 +16,7 @@ const CallForPapers = () => (
       <FlexWrapper>
 
         <ImageWrapper>
-          <img src="/static/cpa.png" />
+          <img src="/static/photos/cpa.png" />
         </ImageWrapper>
 
         <Texts>
@@ -69,7 +69,7 @@ const Texts = styled.div`
 `
 
 const ImageWrapper = styled.div`
-  ${retinaImage('/static/cpa', 'cover', 'png', undefined, '@2x')}
+  ${retinaImage('/static/photos/cpa', 'cover', 'png', undefined, '@2x')}
 
   flex: 1 1 auto;
   background-size: cover;

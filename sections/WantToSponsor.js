@@ -16,7 +16,7 @@ const WantToSponsor = () => (
       <FlexWrapper>
 
         <ImageWrapper>
-          <img src="/static/sponsors.png" />
+          <img src="/static/photos/sponsors.png" />
         </ImageWrapper>
 
         <Texts>
@@ -70,7 +70,7 @@ const Texts = styled.div`
 `
 
 const ImageWrapper = styled.div`
-  ${retinaImage('/static/sponsors', 'cover', 'png', undefined, '@2x')}
+  ${retinaImage('/static/photos/sponsors', 'cover', 'png', undefined, '@2x')}
 
   flex: 1 1 auto;
   background-position: center center;

@@ -16,32 +16,32 @@ const gridGutter = 34 / 2 // half of desired value
 
 const videos = [
   {
-    imageUrl: '/static/highlights-1.png',
+    imageUrl: '/static/highlights/highlights-1.png',
     title: 'Five Years of Client GraphQL Infrastructure',
     description: 'Daniel Schafer, Facebook, GraphQL co-creator',
   },
   {
-    imageUrl: '/static/graphql13-2.png',
+    imageUrl: '/static/highlights/graphql13-2.png',
     title: 'Launching GitHub\'s Public GraphQL API',
     description: 'Brooks Swinnerton, GitHub',
   },
   {
-    imageUrl: '/static/graphql14.png',
+    imageUrl: '/static/highlights/graphql14.png',
     title: 'Closing Keynote',
     description: 'Lee Byron, Facebook, GraphQL co-creator',
   },
   {
-    imageUrl: '/static/graphql12.png',
+    imageUrl: '/static/highlights/graphql12.png',
     title: 'Realtime GraphQL from the Trenches',
     description: 'Tasveer Singh, Mainframe',
   },
   {
-    imageUrl: '/static/graphql5.png',
+    imageUrl: '/static/highlights/graphql5.png',
     title: 'Opening and closing',
     description: 'Chad Fowler, Microsoft/BlueYard',
   },
   {
-    imageUrl: '/static/graphql23.png',
+    imageUrl: '/static/highlights/graphql23.png',
     title: 'Adding GraphQL to your existing architecture',
     description: 'Sashko Stubailo, Meteor/Apollo',
   },

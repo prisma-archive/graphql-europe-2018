@@ -14,29 +14,29 @@ const Sponsors = () => (
 
         <Grid>
           <GridItem>
-            <LogoImage src="/static/commercetools.png" alt="Apollo" />
+            <LogoImage src="/static/logos/commercetools.png" alt="Apollo" />
           </GridItem>
           <GridItem>
-            <LogoImage src="/static/neo4j.png" alt="Neo4j" />
+            <LogoImage src="/static/logos/neo4j.png" alt="Neo4j" />
           </GridItem>
           <GridItem>
-            <LogoImage src="/static/zalando.png" alt="Zalando" />
+            <LogoImage src="/static/logos/zalando.png" alt="Zalando" />
           </GridItem>
           <GridItem>
-            <LogoImage src="/static/github.png" alt="Github" />
+            <LogoImage src="/static/logos/github.png" alt="Github" />
           </GridItem>
 
           <GridItem>
-            <LogoImage src="/static/n26.png" alt="N26" />
+            <LogoImage src="/static/logos/n26.png" alt="N26" />
           </GridItem>
           <GridItem>
-            <LogoImage src="/static/intuit.png" alt="intuit" />
+            <LogoImage src="/static/logos/intuit.png" alt="intuit" />
           </GridItem>
           <GridItem>
-            <LogoImage src="/static/facebook.png" alt="Facebook" />
+            <LogoImage src="/static/logos/facebook.png" alt="Facebook" />
           </GridItem>
           <GridItem>
-            <LogoImage src="/static/apollo.png" alt="Apollo" />
+            <LogoImage src="/static/logos/apollo.png" alt="Apollo" />
           </GridItem>
         </Grid>
 

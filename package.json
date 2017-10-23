@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "dev": "next --port 4004",
-    "build": "next build && next export && cp _redirects out",
-    "start": "next start  --port 4004"
+    "dev": "node server",
+    "build": "cross-env NODE_ENV=production next build && next export && cp _redirects out",
+    "start": "cross-env NODE_ENV=production node server"
   },
   "prettier": {
     "semi": false,
@@ -10,6 +10,7 @@
     "trailingComma": "all"
   },
   "dependencies": {
+    "express": "^4.16.2",
     "next": "^4.1.2",
     "polished": "^1.8.1",
     "react": "^16.0.0",
@@ -21,6 +22,8 @@
   "devDependencies": {
     "babel-plugin-module-resolver": "^2.7.1",
     "babel-plugin-polished": "^1.1.0",
-    "babel-plugin-styled-components": "^1.2.1"
+    "babel-plugin-styled-components": "^1.2.1",
+    "cross-env": "^5.1.0",
+    "sw-precache-webpack-plugin": "^0.11.4"
   }
 }
