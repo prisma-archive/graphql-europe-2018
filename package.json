@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "next --port 4004",
-    "build": "next build && next export",
+    "build": "next build && next export && cp _redirects out",
     "start": "next start  --port 4004"
   },
   "dependencies": {
