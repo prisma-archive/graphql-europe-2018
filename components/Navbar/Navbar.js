@@ -7,31 +7,36 @@ import { navHeight, mobileNavHeight } from 'utils/sizes'
 import Container from 'components/Container'
 import Logo from 'components/Logo'
 import NavbarLinks from './NavbarLinks'
+import Sticky from './Sticky'
 
 const logoHeight = 35
 const mobileLogoHeight = 50
 
 const Navbar = () => (
-  <Wrapper>
-    <Container>
-      <FlexWrapper>
+  <Sticky>
+    {({ shouldStick, isVisible }) => (
+      <Wrapper shouldStick={shouldStick} isVisible={isVisible}>
+        <Container>
+          <FlexWrapper>
 
-        <Start>
-          <Link href="/">
-            <LogoAndTitle href="/">
-              <LogoWrapper><Logo /></LogoWrapper>
-              <Title>GraphQL-Europe</Title>
-            </LogoAndTitle>
-          </Link>
-        </Start>
+            <Start>
+              <Link href="/">
+                <LogoAndTitle href="/">
+                  <LogoWrapper><Logo /></LogoWrapper>
+                  <Title>GraphQL-Europe</Title>
+                </LogoAndTitle>
+              </Link>
+            </Start>
 
-        <End>
-          <NavbarLinks />
-        </End>
+            <End>
+              <NavbarLinks />
+            </End>
 
-      </FlexWrapper>
-    </Container>
-  </Wrapper>
+          </FlexWrapper>
+        </Container>
+      </Wrapper>
+    )}
+  </Sticky>
 )
 
 export default Navbar
@@ -40,10 +45,31 @@ const Wrapper = styled.div`
   width: 100%;
   height: ${rem(navHeight)};
   background: linear-gradient(180deg, white 0%, rgba(255, 255, 255, 0) 100%);
+  transition: all 200ms ease-out;
 
   ${mobile(css`
     height: ${rem(mobileNavHeight)};
   `)}
+
+
+  ${p => !p.isVisible ? css`
+    position: fixed;
+    top: ${rem(-navHeight)};
+    right: 0;
+    left: 0;
+  ` : ''}
+
+  ${p => p.shouldStick ? css`
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9;
+
+    background: white;
+    border-bottom: 1px solid #f1f1f1;
+    box-shadow: 0 ${rem(3)} ${rem(10)} rgba(0, 0, 0, 0.08);
+  ` : ''}
 `
 
 const FlexWrapper = styled.nav`
