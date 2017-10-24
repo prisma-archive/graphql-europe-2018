@@ -5,6 +5,7 @@ import retinaImage from 'polished/lib/mixins/retinaImage'
 import rem from 'utils/rem'
 import { mobile, desktop } from 'utils/media'
 import { resetButton } from 'utils/reset'
+import { boxStyle } from 'utils/mixins'
 import { PlayButton } from 'components/Icons'
 
 const VideoHighlight = ({
@@ -47,7 +48,9 @@ const Wrapper = styled.button`
   border-radius: ${rem(5)};
   overflow: hidden;
   background: black;
-  box-shadow: ${rem(8)} ${rem(8)} ${rem(22)} rgba(0, 0, 0, 0.14);
+
+  ${boxStyle(false, false)}
+
   transform-style: preserve-3d;
   transition: opacity 150ms, box-shadow 150ms, transform 150ms ease-out;
   cursor: pointer;
@@ -62,6 +65,7 @@ const Wrapper = styled.button`
   }
 
   &:focus {
+    /* see utils/mixins for the default box shadow */
     box-shadow: ${rem(8)} ${rem(8)} ${rem(20)} rgba(0, 0, 0, 0.4);
   }
 

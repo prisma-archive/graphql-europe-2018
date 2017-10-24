@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 import rem from 'utils/rem'
-import { textLightGrey, specialRed } from 'utils/colors'
+import { textLightGrey, textGrey, specialRed } from 'utils/colors'
 import {
   navHeight,
   mobileNavHeight,
@@ -25,30 +25,32 @@ const JoinUsIntro = () => (
       <Navbar />
     </NavbarFloater>
 
-    <Container>
-      <SectionContent>
-        <Title>Join us for Europe’s biggest<DesktopTextBreak/> GraphQL-<MobileTextBreak />dedicated conference</Title>
-        <Description>
-          GraphQL-Europe is a non-profit GraphQL conference in Europe with speakers from all around the world. Learn about GraphQL best practices from industry experts and become part of the thriving GraphQL community. GraphQL-Europe is organized by Graph.Cool and Honeypot.
-        </Description>
+    <PopWrapper>
+      <Container>
+        <SectionContent>
+          <Title>Join us for Europe’s biggest<DesktopTextBreak /> GraphQL-<MobileTextBreak soft />dedicated conference</Title>
+          <Description>
+            GraphQL-Europe is a non-profit GraphQL conference in Europe with speakers from all around the world. Learn about GraphQL best practices from industry experts and become part of the thriving GraphQL community. GraphQL-Europe is organized by Graph.Cool and Honeypot.
+          </Description>
 
-        <Meta>
-          <MetaItem>
-            <MetaItemKey>Date</MetaItemKey>
-            <MetaItemValue>June 15th, 2018</MetaItemValue>
-          </MetaItem>
-          <MetaItem>
-            <MetaItemKey>Location</MetaItemKey>
-            <MetaItemValue>nHow Hotel, Berlin</MetaItemValue>
-          </MetaItem>
-        </Meta>
+          <Meta>
+            <MetaItem>
+              <MetaItemKey>Date</MetaItemKey>
+              <MetaItemValue>June 15th, 2018</MetaItemValue>
+            </MetaItem>
+            <MetaItem>
+              <MetaItemKey>Location</MetaItemKey>
+              <MetaItemValue>nHow Hotel, Berlin</MetaItemValue>
+            </MetaItem>
+          </Meta>
 
-        <ButtonWrapper>
-          <Button>Get Tickets</Button>
-        </ButtonWrapper>
+          <ButtonWrapper>
+            <Button>Get Tickets</Button>
+          </ButtonWrapper>
 
-      </SectionContent>
-    </Container>
+        </SectionContent>
+      </Container>
+    </PopWrapper>
 
   </Wrapper>
 )
@@ -78,6 +80,10 @@ const GraphBgWrapper = styled.div`
   `)}
 `
 
+const PopWrapper = styled.div`
+  position: relative;
+`
+
 const NavbarFloater = styled.div`
   position: absolute;
   top: 0;
@@ -102,7 +108,7 @@ const Description = styled.p`
 
   max-width: ${rem(620)};
   line-height: 1.5;
-  color: ${textLightGrey};
+  color: ${textGrey};
 
   ${mobile(css`
     margin-top: ${rem(25)};
@@ -116,8 +122,13 @@ const Meta = styled.div`
 `
 
 const MetaItem = styled.div`
-  min-width: ${rem(155)};
+  padding-right: ${rem(70)};
   display: inline-block;
+
+  ${mobile(css`
+    width: 50%;
+    padding-right: 0;
+  `)}
 `
 
 const MetaItemKey = styled.div`

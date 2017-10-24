@@ -99,11 +99,13 @@ class Highlights extends Component {
               ))}
             </Grid>
 
-            <VideoModal
-              isOpen={!!activeVideoYoutubeId}
-              youtubeId={activeVideoYoutubeId}
-              onClose={this.modalClosed}
-            />
+            {!!activeVideoYoutubeId &&
+              <VideoModal
+                isOpen={!!activeVideoYoutubeId}
+                youtubeId={activeVideoYoutubeId}
+                onClose={this.modalClosed}
+              />
+            }
 
             <FactsRow />
 
@@ -141,4 +143,10 @@ const LowerGraphBgWrapper = styled.div`
   bottom: ${rem(40)};
   right: ${rem(-140)};
   transform: rotateZ(-70deg);
+
+  ${mobile(css`
+    right: ${rem(-460)};
+    bottom: ${rem(100)};
+    transform: scale(0.8) rotateZ(-130deg);
+  `)}
 `

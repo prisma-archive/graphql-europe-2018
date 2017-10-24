@@ -107,6 +107,8 @@ const LinkItem = BaseItem.extend`
   ${mobile(css`
     /* Full width on mobile so it's easier to choose */
     width: 100%;
+    padding-right: ${rem(30)};
+    padding-left: ${rem(30)};
 
     &:hover,
     &:focus {

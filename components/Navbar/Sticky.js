@@ -4,7 +4,7 @@ import debounce from 'lodash/debounce'
 import { navHeight } from 'utils/sizes'
 import { mobileMediaString } from 'utils/media'
 
-const stickyPointPos = 601
+const stickyPointPos = 350
 const height = navHeight
 
 class Sticky extends PureComponent {
@@ -20,14 +20,16 @@ class Sticky extends PureComponent {
 
   componentDidMount() {
     window.addEventListener('scroll', this.checkScroll, { passive: true })
+    window.addEventListener('resize', this.checkScroll, { passive: true })
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.checkScroll, { passive: true })
+    window.removeEventListener('resize', this.checkScroll, { passive: true })
   }
 
   render() {
-    const { children, ...props } = this.props
+    const { children } = this.props
     const { shouldStick, isVisible } = this.state
 
     if (typeof children !== 'function') {
@@ -42,7 +44,7 @@ class Sticky extends PureComponent {
     const isMobile = window.matchMedia(mobileMediaString).matches
     this.setState({
       shouldStick: isMobile ? false : scrollPos > stickyPointPos,
-      isVisible: scrollPos < height,
+      isVisible: isMobile ? true : scrollPos < height,
     })
   }
 }

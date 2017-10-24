@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 import rem from 'utils/rem'
 import { mobile } from 'utils/media'
-import { specialRed, textLightGrey } from 'utils/colors'
+import { specialRed, textLightGrey, textDarkGrey, textGrey } from 'utils/colors'
 
 import Footer from '../sections/Footer'
 import Navbar from 'components/Navbar'
@@ -117,8 +117,9 @@ const Body = styled.div`
   p {
     margin-top: 0;
     margin-bottom: ${rem(25)};
-    color: ${textLightGrey};
+    color: ${textDarkGrey};
     line-height: 1.5;
+    max-width: ${rem(700)};
   }
 `
 

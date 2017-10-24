@@ -20,11 +20,13 @@ export const BaseButton = styled.button`
   padding: 0 ${rem(45)};
 
   font-size: ${rem(18)};
+  font-weight: 600;
   border-radius: ${rem(5)};
   background: ${specialRed};
   color: white;
   cursor: pointer;
   user-select: none;
+  text-decoration: none;
   transition:
     background 100ms ease-out,
     color 100ms ease-out,
