@@ -9,7 +9,7 @@ import OrganizersLogos from 'components/OrganizersLogos'
 const CoOrganizedBy = () => (
   <Wrapper>
     <Container>
-      <SectionContent noPaddingTop noPaddingBottom>
+      <SectionContent noPaddingTop>
         <SectionTitle spacing="medium">Co-Organized by</SectionTitle>
         <OrganizersLogos />
       </SectionContent>

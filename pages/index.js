@@ -23,7 +23,6 @@ export default () => (
       {/* These 3 section share one bg */}
       <GetYourTicket />
       <CoOrganizedBy />
-      <Sponsors />
     </TicketsGraphBgWrapper>
 
     <Footer />
