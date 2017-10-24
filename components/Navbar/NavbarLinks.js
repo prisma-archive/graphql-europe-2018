@@ -24,12 +24,12 @@ class NavbarLinks extends Component {
 
     return [
       // Links layout visible on desktop and hidden on mobile
-      <DesktopLinks>
+      <DesktopLinks key="1">
         <Links />
       </DesktopLinks>,
 
       // Links layout for mobiles and hidden on desktop
-      <ClickOutHandler onClickOut={this.closeNavbar}>
+      <ClickOutHandler key="2" onClickOut={this.closeNavbar}>
         <MobileLinks>
           <IconWrapper
             active={isOpen}
