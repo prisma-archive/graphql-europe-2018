@@ -1,28 +1,32 @@
 import styled, { css } from 'styled-components'
 import Tilt from 'react-tilt'
+import retinaImage from 'polished/lib/mixins/retinaImage'
 
 import rem from 'utils/rem'
 import { mobile, desktop } from 'utils/media'
 import { PlayButton } from 'components/Icons'
 
 const VideoHighlight = ({
-  imageUrl = '/static/highlights-1.png',
+  imageUrl,
+  imageFormat,
   title,
   description,
 }) => (
   <Tilt options={{ max: 13, scale: 1.01 }}>
     <Wrapper>
-      <ImageWrapper url={imageUrl}>
-        <img src={imageUrl} />
+      <ImageWrapper url={imageUrl} format={imageFormat}>
+        <img src={imageUrl + '.' + imageFormat} />
       </ImageWrapper>
 
-      <Content>
-        <IconWrapper><PlayButton /></IconWrapper>
-        <TextsWrapper>
-          <Title>{title}</Title>
-          <Speaker>{description}</Speaker>
-        </TextsWrapper>
-      </Content>
+      <Overlay>
+        <Content>
+          <IconWrapper><PlayButton /></IconWrapper>
+          <TextsWrapper>
+            <Title>{title}</Title>
+            <Speaker>{description}</Speaker>
+          </TextsWrapper>
+        </Content>
+      </Overlay>
     </Wrapper>
   </Tilt>
 )
@@ -49,9 +53,9 @@ const ImageWrapper = styled.div`
   height: 100%;
   width: 100%;
   text-indent: -99999px;
-  background-image:
-    linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.6) 100%),
-    url(${p => p.url});
+
+  ${p => css`${retinaImage(p.url, 'cover', p.format, undefined, '@2x')}`}
+
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -61,6 +65,20 @@ const ImageWrapper = styled.div`
     display: inline-block;
     width: 100%;
   }
+`
+
+const Overlay = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+
+  background-image: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.6) 100%);
 `
 
 const Content = styled.div`

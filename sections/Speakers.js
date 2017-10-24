@@ -4,6 +4,13 @@ import rem from 'utils/rem'
 import Container from 'components/Container'
 import SectionTitle from 'components/SectionTitle'
 import SectionContent from 'components/SectionContent'
+import Grid from 'components/Grid'
+
+const speakersList = [
+  {
+    
+  }
+]
 
 const Speakers = () => (
   <Wrapper>
@@ -12,6 +19,15 @@ const Speakers = () => (
         <SectionTitle spacing="large">
           Speakers 2018 - placeholder -
         </SectionTitle>
+
+        <Grid>
+          {GridItem => [].map((v, i) => (
+            <GridItem key={i}>
+              <VideoHighlight {...v} />
+            </GridItem>
+          ))}
+        </Grid>
+
       </SectionContent>
     </Container>
   </Wrapper>

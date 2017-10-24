@@ -17,32 +17,38 @@ const gridGutter = 34 / 2 // half of desired value
 
 const videos = [
   {
-    imageUrl: '/static/highlights/highlights-1.png',
+    imageUrl: '/static/highlights/highlights-1',
+    imageFormat: 'jpg',
     title: 'Five Years of Client GraphQL Infrastructure',
     description: 'Daniel Schafer, Facebook, GraphQL Co-Creator',
   },
   {
-    imageUrl: '/static/highlights/graphql13-2.png',
+    imageUrl: '/static/highlights/highlights-2',
+    imageFormat: 'jpg',
     title: 'Launching GitHub\'s Public GraphQL API',
     description: 'Brooks Swinnerton, GitHub',
   },
   {
-    imageUrl: '/static/highlights/graphql14.png',
+    imageUrl: '/static/highlights/highlights-3',
+    imageFormat: 'jpg',
     title: 'Closing Keynote',
     description: 'Lee Byron, Facebook, GraphQL Co-Creator',
   },
   {
-    imageUrl: '/static/highlights/graphql12.png',
+    imageUrl: '/static/highlights/highlights-4',
+    imageFormat: 'jpg',
     title: 'Realtime GraphQL from the Trenches',
     description: 'Tasveer Singh, Mainframe',
   },
   {
-    imageUrl: '/static/highlights/graphql5.png',
-    title: 'Opening and closing',
-    description: 'Chad Fowler, Microsoft/BlueYard',
+    imageUrl: '/static/highlights/highlights-5',
+    imageFormat: 'jpg',
+    title: 'Building a GraphQL client in Javascript',
+    description: 'Mina Smart, Shopify',
   },
   {
-    imageUrl: '/static/highlights/graphql23.png',
+    imageUrl: '/static/highlights/highlights-6',
+    imageFormat: 'jpg',
     title: 'Adding GraphQL to your existing architecture',
     description: 'Sashko Stubailo, Meteor/Apollo',
   },
