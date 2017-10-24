@@ -11,6 +11,7 @@ import SectionSeparator from 'components/SectionSeparator'
 import VideoHighlight from 'components/VideoHighlight'
 import FactsRow from 'components/FactsRow'
 import { MobileTextBreak } from 'components/TextBreak'
+import Grid from 'components/Grid'
 
 const gridGutter = 34 / 2 // half of desired value
 
@@ -66,7 +67,7 @@ const Highlights = () => (
         </SectionTitle>
 
         <Grid>
-          {videos.map((v, i) => (
+          {GridItem => videos.map((v, i) => (
             <GridItem key={i}>
               <VideoHighlight {...v} />
             </GridItem>
@@ -99,34 +100,4 @@ const LowerGraphBgWrapper = styled.div`
   bottom: ${rem(40)};
   right: ${rem(-140)};
   transform: rotateZ(-70deg);
-`
-
-const Grid = styled.div`
-  margin-right: ${rem(-gridGutter)};
-  margin-left: ${rem(-gridGutter)};
-
-  display: flex;
-  flex-wrap: wrap;
-  justifty-content: flex-start;
-`
-
-const GridItem = styled.div`
-  display: inline-block;
-  padding: ${rem(gridGutter)};
-
-  ${desktop(css`
-    width: 33.333%;
-
-    &:nth-last-child(-n+3) {
-      padding-bottom: 0;
-    }
-
-    &:nth-child(-n+3) {
-      padding-top: 0;
-    }
-  `)}
-
-  ${mobile(css`
-    width: 100%;
-  `)}
 `
