@@ -127,6 +127,7 @@ const ButtonItem = BaseItem.extend`
   height: ${rem(40)};
   line-height: ${rem(40)};
   padding: 0 ${rem(20)};
+  font-weight: 600;
   border-radius: ${rem(22.5)};
   background: ${specialRed};
   color: white;

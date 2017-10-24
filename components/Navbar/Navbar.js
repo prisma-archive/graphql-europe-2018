@@ -53,11 +53,6 @@ const Wrapper = styled.div`
   `)}
 
   ${p => !p.isVisible ? css`
-    position: fixed;
-    top: ${rem(-navHeight)};
-    right: 0;
-    left: 0;
-
     background: white;
   ` : ''}
 
