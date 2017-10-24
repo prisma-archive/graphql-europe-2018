@@ -51,7 +51,6 @@ const Wrapper = styled.div`
     height: ${rem(mobileNavHeight)};
   `)}
 
-
   ${p => !p.isVisible ? css`
     position: fixed;
     top: ${rem(-navHeight)};
