@@ -29,7 +29,12 @@ const WantToSponsor = () => (
           </Desc>
 
           <ButtonWrapper>
-            <Button>Contact Us</Button>
+            <Button
+              isLink={true}
+              href="mailto:sponsors@graphql-europe.org"
+            >
+              Contact Us
+            </Button>
           </ButtonWrapper>
         </Texts>
 
