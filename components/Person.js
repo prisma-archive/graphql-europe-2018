@@ -107,8 +107,8 @@ const Social = styled.div`
 `
 
 const Bio = styled.p`
-  margin: ${rem(6)} 0 0 0;
-  line-height: 1.5;
+  margin: ${rem(7)} 0 0 0;
+  line-height: 1.3;
   color: #aaacaa;
   font-size: ${rem(16)};
 `

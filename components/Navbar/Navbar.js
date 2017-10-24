@@ -12,10 +12,16 @@ import Sticky from './Sticky'
 const logoHeight = 35
 const mobileLogoHeight = 50
 
-const Navbar = () => (
-  <Sticky>
-    {({ shouldStick, isVisible }) => (
-      <Wrapper shouldStick={shouldStick} isVisible={isVisible}>
+const Navbar = ({ alwaysSticky = false, notSticky = false }) => (
+  <Sticky alwaysSticky={alwaysSticky} notSticky={notSticky}>
+    {({ shouldStick, isVisible }) => ([
+      <Placeholder key="1" shouldStick={shouldStick} />,
+
+      <Wrapper
+        key="2"
+        shouldStick={shouldStick}
+        isVisible={isVisible}
+      >
         <Container>
           <FlexWrapper>
 
@@ -35,7 +41,7 @@ const Navbar = () => (
           </FlexWrapper>
         </Container>
       </Wrapper>
-    )}
+    ])}
   </Sticky>
 )
 
@@ -63,8 +69,17 @@ const Wrapper = styled.div`
     left: 0;
     z-index: 9;
 
+    visibility: visible;
+
     box-shadow: 0 ${rem(3)} ${rem(10)} rgba(0, 0, 0, 0.08);
     border-bottom: 1px solid #f1f1f1;
+  ` : ''}
+`
+
+const Placeholder = styled.div`
+  ${p => p.shouldStick ? css`
+    width: 100%;
+    height: ${rem(navHeight)};
   ` : ''}
 `
 

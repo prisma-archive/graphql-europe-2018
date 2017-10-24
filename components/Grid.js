@@ -20,6 +20,7 @@ const GridWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justifty-content: flex-start;
+  align-items: stretch;
 `
 
 const GridItem = styled.div`

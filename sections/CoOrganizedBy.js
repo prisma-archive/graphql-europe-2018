@@ -6,10 +6,16 @@ import SectionTitle from 'components/SectionTitle'
 import SectionContent from 'components/SectionContent'
 import OrganizersLogos from 'components/OrganizersLogos'
 
-const CoOrganizedBy = () => (
+const CoOrganizedBy = ({
+  noPaddingTop = true,
+  noPaddingBottom = false,
+}) => (
   <Wrapper>
     <Container>
-      <SectionContent noPaddingTop>
+      <SectionContent
+        noPaddingTop={noPaddingTop}
+        noPaddingBottom={noPaddingBottom}
+      >
         <SectionTitle spacing="medium">Co-Organized by</SectionTitle>
         <OrganizersLogos />
       </SectionContent>

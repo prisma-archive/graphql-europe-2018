@@ -40,10 +40,19 @@ class Sticky extends PureComponent {
   }
 
   checkScroll = e => {
+    const { alwaysSticky, notSticky } = this.props
     const scrollPos = window.pageYOffset || document.body.scrollTop
     const isMobile = window.matchMedia(mobileMediaString).matches
+
+    let pos = stickyPointPos
+    if (alwaysSticky) {
+      pos = 1
+    }
+
     this.setState({
-      shouldStick: isMobile ? false : scrollPos > stickyPointPos,
+      shouldStick:
+        notSticky ? false :
+        isMobile ? false : scrollPos > pos,
       isVisible: isMobile ? true : scrollPos < height,
     })
   }

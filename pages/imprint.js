@@ -12,7 +12,7 @@ import SectionContent from 'components/SectionContent'
 
 export default () => (
   <div>
-    <Navbar />
+    <Navbar notSticky={true} />
 
     <section>
       <Container>
