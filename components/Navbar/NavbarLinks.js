@@ -64,12 +64,12 @@ class NavbarLinks extends Component {
 export default NavbarLinks
 
 const Links = () => [
-  <NavItem href="/#">2017</NavItem>,
-  <NavItem href="/#">Attend</NavItem>,
-  <NavItem href="/#">Speak</NavItem>,
-  <NavItem href="/#">Sponsor</NavItem>,
-  <NavItem href="/#">Team</NavItem>,
-  <NavItem href="/#" isButtonStyle={true}>Register</NavItem>,
+  <NavItem key="1" href="/#">2017</NavItem>,
+  <NavItem key="2" href="/#">Attend</NavItem>,
+  <NavItem key="3" href="/#">Speak</NavItem>,
+  <NavItem key="4" href="/#">Sponsor</NavItem>,
+  <NavItem key="5" href="/#">Team</NavItem>,
+  <NavItem key="6" href="/#" isButtonStyle={true}>Register</NavItem>,
 ]
 
 const DesktopLinks = styled.div`
