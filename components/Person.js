@@ -7,7 +7,7 @@ import { mobile, desktop } from 'utils/media'
 import { specialRed } from 'utils/colors'
 import { resetButton } from 'utils/reset'
 import { boxStyle } from 'utils/mixins'
-import { Github } from 'components/Icons'
+import { Github, Twitter } from 'components/Icons'
 
 const Person = ({
   imageUrl,
@@ -30,6 +30,11 @@ const Person = ({
         <Name>{name}</Name>
 
         <Social>
+          {twitter &&
+            <SocialLink href={`https://github.com/${twitter}`}>
+              <Twitter />
+            </SocialLink>
+          }
           {github &&
             <SocialLink href={`https://github.com/${github}`}>
               <Github />
@@ -78,20 +83,20 @@ const Content = styled.div`
   width: 100%;
 
   padding-left: ${rem(10)};
-  padding-right: ${rem(10)};
+  padding-right: ${rem(3)}; /* social icons have paddings on the sides */
   margin-top: ${rem(30)};
 `
 
 const FirstRow = styled.div`
   display: flex;
   justify-content: space-between;
-
-  font-size: ${rem(16)};
+  align-items: bottom;
 `
 
 const Name = styled.h3`
   margin: 0;
   line-height: 1.2;
+  font-size: ${rem(16)};
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: ${rem(1)};
@@ -102,11 +107,28 @@ const Social = styled.div`
 `
 
 const Bio = styled.p`
-  margin: ${rem(10)} 0 0 0;
+  margin: ${rem(6)} 0 0 0;
   line-height: 1.5;
   color: #aaacaa;
+  font-size: ${rem(16)};
 `
 
 const SocialLink = styled.a`
+  padding: 0 ${rem(7)};
+  text-decoration: none;
 
+  svg {
+    height: ${rem(16)};
+  }
+
+  path {
+    fill: #cacaca;
+    transition: fill 100ms ease-out;
+  }
+
+  &:hover {
+    path {
+      fill: #888;
+    }
+  }
 `

@@ -5,11 +5,41 @@ import Container from 'components/Container'
 import SectionTitle from 'components/SectionTitle'
 import SectionContent from 'components/SectionContent'
 import Grid from 'components/Grid'
+import Person from 'components/Person'
 
 const speakersList = [
   {
-    
-  }
+    imageUrl: '/static/speakers/speakers-1',
+    imageFormat: 'jpg',
+    name: 'Peggy Rayzis',
+    bio: 'Open Source Engineer at Apollo',
+    twitter: 'peggyrayzis',
+    github: 'peggyrayzis',
+  },
+  {
+    imageUrl: '/static/speakers/speakers-2',
+    imageFormat: 'jpg',
+    name: 'Lee Bryon',
+    bio: 'Facebook, GraphQL co-creator',
+    twitter: 'leeb',
+    github: 'leebyron',
+  },
+  {
+    imageUrl: '/static/speakers/speakers-3',
+    imageFormat: 'jpg',
+    name: 'Nick Schrock',
+    bio: 'Ex-Facebook Engineer, GraphQL co-creator',
+    twitter: 'schrockn',
+    github: 'schrockn',
+  },
+  {
+    imageUrl: '/static/speakers/speakers-4',
+    imageFormat: 'jpg',
+    name: 'Kyle Daigle',
+    bio: 'Github',
+    twitter: 'kdaigle',
+    github: 'kdaigle',
+  },
 ]
 
 const Speakers = () => (
@@ -17,13 +47,13 @@ const Speakers = () => (
     <Container>
       <SectionContent>
         <SectionTitle spacing="large">
-          Speakers 2018 - placeholder -
+          Speakers 2018
         </SectionTitle>
 
         <Grid>
-          {GridItem => [].map((v, i) => (
+          {GridItem => speakersList.map((v, i) => (
             <GridItem key={i}>
-              <VideoHighlight {...v} />
+              <Person {...v} />
             </GridItem>
           ))}
         </Grid>
