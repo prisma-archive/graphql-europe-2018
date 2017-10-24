@@ -4,6 +4,7 @@ import retinaImage from 'polished/lib/mixins/retinaImage'
 
 import rem from 'utils/rem'
 import { mobile, desktop } from 'utils/media'
+import { resetButton } from 'utils/reset'
 import { PlayButton } from 'components/Icons'
 
 const VideoHighlight = ({
@@ -11,9 +12,11 @@ const VideoHighlight = ({
   imageFormat,
   title,
   description,
+  youtubeId,
+  onClick,
 }) => (
   <Tilt options={{ max: 13, scale: 1.01 }}>
-    <Wrapper>
+    <Wrapper onClick={() => onClick(youtubeId)}>
       <ImageWrapper url={imageUrl} format={imageFormat}>
         <img src={imageUrl + '.' + imageFormat} />
       </ImageWrapper>
@@ -33,7 +36,10 @@ const VideoHighlight = ({
 
 export default VideoHighlight
 
-const Wrapper = styled.div`
+const Wrapper = styled.button`
+  ${resetButton}
+
+  display: block;
   position: relative;
   width: 100%;
   height: ${rem(332)};
@@ -43,10 +49,25 @@ const Wrapper = styled.div`
   background: black;
   box-shadow: ${rem(8)} ${rem(8)} ${rem(22)} rgba(0, 0, 0, 0.14);
   transform-style: preserve-3d;
+  transition: opacity 150ms, box-shadow 150ms, transform 150ms ease-out;
+  cursor: pointer;
 
   ${mobile(css`
     height: ${rem(251)};
   `)}
+
+  &:hover,
+  &:focus {
+    opacity: 0.9;
+  }
+
+  &:focus {
+    box-shadow: ${rem(8)} ${rem(8)} ${rem(20)} rgba(0, 0, 0, 0.4);
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
 `
 
 const ImageWrapper = styled.div`

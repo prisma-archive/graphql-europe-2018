@@ -1,3 +1,4 @@
+import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
 
 import rem from 'utils/rem'
@@ -9,9 +10,10 @@ import SectionTitle from 'components/SectionTitle'
 import SectionContent from 'components/SectionContent'
 import SectionSeparator from 'components/SectionSeparator'
 import VideoHighlight from 'components/VideoHighlight'
+import Grid from 'components/Grid'
 import FactsRow from 'components/FactsRow'
 import { MobileTextBreak } from 'components/TextBreak'
-import Grid from 'components/Grid'
+import VideoModal from 'components/VideoModal'
 
 const gridGutter = 34 / 2 // half of desired value
 
@@ -21,71 +23,104 @@ const videos = [
     imageFormat: 'jpg',
     title: 'Five Years of Client GraphQL Infrastructure',
     description: 'Daniel Schafer, Facebook, GraphQL Co-Creator',
+    youtubeId: '5lcvRd80jYk',
   },
   {
     imageUrl: '/static/highlights/highlights-2',
     imageFormat: 'jpg',
     title: 'Launching GitHub\'s Public GraphQL API',
     description: 'Brooks Swinnerton, GitHub',
+    youtubeId: 'pxjIwOtVlwk',
   },
   {
     imageUrl: '/static/highlights/highlights-3',
     imageFormat: 'jpg',
     title: 'Closing Keynote',
     description: 'Lee Byron, Facebook, GraphQL Co-Creator',
+    youtubeId: 'mePT9MNTM98',
   },
   {
     imageUrl: '/static/highlights/highlights-4',
     imageFormat: 'jpg',
     title: 'Realtime GraphQL from the Trenches',
     description: 'Tasveer Singh, Mainframe',
+    youtubeId: 'ShrCTUJJDT0',
   },
   {
     imageUrl: '/static/highlights/highlights-5',
     imageFormat: 'jpg',
     title: 'Building a GraphQL client in Javascript',
     description: 'Mina Smart, Shopify',
+    youtubeId: 'AUpUfsNoW4o',
   },
   {
     imageUrl: '/static/highlights/highlights-6',
     imageFormat: 'jpg',
     title: 'Adding GraphQL to your existing architecture',
     description: 'Sashko Stubailo, Meteor/Apollo',
+    youtubeId: 'bIY2SUSEBY0',
   },
 ]
 
-const Highlights = () => (
-  <Wrapper>
-    <Container>
-      <SectionSeparator />
+class Highlights extends Component {
+  state = {
+    activeVideoYoutubeId: null
+  }
 
-      <TopGraphBgWrapper>
-        <GraphBg />
-      </TopGraphBgWrapper>
+  render() {
+    const { activeVideoYoutubeId } = this.state
 
-      <LowerGraphBgWrapper>
-        <GraphBg />
-      </LowerGraphBgWrapper>
+    return (
+      <Wrapper>
+        <Container>
+          <SectionSeparator />
 
-      <SectionContent>
-        <SectionTitle spacing="large">
-          Highlights from <MobileTextBreak />GraphQL-Europe 2017
-        </SectionTitle>
+          <TopGraphBgWrapper>
+            <GraphBg />
+          </TopGraphBgWrapper>
 
-        <Grid>
-          {GridItem => videos.map((v, i) => (
-            <GridItem key={i}>
-              <VideoHighlight {...v} />
-            </GridItem>
-          ))}
-        </Grid>
+          <LowerGraphBgWrapper>
+            <GraphBg />
+          </LowerGraphBgWrapper>
 
-        <FactsRow />
+          <SectionContent>
+            <SectionTitle spacing="large">
+              Highlights from <MobileTextBreak />GraphQL-Europe 2017
+            </SectionTitle>
 
-      </SectionContent>
-    </Container>
-  </Wrapper>
-)
+            <Grid>
+              {GridItem => videos.map((v, i) => (
+                <GridItem key={i}>
+                  <VideoHighlight
+                    {...v}
+                    onClick={this.videoClicked}
+                  />
+                </GridItem>
+              ))}
+            </Grid>
+
+            <VideoModal
+              isOpen={!!activeVideoYoutubeId}
+              youtubeId={activeVideoYoutubeId}
+              onClose={this.modalClosed}
+            />
+
+            <FactsRow />
+
+          </SectionContent>
+        </Container>
+      </Wrapper>
+    )
+  }
+
+  videoClicked = youtubeId => {
+    this.setState({ activeVideoYoutubeId: youtubeId })
+  }
+
+  modalClosed = () => {
+    this.setState({ activeVideoYoutubeId: false })
+  }
+}
 
 export default Highlights
 
