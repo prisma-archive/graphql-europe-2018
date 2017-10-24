@@ -18,7 +18,7 @@ const videos = [
   {
     imageUrl: '/static/highlights/highlights-1.png',
     title: 'Five Years of Client GraphQL Infrastructure',
-    description: 'Daniel Schafer, Facebook, GraphQL co-creator',
+    description: 'Daniel Schafer, Facebook, GraphQL Co-Creator',
   },
   {
     imageUrl: '/static/highlights/graphql13-2.png',
@@ -28,7 +28,7 @@ const videos = [
   {
     imageUrl: '/static/highlights/graphql14.png',
     title: 'Closing Keynote',
-    description: 'Lee Byron, Facebook, GraphQL co-creator',
+    description: 'Lee Byron, Facebook, GraphQL Co-Creator',
   },
   {
     imageUrl: '/static/highlights/graphql12.png',

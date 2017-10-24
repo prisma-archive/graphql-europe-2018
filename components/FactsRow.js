@@ -10,7 +10,7 @@ const FactsRow = () => (
   <Wrapper>
     <Fact
       value="100%"
-      desc="Would attend again"
+      desc="of attendees said would attend again"
       renderIcon={() => <Prize />}
     />
     <Fact

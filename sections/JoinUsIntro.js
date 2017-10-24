@@ -44,7 +44,7 @@ const JoinUsIntro = () => (
         </Meta>
 
         <ButtonWrapper>
-          <Button>Get Ticket</Button>
+          <Button>Get Tickets</Button>
         </ButtonWrapper>
 
       </SectionContent>
