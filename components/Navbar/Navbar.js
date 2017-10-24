@@ -57,6 +57,8 @@ const Wrapper = styled.div`
     top: ${rem(-navHeight)};
     right: 0;
     left: 0;
+
+    background: white;
   ` : ''}
 
   ${p => p.shouldStick ? css`
@@ -66,9 +68,8 @@ const Wrapper = styled.div`
     left: 0;
     z-index: 9;
 
-    background: white;
-    border-bottom: 1px solid #f1f1f1;
     box-shadow: 0 ${rem(3)} ${rem(10)} rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid #f1f1f1;
   ` : ''}
 `
 
