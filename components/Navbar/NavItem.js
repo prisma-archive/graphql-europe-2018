@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 import Link from 'next/link'
 import darken from 'polished/lib/color/darken'
+import Scrollchor from 'react-scrollchor'
 
 import rem from 'utils/rem'
 import { mobile } from 'utils/media'
@@ -8,17 +9,32 @@ import { almostBlack, specialRed } from 'utils/colors'
 
 const height = 40
 
-const NavItem = ({ children, isButtonStyle = false, href, ...props }) => {
-  let Item = LinkItem
-  if (isButtonStyle) {
+const NavItem = ({ children, isButtonStyle = false, href, isAnchor = false, ...props }) => {
+  let Item
+  if (isAnchor && isButtonStyle) {
+    Item = ScrollchorButtonItem
+  } else if (isAnchor && !isButtonStyle) {
+    Item = ScrollchorLinkItem
+  } else if (isButtonStyle) {
     Item = ButtonItem
+  } else {
+    Item = LinkItem
+  }
+
+  if (isAnchor) {
+    return (
+      <Wrapper {...props}>
+        <Item to={href}>
+          {children}
+        </Item>
+      </Wrapper>
+    )
   }
 
   return (
     <Link href={href}>
       <Wrapper {...props}>
         <Item
-          isButtonStyle={isButtonStyle}
           href={href}
           children={children}
         />
@@ -127,3 +143,6 @@ const ButtonItem = BaseItem.extend`
     transform: scale(0.95);
   }
 `
+
+const ScrollchorLinkItem = LinkItem.withComponent(Scrollchor)
+const ScrollchorButtonItem = ButtonItem.withComponent(Scrollchor)

@@ -10,7 +10,7 @@ import SectionSeparator from 'components/SectionSeparator'
 import Ticket from 'components/Ticket'
 
 const GetYourTicket = () => (
-  <Wrapper>
+  <Wrapper id="get-your-ticket">
     <Container>
       <SectionContent>
 

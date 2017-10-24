@@ -19,6 +19,7 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-onclickout": "^2.0.8",
+    "react-scrollchor": "^4.0.0",
     "react-tilt": "^0.1.4",
     "react-youtube": "^7.5.0",
     "styled-components": "^2.2.1"

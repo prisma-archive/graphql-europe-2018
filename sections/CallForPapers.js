@@ -10,7 +10,7 @@ import SectionContent from 'components/SectionContent'
 import Button from 'components/Button'
 
 const CallForPapers = () => (
-  <Wrapper>
+  <Wrapper id="call-for-papers">
     <Container>
       <SectionContent>
       <FlexWrapper>

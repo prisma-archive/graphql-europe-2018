@@ -10,7 +10,7 @@ import SectionContent from 'components/SectionContent'
 import Button from 'components/Button'
 
 const WantToSponsor = () => (
-  <Wrapper>
+  <Wrapper id="want-to-sponsor">
     <Container>
       <SectionContent>
       <FlexWrapper>

@@ -3915,6 +3915,10 @@ react-proxy@^3.0.0-alpha.0:
   dependencies:
     lodash "^4.6.1"
 
+react-scrollchor@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/react-scrollchor/-/react-scrollchor-4.0.0.tgz#b1aa4783f9f968ef0981a68fbc3854c60918e969"
+
 react-tilt@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/react-tilt/-/react-tilt-0.1.4.tgz#0ac1f33674a3fff6c617cf411002d7ecdd2ebcb1"
