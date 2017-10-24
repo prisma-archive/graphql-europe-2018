@@ -35,11 +35,11 @@ const JoinUsIntro = () => (
         <Meta>
           <MetaItem>
             <MetaItemKey>Date</MetaItemKey>
-            <MetaItemValue>TBA, 2018</MetaItemValue>
+            <MetaItemValue>June 15th, 2018</MetaItemValue>
           </MetaItem>
           <MetaItem>
             <MetaItemKey>Location</MetaItemKey>
-            <MetaItemValue>TBA, Berlin</MetaItemValue>
+            <MetaItemValue>nHow Hotel, Berlin</MetaItemValue>
           </MetaItem>
         </Meta>
 
