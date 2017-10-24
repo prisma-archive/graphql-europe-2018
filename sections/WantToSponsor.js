@@ -30,7 +30,6 @@ const WantToSponsor = () => (
 
           <ButtonWrapper>
             <Button>Contact Us</Button>
-            <OrLink href="/">or download sponsor pack</OrLink>
           </ButtonWrapper>
         </Texts>
 
