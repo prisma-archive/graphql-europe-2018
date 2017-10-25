@@ -14,8 +14,10 @@ class Sticky extends PureComponent {
   }
 
   state = {
+    lastScrollPos: process.browser && getScrollPos(),
     shouldStick: false,
     isVisible: true,
+    isTransitioning: false,
   }
 
   componentDidMount() {
@@ -30,18 +32,17 @@ class Sticky extends PureComponent {
 
   render() {
     const { children } = this.props
-    const { shouldStick, isVisible } = this.state
 
     if (typeof children !== 'function') {
       return null
     }
 
-    return children({ shouldStick, isVisible })
+    return children(this.state)
   }
 
   checkScroll = e => {
     const { alwaysSticky, notSticky } = this.props
-    const scrollPos = window.pageYOffset || document.body.scrollTop
+    const scrollPos = getScrollPos()
     const isMobile = window.matchMedia(mobileMediaString).matches
 
     let pos = stickyPointPos
@@ -49,13 +50,34 @@ class Sticky extends PureComponent {
       pos = 1
     }
 
-    this.setState({
-      shouldStick:
+    this.setState(({ lastScrollPos, shouldStick: lastShouldStick }) => {
+      const shouldStick =
         notSticky ? false :
-        isMobile ? false : scrollPos > pos,
-      isVisible: isMobile ? true : scrollPos < height,
+        isMobile ? false :
+        scrollPos > pos && scrollPos < lastScrollPos; // check if it's scrolling up
+
+      let isTransitioning = false
+      if (shouldStick !== lastShouldStick) {
+        isTransitioning = true
+        setTimeout(() => {
+          if (this) {
+            this.setState({ isTransitioning: false })
+          }
+        }, 100)
+      }
+
+      return {
+        shouldStick,
+        isTransitioning,
+        isVisible: isMobile ? true : scrollPos < height,
+        lastScrollPos: scrollPos,
+      }
     })
   }
 }
 
 export default Sticky
+
+function getScrollPos() {
+  return window.pageYOffset || document.body.scrollTop
+}

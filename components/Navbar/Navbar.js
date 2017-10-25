@@ -14,13 +14,14 @@ const mobileLogoHeight = 50
 
 const Navbar = ({ alwaysSticky = false, notSticky = false }) => (
   <Sticky alwaysSticky={alwaysSticky} notSticky={notSticky}>
-    {({ shouldStick, isVisible }) => ([
+    {({ shouldStick, isVisible, isTransitioning }) => ([
       <Placeholder key="1" shouldStick={shouldStick} />,
 
       <Wrapper
         key="2"
         shouldStick={shouldStick}
         isVisible={isVisible}
+        isTransitioning={isTransitioning}
       >
         <Container>
           <FlexWrapper>
@@ -49,38 +50,46 @@ export default Navbar
 
 const Wrapper = styled.div`
   width: 100%;
-  top: ${rem(-navHeight)};
   height: ${rem(navHeight)};
   background: linear-gradient(180deg, white 0%, rgba(255, 255, 255, 0) 100%);
-  transition: all 200ms ease-out;
+  will-change: transform;
+
+  position: absolute;
+  top: 0;
+  z-index: 9;
+  transform: translateY(0);
 
   ${mobile(css`
     height: ${rem(mobileNavHeight)};
   `)}
 
-  ${p => !p.isVisible ? css`
+  ${p => !p.isVisible && css`
     background: white;
-  ` : ''}
 
-  ${p => p.shouldStick ? css`
     position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 9;
+    visibility: hidden;
+    transform: translateY(-100%);
+  `}
 
+  ${p => p.isTransitioning && css`
+    transition: all 100ms ease-in-out;
+  `}
+
+  ${p => p.shouldStick && css`
+    position: fixed;
+    transform: translateY(0);
     visibility: visible;
 
     box-shadow: 0 ${rem(3)} ${rem(10)} rgba(0, 0, 0, 0.08);
     border-bottom: 1px solid #f1f1f1;
-  ` : ''}
+  `}
 `
 
 const Placeholder = styled.div`
-  ${p => p.shouldStick ? css`
+  ${p => p.shouldStick && css`
     width: 100%;
     height: ${rem(navHeight)};
-  ` : ''}
+  `}
 `
 
 const FlexWrapper = styled.nav`
