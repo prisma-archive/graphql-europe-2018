@@ -17,11 +17,17 @@ const Person = ({
   twitter,
   github,
   blackAndWhite = false,
+  noShadow = false,
   ...props
 }) => (
   <Wrapper {...props}>
     <Tilt options={{ max: 10, scale: 1 }}>
-      <ImageWrapper url={imageUrl} format={imageFormat} blackAndWhite={blackAndWhite}>
+      <ImageWrapper
+        url={imageUrl}
+        format={imageFormat}
+        noShadow={noShadow}
+        blackAndWhite={blackAndWhite}
+      >
         <img src={`${imageUrl}.${imageFormat}`} />
       </ImageWrapper>
     </Tilt>
@@ -64,8 +70,12 @@ const ImageWrapper = styled.div`
 
   ${boxStyle(false, false)}
   ${p => css`${retinaImage(p.url, 'cover', p.format, undefined, '@2x')}`}
-
-  ${p => p.blackAndWhite && css`filter: saturate(0) brightness(1.02);`}
+  ${p => p.blackAndWhite && css`
+    filter: saturate(0) brightness(1.02);
+  `}
+  ${p => p.noShadow && css`
+    box-shadow: none;
+  `}
 
   background-position: center center;
   background-repeat: no-repeat;

@@ -40,6 +40,13 @@ const speakersList = [
     twitter: 'kdaigle',
     github: 'kdaigle',
   },
+  {
+    imageUrl: '/static/speakers/you-want-to-talk',
+    imageFormat: 'jpg',
+    name: 'This can be you!',
+    bio: 'Register today',
+    noShadow: true,
+  },
 ]
 
 const Speakers = () => (
