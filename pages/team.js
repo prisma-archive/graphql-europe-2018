@@ -22,6 +22,7 @@ const team = [
     bio: `Oleg is a passionate software engineer and speaker who loves innovative ideas and technology, challenging problems and working on things that help other people. Oleg is an author of Sangria - a scala GraphQL implementation.`,
     twitter: 'easyangel',
     github: 'OlegIlyenko',
+    blackAndWhite: true,
   },
   {
     imageUrl: '/static/team/team-2',
@@ -30,6 +31,7 @@ const team = [
     bio: `Johannes is a Berlin/SF-based entrepreneur  and founder of Graphcool, a flexible backend platform combining GraphQL+ AWS Lambda.  He previously built and sold the VR company “Optonaut”. Johannes studied computer science at KIT, Germany and loves cutting- edge mobile/web tech-nologies.`,
     twitter: '_schickling',
     github: 'schickling',
+    blackAndWhite: true,
   },
   {
     imageUrl: '/static/team/team-3',
@@ -51,7 +53,7 @@ const team = [
     imageUrl: '/static/team/team-5',
     imageFormat: 'jpg',
     name: 'Ekaterina Kromina',
-    bio: `Johannes is a Berlin/SF-based entrepreneur  and founder of Graphcool, a flexible backend platform combining GraphQL+ AWS Lambda.  He previously built and sold the VR company “Optonaut”. Johannes studied computer science at KIT, Germany and loves cutting- edge mobile/web tech-nologies.`,
+    bio: `Ekaterina is a Growth Manager at Honeypot. Originally from Moscow, Kate moved to Amsterdam to study management in creative industries. With experience in advertising and cinema, she enjoys making events happen.`,
     twitter: 'kromina_ek',
   },
 ]
