@@ -37,6 +37,9 @@ const Footer = () => (
               <LinkItem href="/#">API</LinkItem>
               <LinkItem href="/code-of-conduct">Code of Conduct</LinkItem>
               <LinkItem href="/imprint">Imprint</LinkItem>
+              <LinkItem href="https://github.com/graphcool/graphql-europe-2018">
+                <span>View source</span>
+              </LinkItem>
             </Column>
 
             <Column>
@@ -44,9 +47,9 @@ const Footer = () => (
                 <IconWrapper><Twitter /></IconWrapper>
                 <span>Twitter</span>
               </LinkItem>
-              <LinkItem href="https://github.com/graphql-europe">
-                <IconWrapper><Github /></IconWrapper>
-                <span>Github</span>
+              <LinkItem href="https://medium.com/graphql-europe">
+                <IconWrapper medium><Medium /></IconWrapper>
+                <span>Medium</span>
               </LinkItem>
               <LinkItem href="mailto:support@graphql-europe.org">
                 <IconWrapper><Mail /></IconWrapper>
@@ -187,7 +190,7 @@ const IconWrapper = styled.span`
 
   svg {
     display: inline-block;
-    vertical-align: -2px;
+    vertical-align: ${p => p.medium ? '0' : '1px'};
     width: ${rem(17)};
     height: auto;
   }
