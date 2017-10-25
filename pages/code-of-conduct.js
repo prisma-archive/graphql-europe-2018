@@ -98,6 +98,7 @@ export default () => (
 )
 
 const Desc = styled.p`
+  max-width: ${rem(800)};
   font-size: ${rem(25)};
   line-height: 1.67;
 
@@ -115,11 +116,12 @@ const Body = styled.div`
   `)}
 
   p {
+    max-width: ${rem(800)};
+
     margin-top: 0;
     margin-bottom: ${rem(25)};
     color: ${textDarkGrey};
     line-height: 1.5;
-    max-width: ${rem(700)};
   }
 `
 
