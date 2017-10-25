@@ -8,9 +8,12 @@ import SectionTitle from 'components/SectionTitle'
 import SectionContent from 'components/SectionContent'
 import SectionSeparator from 'components/SectionSeparator'
 import Ticket from 'components/Ticket'
+import { InvisibleAnchor } from 'components/Anchor'
 
-const GetYourTicket = () => (
-  <Wrapper id="get-your-ticket">
+const GetYourTicket = () => [
+  <InvisibleAnchor key="1" id="get-your-ticket" />,
+
+  <Wrapper key="2">
     <Container>
       <SectionContent>
 
@@ -52,7 +55,7 @@ const GetYourTicket = () => (
       </SectionContent>
     </Container>
   </Wrapper>
-)
+]
 
 export default GetYourTicket
 

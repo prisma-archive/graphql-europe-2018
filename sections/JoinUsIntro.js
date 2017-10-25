@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import Scrollchor from 'react-scrollchor'
 
 import rem from 'utils/rem'
 import { textLightGrey, textGrey, specialRed } from 'utils/colors'
@@ -46,7 +47,9 @@ const JoinUsIntro = () => (
           </Meta>
 
           <ButtonWrapper>
-            <Button>Get Tickets</Button>
+            <Scrollchor to="#get-your-ticket">
+              <Button>Get Tickets</Button>
+            </Scrollchor>
           </ButtonWrapper>
 
         </SectionContent>
