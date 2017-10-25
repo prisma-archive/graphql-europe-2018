@@ -52,7 +52,8 @@ const Wrapper = styled.div`
   width: 100%;
   height: ${rem(navHeight)};
   background: linear-gradient(180deg, white 0%, rgba(255, 255, 255, 0) 100%);
-  will-change: transform;
+  opacity: 1;
+  transition: opacity 150ms ease-in-out;
 
   position: absolute;
   top: 0;
@@ -65,6 +66,7 @@ const Wrapper = styled.div`
 
   ${p => !p.isVisible && css`
     background: white;
+    opacity: 0;
 
     position: fixed;
     visibility: hidden;
@@ -79,6 +81,7 @@ const Wrapper = styled.div`
     position: fixed;
     transform: translateY(0);
     visibility: visible;
+    opacity: 1;
 
     box-shadow: 0 ${rem(3)} ${rem(10)} rgba(0, 0, 0, 0.08);
     border-bottom: 1px solid #f1f1f1;
