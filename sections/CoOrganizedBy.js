@@ -1,6 +1,7 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import rem from 'utils/rem'
+import { mobile } from 'utils/media'
 import Container from 'components/Container'
 import SectionTitle from 'components/SectionTitle'
 import SectionContent from 'components/SectionContent'
@@ -27,4 +28,8 @@ export default CoOrganizedBy
 
 const Wrapper = styled.section`
   text-align: center;
+
+  ${mobile(css`
+    text-align: left;
+  `)}
 `

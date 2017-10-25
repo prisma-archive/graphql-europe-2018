@@ -4,12 +4,18 @@ import rem from 'utils/rem'
 import { mobile } from 'utils/media'
 import { X } from 'components/Icons'
 
-const OrganizersLogos = () => (
+const OrganizersLogos = ({ compact = false }) => (
   <Wrapper>
     <FlexWrapper>
-      <LogoImage src="/static/logos/honeypot.svg" alt="Honeypot" />
-      <XWrapper><X /></XWrapper>
-      <LogoImage src="/static/logos/graphcool.svg" alt="Graphcool" />
+      <a href="https://www.honeypot.io/" target="_blank">
+        <LogoImage src="/static/logos/honeypot.svg" alt="Honeypot" compact={compact} />
+      </a>
+
+      <XWrapper compact={compact}><X /></XWrapper>
+
+      <a href="https://www.graph.cool/" target="_blank">
+        <LogoImage src="/static/logos/graphcool.svg" alt="Graphcool" compact={compact} last={true} />
+      </a>
     </FlexWrapper>
   </Wrapper>
 )
@@ -23,26 +29,65 @@ const Wrapper = styled.div`
 const FlexWrapper = styled.div`
   display: flex;
   align-items: center;
+
+  ${mobile(css`
+    flex-direction: column;
+    align-items: flex-start;
+  `)}
 `
 
 const XWrapper = styled.div`
   margin: 0 ${rem(30)};
 
-  ${mobile(css`
-    margin: 0 ${rem(15)};
+  ${p => p.compact ? css`
+    margin: 0 ${rem(18)};
 
     svg {
-      width: ${rem(30)};
+      width: ${rem(15)};
       height: auto;
+
+      path {
+        stroke-width: 2px;
+      }
     }
+  ` : ''}
+
+  ${mobile(css`
+    display: none;
   `)}
 `
 
 const LogoImage = styled.img`
+  position: relative;
+  top: 0;
+  left: 0;
   display: inline-block;
   height: ${rem(50)};
+  transition: all 70ms;
+
+  &:hover {
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15));
+    top: -1px;
+    left: -1px;
+    opacity: 0.9;
+  }
+
+  ${p => p.compact ? css`
+    height: ${rem(25)};
+  ` : ''}
 
   ${mobile(css`
-    height: ${rem(30)};
+    ${p => p.compact ? css`
+      height: ${rem(30)};
+      margin-bottom: ${rem(10)};
+    ` : css`
+      width: ${rem(230)};
+      height: auto;
+      margin-bottom: ${rem(20)};
+    `}
+
+    ${p => p.last ? css`
+      margin-bottom: 0;
+    ` : ''}
   `)}
 `
