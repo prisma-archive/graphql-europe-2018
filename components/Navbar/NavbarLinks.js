@@ -69,7 +69,7 @@ const Links = () => [
   <NavItem key="3" href="#call-for-papers" isAnchor={true}>Speak</NavItem>,
   <NavItem key="4" href="#want-to-sponsor" isAnchor={true}>Sponsor</NavItem>,
   <NavItem key="5" href="/team">Team</NavItem>,
-  <NavItem key="6" href="#get-your-ticket" isButtonStyle={true} isAnchor={true}>Register</NavItem>,
+  <NavItem key="6" href="#get-your-ticket" isButtonStyle={true} isAnchor={true}>Get Tickets</NavItem>,
 ]
 
 const DesktopLinks = styled.div`
