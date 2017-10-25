@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 
 import rem from 'utils/rem'
 import { textLightGrey, textGrey, specialRed } from 'utils/colors'
+import { upperCaseHeading } from 'utils/mixins'
 import {
   navHeight,
   mobileNavHeight,
@@ -133,12 +134,7 @@ const MetaItem = styled.div`
 `
 
 const MetaItemKey = styled.div`
-  line-height: 1.1;
-  font-size: ${rem(16)};
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-  color: ${specialRed};
+  ${upperCaseHeading}
 `
 
 const MetaItemValue = styled.div`

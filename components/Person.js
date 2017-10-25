@@ -6,7 +6,7 @@ import rem from 'utils/rem'
 import { mobile, desktop } from 'utils/media'
 import { specialRed } from 'utils/colors'
 import { resetButton } from 'utils/reset'
-import { boxStyle } from 'utils/mixins'
+import { boxStyle, upperCaseHeading } from 'utils/mixins'
 import { Github, Twitter } from 'components/Icons'
 
 const Person = ({
@@ -95,12 +95,8 @@ const FirstRow = styled.div`
 
 const Name = styled.h3`
   margin: 0;
-  line-height: 1.2;
-  font-size: ${rem(16)};
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: ${rem(1)};
-  color: ${specialRed};
+
+  ${upperCaseHeading}
 `
 
 const Social = styled.div`

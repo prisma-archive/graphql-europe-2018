@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components'
 import rem from 'utils/rem'
 import { mobile } from 'utils/media'
 import { specialRed, textLightGrey, textDarkGrey, textGrey } from 'utils/colors'
+import { upperCaseHeading } from 'utils/mixins'
 import withData from 'utils/withData'
 
 import Footer from '../sections/Footer'
@@ -130,7 +131,5 @@ const Heading = styled.h2`
   margin-top: ${rem(30)};
   margin-bottom: ${rem(25)};
 
-  font-size: ${rem(16)};
-  text-transform: uppercase;
-  color: ${specialRed};
+  ${upperCaseHeading}
 `
