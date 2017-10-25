@@ -13,6 +13,7 @@ import SectionContent from 'components/SectionContent'
 import Person from 'components/Person'
 import Grid from 'components/Grid'
 import CoOrganizedBy from '../sections/CoOrganizedBy'
+import WantToSponsor from '../sections/WantToSponsor'
 
 const team = [
   {
@@ -79,6 +80,8 @@ export default withData(() => (
         </SectionContent>
       </Container>
     </section>
+
+    <WantToSponsor noPic={true} />
 
     <Footer />
   </div>

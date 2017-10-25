@@ -9,36 +9,36 @@ import SectionTitle from 'components/SectionTitle'
 import SectionContent from 'components/SectionContent'
 import Button from 'components/Button'
 
-const WantToSponsor = () => (
+const WantToSponsor = ({ noPic = false }) => (
   <Wrapper id="want-to-sponsor">
     <Container>
       <SectionContent>
-      <FlexWrapper>
+        <FlexWrapper noPic={noPic}>
 
-        <ImageWrapper>
-          <img src="/static/photos/sponsors.png" />
-        </ImageWrapper>
+          <ImageWrapper noPic={noPic}>
+            <img src="/static/photos/sponsors.png" />
+          </ImageWrapper>
 
-        <Texts>
-          <SectionTitle spacing="medium">
-            Want to sponsor?
-          </SectionTitle>
+          <Texts noPic={noPic}>
+            <SectionTitle spacing="medium">
+              Want to sponsor?
+            </SectionTitle>
 
-          <Desc>
-            GraphQL-Europe is an excellent opportunity to reach some of the best software developers in the industry. Contact our sponsor team for more information regarding sponsor packages.
-          </Desc>
+            <Desc>
+              GraphQL-Europe is an excellent opportunity to reach some of the best software developers in the industry. Contact our sponsor team for more information regarding sponsor packages.
+            </Desc>
 
-          <ButtonWrapper>
-            <Button
-              isLink={true}
-              href="mailto:sponsors@graphql-europe.org"
-            >
-              Contact Us
-            </Button>
-          </ButtonWrapper>
-        </Texts>
+            <ButtonWrapper noPic={noPic}>
+              <Button
+                isLink={true}
+                href="mailto:sponsors@graphql-europe.org"
+              >
+                Contact Us
+              </Button>
+            </ButtonWrapper>
+          </Texts>
 
-      </FlexWrapper>
+        </FlexWrapper>
       </SectionContent>
     </Container>
   </Wrapper>
@@ -59,6 +59,10 @@ const FlexWrapper = styled.div`
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
+
+  ${p => p.noPic && css`
+    justify-content: center;
+  `}
 `
 
 const Texts = styled.div`
@@ -66,10 +70,22 @@ const Texts = styled.div`
   padding: ${rem(16)} 0;
   margin-left: ${rem(86)};
 
+  ${p => p.noPic && css`
+    width: 100%;
+    max-width: ${rem(735)};
+    margin-left: 0;
+    padding: 0;
+    text-align: center;
+  `}
+
   ${mobile(css`
     width: 100%;
     margin-left: 0;
     padding: ${rem(45)} 0 0 0;
+
+    ${p => p.noPic && css`
+      padding: 0;
+    `}
   `)}
 `
 
@@ -86,6 +102,10 @@ const ImageWrapper = styled.div`
     width: 1px;
     display: none;
   }
+
+  ${p => p.noPic && css`
+    display: none;
+  `}
 
   ${mobile(css`
     width: 100%;
@@ -106,6 +126,10 @@ const ButtonWrapper = styled.div`
   margin-top: ${rem(35)};
   display: flex;
   align-items: center;
+
+  ${p => p.noPic && css`
+    justify-content: center;
+  `}
 `
 
 const OrLink = styled.a`
