@@ -48,7 +48,7 @@ const Footer = () => (
                 <IconWrapper><Github /></IconWrapper>
                 <span>Github</span>
               </LinkItem>
-              <LinkItem href="mailto:contact@graphql-europe.org">
+              <LinkItem href="mailto:support@graphql-europe.org">
                 <IconWrapper><Mail /></IconWrapper>
                 <span>Contact us!</span>
               </LinkItem>

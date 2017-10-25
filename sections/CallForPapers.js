@@ -29,7 +29,12 @@ const CallForPapers = () => (
           </Desc>
 
           <ButtonWrapper>
-            <Button>Contact Us</Button>
+            <Button
+              isLink={true}
+              href="mailto:support@graphql-europe.org"
+            >
+              Contact Us
+            </Button>
           </ButtonWrapper>
         </Texts>
 
