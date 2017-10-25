@@ -1,3 +1,5 @@
+import withData from 'utils/withData'
+
 import JoinUsIntro from '../sections/JoinUsIntro'
 import JoinTheCommunity from '../sections/JoinTheCommunity'
 import Highlights from '../sections/Highlights'
@@ -10,7 +12,7 @@ import CoOrganizedBy from '../sections/CoOrganizedBy'
 import Sponsors from '../sections/Sponsors'
 import Footer from '../sections/Footer'
 
-export default () => (
+export default withData(() => (
   <div>
     <JoinUsIntro />
     <JoinTheCommunity />
@@ -27,4 +29,4 @@ export default () => (
 
     <Footer />
   </div>
-)
+))

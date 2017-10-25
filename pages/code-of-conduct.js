@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components'
 import rem from 'utils/rem'
 import { mobile } from 'utils/media'
 import { specialRed, textLightGrey, textDarkGrey, textGrey } from 'utils/colors'
+import withData from 'utils/withData'
 
 import Footer from '../sections/Footer'
 import Navbar from 'components/Navbar'
@@ -10,7 +11,7 @@ import PageTitle from 'components/PageTitle'
 import Container from 'components/Container'
 import SectionContent from 'components/SectionContent'
 
-export default () => (
+export default withData(() => (
   <div>
     <Navbar notSticky={true} />
 
@@ -95,7 +96,7 @@ export default () => (
 
     <Footer />
   </div>
-)
+))
 
 const Desc = styled.p`
   max-width: ${rem(800)};

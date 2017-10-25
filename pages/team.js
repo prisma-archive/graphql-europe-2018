@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components'
 import rem from 'utils/rem'
 import { mobile } from 'utils/media'
 import { specialRed, textLightGrey } from 'utils/colors'
+import withData from 'utils/withData'
 
 import Footer from '../sections/Footer'
 import Navbar from 'components/Navbar'
@@ -55,7 +56,7 @@ const team = [
   },
 ]
 
-export default () => (
+export default withData(() => (
   <div>
     <Navbar notSticky={true} />
 
@@ -79,4 +80,4 @@ export default () => (
 
     <Footer />
   </div>
-)
+))
