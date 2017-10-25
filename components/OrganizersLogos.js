@@ -6,7 +6,7 @@ import { X } from 'components/Icons'
 
 const OrganizersLogos = ({ compact = false }) => (
   <Wrapper>
-    <FlexWrapper>
+    <FlexWrapper compact={compact}>
       <a href="https://www.honeypot.io/" target="_blank">
         <LogoImage src="/static/logos/honeypot.svg" alt="Honeypot" compact={compact} />
       </a>
@@ -31,8 +31,10 @@ const FlexWrapper = styled.div`
   align-items: center;
 
   ${mobile(css`
-    flex-direction: column;
-    align-items: flex-start;
+    ${p => !p.compact ? css`
+      flex-direction: column;
+      align-items: flex-start;
+    `: ''}
   `)}
 `
 
@@ -53,7 +55,9 @@ const XWrapper = styled.div`
   ` : ''}
 
   ${mobile(css`
-    display: none;
+    ${p => !p.compact && css`
+      display: none;
+    `}
   `)}
 `
 
@@ -72,22 +76,19 @@ const LogoImage = styled.img`
     opacity: 0.9;
   }
 
-  ${p => p.compact ? css`
+  ${p => p.compact && css`
     height: ${rem(25)};
-  ` : ''}
+  `}
 
   ${mobile(css`
-    ${p => p.compact ? css`
-      height: ${rem(30)};
-      margin-bottom: ${rem(10)};
-    ` : css`
+    ${p => !p.compact && css`
       width: ${rem(230)};
       height: auto;
       margin-bottom: ${rem(20)};
     `}
 
-    ${p => p.last ? css`
+    ${p => p.last && css`
       margin-bottom: 0;
-    ` : ''}
+    `}
   `)}
 `
