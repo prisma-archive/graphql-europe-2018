@@ -27,7 +27,7 @@ const Footer = () => (
             </LogoWrapper>
 
             <Column>
-              <LinkItem href="/#get-your-ticket">Attend</LinkItem>
+              <LinkItem href="/#get-your-ticket">Get Tickets</LinkItem>
               <LinkItem href="/#speakers">Speakers</LinkItem>
               <LinkItem href="/#want-to-sponsor">Sponsors</LinkItem>
               <LinkItem href="/team">Team</LinkItem>
