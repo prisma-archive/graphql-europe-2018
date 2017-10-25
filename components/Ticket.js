@@ -10,6 +10,7 @@ const VideoHighlight = ({
   price,
   name,
   desc,
+  href,
   comingSoon = false,
   disabled = false,
   buttonLabel = 'Register',
@@ -28,7 +29,9 @@ const VideoHighlight = ({
 
     <ButtonWrapper>
       <Button
+        isLink={true}
         disabled={disabled}
+        href={href}
         onClick={onSelect}
       >
         {buttonLabel}

@@ -27,7 +27,8 @@ const GetYourTicket = () => (
               comingSoon={true}
               price="149€"
               name="Early Bird"
-              desc="Available from 20th of October"
+              desc="Available from 26th of October"
+              href="https://www.eventbrite.com/e/graphql-europe-2018-tickets-39184180940"
             />
           </TicketWrapper>
           <TicketWrapper>
