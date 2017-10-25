@@ -1,8 +1,13 @@
+import React, { PureComponent } from 'react'
 import styled, { css } from 'styled-components'
+import { graphql } from 'react-apollo'
+import gql from 'graphql-tag'
 
 import rem from 'utils/rem'
 import { mobile } from 'utils/media'
+import { textGrey } from 'utils/colors'
 import { BaseButton } from 'components/Button'
+import { Mail } from 'components/Icons'
 
 const Newsletter = () => (
   <Wrapper>
@@ -12,20 +17,100 @@ const Newsletter = () => (
       <Title>Sign up for our newletter</Title>
     </Texts>
 
-    <Form>
-      <Field>
-        <InputWrapper>
-          <Label htmlFor="nl-email">Email</Label>
-          <Input id="nl-email" placeholder="Add your email" />
-        </InputWrapper>
-        <Button>Sign up</Button>
-      </Field>
-    </Form>
+    <NewletterFormContainer />
 
   </Wrapper>
 )
 
 export default Newsletter
+
+class NewletterForm extends PureComponent {
+  state = {
+    email: '',
+    loading: false,
+    done: false,
+    error: null,
+  }
+
+  renderMsg() {
+    const { error, done } = this.state
+
+    if (!!error) {
+      return <Msg>{error}</Msg>
+    } else if (done) {
+      return <Msg type="success"><Mail /> Subscribed!</Msg>
+    }
+
+    return null
+  }
+
+  render() {
+    const { loading, email } = this.state
+
+    return (
+      <Form onSubmit={this.submitted}>
+        <Field>
+          <InputWrapper>
+            <Label htmlFor="nl-email">Email</Label>
+            <Input
+              id="nl-email"
+              placeholder="Add your email"
+              value={email}
+              onChange={this.emailChanged}
+            />
+          </InputWrapper>
+          <Button>Sign up{loading && ' ...'}</Button>
+        </Field>
+
+        {this.renderMsg()}
+      </Form>
+    )
+  }
+
+  emailChanged = e => {
+    this.setState({ email: e.target.value })
+  }
+
+  submitted = async e => {
+    e.preventDefault()
+    const { email } = this.state
+    const { addSubscriber } = this.props
+
+    if (email.trim() === '' || !email.includes('@') || !email.includes('.')) {
+      // It's not an email
+      this.setState({ error: 'Enter your email!' })
+      return false
+    }
+
+    // Let's do this!
+    this.setState({ loading: true, error: null })
+
+    try {
+      const res = await addSubscriber(email)
+      console.log(res)
+      this.setState({ loading: false, done: true })
+    } catch (e) {
+      console.log(e)
+      this.setState({ loading: false, error: 'Looks like you have subscribed before!' })
+    }
+
+    return false
+  }
+}
+
+const AddSubscriber = gql`mutation ($email: String!) {
+  createSubscriber(email: $email) {
+    id
+    email
+  }
+}`
+
+// Attach the mutatation triggerer
+const NewletterFormContainer = graphql(AddSubscriber, {
+  props: ({ mutate }) => ({
+    addSubscriber: (email) => mutate({ variables: { email } }),
+  }),
+})(NewletterForm)
 
 const Wrapper = styled.section`
   height: ${rem(161)};
@@ -72,6 +157,37 @@ const Form = styled.form`
     margin-left: 0;
     margin-top: ${rem(20)};
   `)}
+`
+
+const Msg = styled.p`
+  display: inline-block;
+  padding: ${rem(2)} ${rem(10)};
+  margin: ${rem(8)} 0 0 0;
+  font-size: ${rem(16)};
+  border-radius: ${rem(5)};
+  background: #f1f1f1;
+  color: ${textGrey};
+
+  path {
+    fill: ${textGrey};
+  }
+
+  svg {
+    display: inline-block;
+    margin-right: ${rem(5)};
+    vertical-align: ${rem(-2)};
+    height: ${rem(15)};
+    width: auto;
+    opacity: 0.7;
+  }
+
+  ${p => p.type === 'success' && css`
+    color: green;
+
+    path {
+      fill: green;
+    }
+  `}
 `
 
 const Field = styled.div`

@@ -62,17 +62,13 @@ const XWrapper = styled.div`
 `
 
 const LogoImage = styled.img`
-  position: relative;
-  top: 0;
-  left: 0;
   display: inline-block;
   height: ${rem(50)};
-  transition: all 70ms;
+  transition: all 100ms;
 
   &:hover {
-    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15));
-    top: -1px;
-    left: -1px;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.12));
+    transform: translateY(-1px);
     opacity: 0.9;
   }
 
