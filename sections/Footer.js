@@ -5,6 +5,7 @@ import Scrollchor from 'react-scrollchor'
 import rem from 'utils/rem'
 import { specialRed, textDarkGrey, textGrey } from 'utils/colors'
 import { mobile, desktop } from 'utils/media'
+import { eventbriteLink } from 'utils/config'
 import Container from 'components/Container'
 import Newsletter from 'components/Newsletter'
 import OrganizersLogos from 'components/OrganizersLogos'
@@ -70,14 +71,14 @@ const Footer = () => (
 export default Footer
 
 const AnchorLinks = () => [
-  <AnchorLinkItem to="#get-your-ticket-padded">Get Tickets</AnchorLinkItem>,
+  <Link href={eventbriteLink}><LinkItem href={eventbriteLink}>Get Tickets</LinkItem></Link>,
   <AnchorLinkItem to="#speakers-padded">Speakers</AnchorLinkItem>,
   <AnchorLinkItem to="#want-to-sponsor-padded">Sponsors</AnchorLinkItem>,
   <Link href="/team"><LinkItem href="/team">Team</LinkItem></Link>,
 ]
 
 const NormalLinks = () => [
-  <Link href="/#get-your-ticket-padded"><LinkItem href="/#get-your-ticket-padded">Get Tickets</LinkItem></Link>,
+  <Link href={eventbriteLink}><LinkItem href={eventbriteLink}>Get Tickets</LinkItem></Link>,
   <Link href="/#speakers"><LinkItem href="/#speakers">Speakers</LinkItem></Link>,
   <Link href="/#want-to-sponsor"><LinkItem href="/#want-to-sponsor">Sponsors</LinkItem></Link>,
   <Link href="/team"><LinkItem href="/team">Team</LinkItem></Link>,

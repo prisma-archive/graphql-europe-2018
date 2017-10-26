@@ -7,6 +7,7 @@ import rem from 'utils/rem'
 import { mobile } from 'utils/media'
 import { bgLightGrey, specialRed } from 'utils/colors'
 import { resetButton } from 'utils/reset'
+import { eventbriteLink } from 'utils/config'
 import NavItem from './NavItem'
 import { MenuIcon } from 'components/Icons'
 
@@ -68,7 +69,7 @@ const AnchorLinks = () => [
   <NavItem key="3" href="#call-for-papers" isAnchor={true}>Speak</NavItem>,
   <NavItem key="4" href="#want-to-sponsor" isAnchor={true}>Sponsor</NavItem>,
   <NavItem key="5" href="/team">Team</NavItem>,
-  <NavItem key="6" href="#get-your-ticket" isButtonStyle={true} isAnchor={true}>Get Tickets</NavItem>,
+  <NavItem key="6" href={eventbriteLink} isButtonStyle={true}>Get Tickets</NavItem>,
 ]
 
 const NormalLinks = () => [
@@ -76,7 +77,7 @@ const NormalLinks = () => [
   <NavItem key="3" href="/#call-for-papers">Speak</NavItem>,
   <NavItem key="4" href="/#want-to-sponsor">Sponsor</NavItem>,
   <NavItem key="5" href="/team">Team</NavItem>,
-  <NavItem key="6" href="/#get-your-ticket" isButtonStyle={true}>Get Tickets</NavItem>,
+  <NavItem key="6" href={eventbriteLink} isButtonStyle={true}>Get Tickets</NavItem>,
 ]
 
 const Links = () => {

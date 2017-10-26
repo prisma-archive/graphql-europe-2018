@@ -9,6 +9,7 @@ import {
   mobileNavHeight,
 } from 'utils/sizes'
 import { mobile } from 'utils/media'
+import { eventbriteLink } from 'utils/config'
 import Navbar from 'components/Navbar'
 import GraphBg from 'components/GraphBg'
 import Container from 'components/Container'
@@ -47,9 +48,7 @@ const JoinUsIntro = () => (
           </Meta>
 
           <ButtonWrapper>
-            <Scrollchor to="#get-your-ticket">
-              <Button>Get Tickets</Button>
-            </Scrollchor>
+            <Button isLink={true} href={eventbriteLink}>Get Tickets</Button>
           </ButtonWrapper>
 
         </SectionContent>
