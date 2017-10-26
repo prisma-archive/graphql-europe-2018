@@ -63,13 +63,35 @@ class NavbarLinks extends Component {
 
 export default NavbarLinks
 
-const Links = () => [
+const AnchorLinks = () => [
   <NavItem key="1" href="https://2017.graphql-europe.org/">2017</NavItem>,
   <NavItem key="3" href="#call-for-papers" isAnchor={true}>Speak</NavItem>,
   <NavItem key="4" href="#want-to-sponsor" isAnchor={true}>Sponsor</NavItem>,
   <NavItem key="5" href="/team">Team</NavItem>,
   <NavItem key="6" href="#get-your-ticket" isButtonStyle={true} isAnchor={true}>Get Tickets</NavItem>,
 ]
+
+const NormalLinks = () => [
+  <NavItem key="1" href="https://2017.graphql-europe.org/">2017</NavItem>,
+  <NavItem key="3" href="/#call-for-papers">Speak</NavItem>,
+  <NavItem key="4" href="/#want-to-sponsor">Sponsor</NavItem>,
+  <NavItem key="5" href="/team">Team</NavItem>,
+  <NavItem key="6" href="/#get-your-ticket" isButtonStyle={true}>Get Tickets</NavItem>,
+]
+
+const Links = () => {
+  if (!process.browser) {
+    return <NormalLinks />
+  }
+
+  if (window.location.pathname === '/') {
+    return <AnchorLinks />
+  } else {
+    return <NormalLinks />
+  }
+
+  return null
+}
 
 const DesktopLinks = styled.div`
   height: 100%;

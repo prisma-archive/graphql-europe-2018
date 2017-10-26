@@ -190,7 +190,7 @@ const IconWrapper = styled.span`
 
   svg {
     display: inline-block;
-    vertical-align: ${p => p.medium ? '0' : '1px'};
+    vertical-align: ${p => p.medium ? '0' : '-2px'};
     width: ${rem(17)};
     height: auto;
   }

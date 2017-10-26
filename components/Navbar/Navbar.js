@@ -15,7 +15,7 @@ const mobileLogoHeight = 50
 const Navbar = ({ alwaysSticky = false, notSticky = false }) => (
   <Sticky alwaysSticky={alwaysSticky} notSticky={notSticky}>
     {({ shouldStick, isVisible, isTransitioning }) => ([
-      <Placeholder key="1" shouldStick={shouldStick} />,
+      <Placeholder key="1" />,
 
       <Wrapper
         key="2"
@@ -89,10 +89,8 @@ const Wrapper = styled.div`
 `
 
 const Placeholder = styled.div`
-  ${p => p.shouldStick && css`
-    width: 100%;
-    height: ${rem(navHeight)};
-  `}
+  width: 100%;
+  height: ${rem(navHeight)};
 `
 
 const FlexWrapper = styled.nav`
