@@ -28,7 +28,7 @@ const GetYourTicket = () => [
           <TicketWrapper>
             <Ticket
               comingSoon={true}
-              price="149€"
+              price="199€"
               name="Early Bird"
               desc="Available from 26th of October"
               href="https://www.eventbrite.com/e/graphql-europe-2018-tickets-39184180940"
@@ -37,7 +37,7 @@ const GetYourTicket = () => [
           <TicketWrapper>
             <Ticket
               disabled={true}
-              price="189€"
+              price="299€"
               name="Regular"
               desc="Regular ticket price for the conferance"
             />
@@ -45,7 +45,7 @@ const GetYourTicket = () => [
           <TicketWrapper>
             <Ticket
               disabled={true}
-              price="239€"
+              price="399€"
               name="Late Bird"
               desc="Last chance to get tickets"
             />
