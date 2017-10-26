@@ -50,6 +50,24 @@ export default class MyDocument extends Document {
           <link rel="manifest" href="/static/manifest.json" />
           <meta name="theme-color" content="#DB3F74" />
 
+          <meta name="keywords" content="GraphQL,conference,Europe,Berlin,2018" />
+          <meta name="description" content="GraphQL-Europe - Berlin, June 15th, 2018 - Join Europe’s biggest GraphQL-dedicated conference">
+
+          <meta property="og:type" content="article">
+          <meta property="og:url" content="https://graphql-europe.org/">
+          <meta property="og:title" content="GraphQL-Europe - Berlin, June 15th, 2018 - Join Europe’s biggest GraphQL-dedicated conference">
+          <meta property="og:description" content="GraphQL-Europe - Berlin, June 15th, 2018 - Join Europe’s biggest GraphQL-dedicated conference">
+          <meta property="og:image:url" content="https://graphql-europe.org/static/GrapQL-Europe-2018-banner.png">
+
+          <meta name="twitter:card" content="summary_large_image">
+          <meta name="twitter:site" content="@graphqleu">
+          <meta name="twitter:creator" content="@graphqleu">
+          <meta name="twitter:title" content="GraphQL-Europe - Join Europe’s biggest GraphQL-dedicated conference">
+          <meta name="twitter:description" content="GraphQL-Europe - Berlin, June 15th, 2018 - Join Europe’s biggest GraphQL-dedicated conference">
+          <meta name="twitter:image" content="https://graphql-europe.org/static/GrapQL-Europe-2018-banner.png">
+
+          <link rel="canonical" href="https://graphql-europe.org" />
+
           <script src="https://use.typekit.net/fkv8pfd.js" />
           <script dangerouslySetInnerHTML={{ __html: 'try{Typekit.load({ async: true });}catch(e){}' }} />
           {this.props.styleTags}
