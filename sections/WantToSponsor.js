@@ -8,9 +8,12 @@ import Container from 'components/Container'
 import SectionTitle from 'components/SectionTitle'
 import SectionContent from 'components/SectionContent'
 import Button from 'components/Button'
+import { InvisibleAnchor } from 'components/Anchor'
 
-const WantToSponsor = ({ noPic = false }) => (
-  <Wrapper id="want-to-sponsor">
+const WantToSponsor = ({ noPic = false }) => [
+  <InvisibleAnchor key="1" id="want-to-sponsor-padded" />,
+
+  <Wrapper key="2" id="want-to-sponsor">
     <Container>
       <SectionContent>
         <FlexWrapper noPic={noPic}>
@@ -42,7 +45,7 @@ const WantToSponsor = ({ noPic = false }) => (
       </SectionContent>
     </Container>
   </Wrapper>
-)
+]
 
 export default WantToSponsor
 

@@ -11,9 +11,9 @@ import Ticket from 'components/Ticket'
 import { InvisibleAnchor } from 'components/Anchor'
 
 const GetYourTicket = () => [
-  <InvisibleAnchor key="1" id="get-your-ticket" />,
+  <InvisibleAnchor key="1" id="get-your-ticket-padded" />,
 
-  <Wrapper key="2">
+  <Wrapper key="2" id="get-your-ticket">
     <Container>
       <SectionContent>
 

@@ -6,6 +6,7 @@ import SectionTitle from 'components/SectionTitle'
 import SectionContent from 'components/SectionContent'
 import Grid from 'components/Grid'
 import Person from 'components/Person'
+import { InvisibleAnchor } from 'components/Anchor'
 
 const speakersList = [
   {
@@ -49,8 +50,10 @@ const speakersList = [
   },
 ]
 
-const Speakers = () => (
-  <Wrapper>
+const Speakers = () => [
+  <InvisibleAnchor key="2" id="speakers-padded" />,
+
+  <Wrapper key="1" id="speakers">
     <Container>
       <SectionContent>
         <SectionTitle spacing="large">
@@ -68,7 +71,7 @@ const Speakers = () => (
       </SectionContent>
     </Container>
   </Wrapper>
-)
+]
 
 export default Speakers
 

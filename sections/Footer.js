@@ -1,4 +1,6 @@
 import styled, { css } from 'styled-components'
+import Link from 'next/link'
+import Scrollchor from 'react-scrollchor'
 
 import rem from 'utils/rem'
 import { specialRed, textDarkGrey, textGrey } from 'utils/colors'
@@ -27,10 +29,7 @@ const Footer = () => (
             </LogoWrapper>
 
             <Column>
-              <LinkItem href="/#get-your-ticket">Get Tickets</LinkItem>
-              <LinkItem href="/#speakers">Speakers</LinkItem>
-              <LinkItem href="/#want-to-sponsor">Sponsors</LinkItem>
-              <LinkItem href="/team">Team</LinkItem>
+              <Links />
             </Column>
 
             <Column>
@@ -69,6 +68,35 @@ const Footer = () => (
 )
 
 export default Footer
+
+
+const AnchorLinks = () => [
+  <AnchorLinkItem to="#get-your-ticket-padded">Get Tickets</AnchorLinkItem>,
+  <AnchorLinkItem to="#speakers-padded">Speakers</AnchorLinkItem>,
+  <AnchorLinkItem to="#want-to-sponsor-padded">Sponsors</AnchorLinkItem>,
+  <Link href="/team"><LinkItem href="/team">Team</LinkItem></Link>,
+]
+
+const NormalLinks = () => [
+  <Link href="/#get-your-ticket-padded"><LinkItem href="/#get-your-ticket-padded">Get Tickets</LinkItem></Link>,
+  <Link href="/#speakers"><LinkItem href="/#speakers">Speakers</LinkItem></Link>,
+  <Link href="/#want-to-sponsor"><LinkItem href="/#want-to-sponsor">Sponsors</LinkItem></Link>,
+  <Link href="/team"><LinkItem href="/team">Team</LinkItem></Link>,
+]
+
+const Links = () => {
+  if (!process.browser) {
+    return <NormalLinks />
+  }
+
+  if (window.location.pathname === '/') {
+    return <AnchorLinks />
+  } else {
+    return <NormalLinks />
+  }
+
+  return null
+}
 
 const Wrapper = styled.footer`
   border-top: 1px solid #f1f1f1;
@@ -183,6 +211,8 @@ const LinkItem = styled.a`
     line-height: 1.5;
   `)}
 `
+
+const AnchorLinkItem = LinkItem.withComponent(Scrollchor)
 
 const IconWrapper = styled.span`
   vertical-align: middle;

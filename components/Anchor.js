@@ -11,8 +11,7 @@ export const InvisibleAnchor = styled.div.attrs({
   visibility: hidden;
   height: 0;
 
-  top: ${rem(0)};
-  /* if we wanted sticky navbar */
+  top: ${rem(-70)};
 
   ${mobile(css`
      top: ${rem(0)};
