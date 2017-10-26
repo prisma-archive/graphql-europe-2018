@@ -13,7 +13,7 @@ const VideoHighlight = ({
   href,
   comingSoon = false,
   disabled = false,
-  buttonLabel = 'Register',
+  buttonLabel = 'Get Tickets',
   onSelect = () => {},
 }) => (
   <Wrapper disabled={disabled}>
