@@ -69,7 +69,6 @@ const Footer = () => (
 
 export default Footer
 
-
 const AnchorLinks = () => [
   <AnchorLinkItem to="#get-your-ticket-padded">Get Tickets</AnchorLinkItem>,
   <AnchorLinkItem to="#speakers-padded">Speakers</AnchorLinkItem>,
