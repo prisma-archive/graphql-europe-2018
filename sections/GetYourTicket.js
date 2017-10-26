@@ -47,7 +47,7 @@ const GetYourTicket = () => [
               disabled={true}
               price="239€"
               name="Late Bird"
-              desc="Regular ticket price for the conferance"
+              desc="Last chance to get tickets"
             />
           </TicketWrapper>
         </TicketsRow>
