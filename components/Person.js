@@ -38,7 +38,7 @@ const Person = ({
 
         <Social>
           {twitter &&
-            <SocialLink href={`https://github.com/${twitter}`}>
+            <SocialLink href={`https://twitter.com/${twitter}`}>
               <Twitter />
             </SocialLink>
           }
