@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components'
 import rem from 'utils/rem'
 import { specialRed } from 'utils/colors'
 import { mobile } from 'utils/media'
+import { eventbriteLink } from 'utils/config'
 import Container from 'components/Container'
 import SectionTitle from 'components/SectionTitle'
 import SectionContent from 'components/SectionContent'
@@ -31,7 +32,7 @@ const GetYourTicket = () => [
               price="199€"
               name="Early Bird"
               desc="Available from 26th of October"
-              href="https://www.eventbrite.com/e/graphql-europe-2018-tickets-39184180940"
+              href={eventbriteLink}
             />
           </TicketWrapper>
           <TicketWrapper>
