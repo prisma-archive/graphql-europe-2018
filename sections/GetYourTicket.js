@@ -28,7 +28,6 @@ const GetYourTicket = () => [
         <TicketsRow>
           <TicketWrapper>
             <Ticket
-              comingSoon={true}
               price="199€"
               name="Early Bird"
               desc="Available from 26th of October"
