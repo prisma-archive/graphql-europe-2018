@@ -30,7 +30,7 @@ const GetYourTicket = () => [
             <Ticket
               price="199€"
               name="Early Bird"
-              desc="Available from 26th of October"
+              desc="Secure your spot now! Time is limited."
               href={eventbriteLink}
             />
           </TicketWrapper>
