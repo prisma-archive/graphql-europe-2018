@@ -57,6 +57,14 @@ const team = [
     bio: `Ekaterina is a Growth Manager at Honeypot. Originally from Moscow, Kate moved to Amsterdam to study management in creative industries. With experience in advertising and cinema, she enjoys making events happen.`,
     twitter: 'kromina_ek',
   },
+  {
+    imageUrl: '/static/team/team-6',
+    imageFormat: 'jpg',
+    name: 'Mohammad Rajabifard',
+    bio: `Mohammad is a Software Developer, currently focused on open source work specially in Javascript. He's helping with styled-components project and he loves designing interfaces and experiences. He happily did this website w/ Next!`,
+    twitter: 'morajabi',
+    github: 'morajabi',
+  },
 ]
 
 export default withData(() => (
