@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "start": "sls offline"
+  },
+  "dependencies": {
+    "apollo-link-http": "^1.0.0",
+    "apollo-server-lambda": "^1.2.0",
+    "graphiql": "^0.11.5",
+    "graphql": "^0.11.3",
+    "graphql-tools": "^2.6.1",
+    "graphql-transform-schema": "^0.2.2",
+    "node-fetch": "^1.7.3"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^0.0.18",
+    "@types/node-fetch": "^1.6.7",
+    "serverless-offline": "^3.16.0",
+    "serverless-plugin-typescript": "^1.1.2"
+  }
+}

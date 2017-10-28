@@ -1,0 +1,196 @@
+type File @model {
+  contentType: String!
+  createdAt: DateTime
+  id: ID! @isUnique
+  name: String!
+  secret: String! @isUnique
+  size: Int!
+  updatedAt: DateTime
+  url: String! @isUnique
+}
+
+type Notification @model {
+  body: String!
+  createdAt: DateTime
+  fromName: String!
+  id: ID! @isUnique
+  mailchimpExport: Boolean!
+  sent: Boolean! @defaultValue(value: false)
+  sibscriberId: String
+  title: String!
+  to: NOTIFICATION_TO!
+  updatedAt: DateTime
+}
+
+type Subscriber @model {
+  createdAt: DateTime
+  email: String! @isUnique
+  id: ID! @isUnique
+  mailchimpExported: Boolean! @defaultValue(value: false)
+  mailchimpId: String
+  name: String!
+  notified: Boolean! @defaultValue(value: false)
+  unsubscribed: Boolean! @defaultValue(value: false)
+  updatedAt: DateTime
+}
+
+type User @model {
+  createdAt: DateTime
+  email: String @isUnique
+  id: ID! @isUnique
+  password: String
+  updatedAt: DateTime
+}
+
+type Speaker @model {
+  id: ID! @isUnique
+  name: String!
+  conference: Conference! @relation(name: "ConferenceSpeakers")
+  talk: Talk! @relation(name: "TalkSpeakers")
+}
+
+type Conference @model {
+  id: ID! @isUnique
+  name: String!
+  edition: Edition!
+  description: String!
+  shortDescription: String!
+  location: String!
+  tagLine: String!
+  year: Int!
+  venue: Venue @relation(name: "ConferenceVenue")
+  dateStart: DateTime
+  dateEnd: DateTime
+  tickets: [Ticket!]! @relation(name: "ConferenceTickets")
+  url: String!
+  sponsorEmail: String!
+  supportEmail: String!
+  ticketsUrl: String!
+  scheduleUrl: String!
+  speakersUrl: String!
+  sponsorsUrl: String!
+  teamUrl: String!
+  locationUrl: String!
+  videosUrl: String!
+  speakers: [Speaker!]! @relation(name: "ConferenceSpeakers")
+  team: [TeamMember!]! @relation(name: "ConferenceTeamMembers")
+  schedule: [ScheduleEntry!]! @relation(name: "ConferenceScheduleEntries")
+  sponsors: [Sponsor!]! @relation(name: "ConferenceSponsors")
+  talks: [Talk!]! @relation(name: "ConferenceTalks")
+}
+
+type Talk @model {
+  id: ID! @isUnique
+  conference: Conference! @relation(name: "ConferenceTalks")
+  title: String!
+  description: String!
+  cardUrl: String!
+  format: TalkFormat!
+  startTime: DateTime!
+  endTime: DateTime!
+  duration: Int!
+  speakers: [Speaker!]! @relation(name: "TalkSpeakers")
+  slidesUrl: String
+  videoUrl: String
+  url: String!
+  entryType: ScheduleEntryType!
+}
+
+type ScheduleEntry @model {
+  id: ID! @isUnique
+  conference: Conference! @relation(name: "ConferenceScheduleEntries")
+}
+
+type Sponsor @model {
+  id: ID! @isUnique
+  conference: Conference! @relation(name: "ConferenceSponsors")
+  name: String!
+  sponsorType: SponsorType!
+  url: String!
+  logoUrl: String!
+  description: String
+  twitter: String
+  github: String
+}
+
+type TeamMember @model {
+  id: ID! @isUnique
+  conference: Conference! @relation(name: "ConferenceTeamMembers")
+  name: String!
+  photoUrl: String
+  teamSection: TeamSection!
+  description: String
+  twitter: String
+  github: String
+}
+
+type Venue @model {
+  id: ID! @isUnique
+  conference: Conference! @relation(name: "ConferenceVenue")
+  name: String!
+  url: String!
+  phone: String!
+  address: Address! @relation(name: "VenueAddress")
+}
+
+type Ticket @model {
+  id: ID! @isUnique
+  conference: Conference! @relation(name: "ConferenceTickets")
+  name: String!
+  price: String!
+  availableUntil: DateTime!
+  url: String!
+  soldOut: Boolean!
+  available: Boolean!
+}
+
+type Address @model {
+  id: ID! @isUnique
+  country: String!
+  city: String!
+  zipCode: String!
+  streetName: String!
+  houseNumber: String!
+  latitude: Float!
+  longitude: Float!
+  venue: Venue! @relation(name: "VenueAddress")
+}
+
+enum NOTIFICATION_TO {
+  AllSubscribers
+  SingleSubscriber
+}
+
+enum Edition {
+  Berlin2018
+  Berlin2017
+}
+
+enum TalkFormat {
+  Lightning
+  Standard
+  PanelDiscussion
+  Special
+}
+
+enum TeamSection {
+  SpecialThanks
+  Core
+}
+
+enum ScheduleEntryType {
+  Lunch
+  Break
+  Talk
+  Registration
+}
+
+enum SponsorType {
+  Bronze
+  Silver
+  Gold
+  Platinum
+  Opportunity
+  Partner
+  Organiser
+}
