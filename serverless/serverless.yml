@@ -1,0 +1,47 @@
+service: serverless-graphql-europe
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
+provider:
+  name: aws
+  region: eu-west-1
+  runtime: nodejs6.10
+  deploymentBucket: serverless-deployments-${env:AWS_REGION}-${env:AWS_ACCOUNT_ID}
+  environment:
+    GRAPHQL_ENDPOINT: 'https://api.graph.cool/simple/v1/ciwjdudnq0ks60122osmdynr4'
+
+functions:
+  Graphql:
+    handler: handler.default
+    events:
+      - http:
+          path: /
+          method: post
+  Graphiql:
+    handler: handler.graphiql
+    events:
+      - http:
+          path: /
+          method: get
+
+# needs to be commented out for first initialization because of: https://github.com/serverless/serverless/issues/2233
+resources:
+  Resources:
+
+    GraphqlLogGroup:
+      Properties:
+        RetentionInDays: 7
+
+    GraphiqlLogGroup:
+      Properties:
+        RetentionInDays: 7
+
+    pathmapping:
+      Type: AWS::ApiGateway::BasePathMapping
+      Properties:
+        DomainName: 'api.graphql-europe.org'
+        RestApiId:
+          Ref: ApiGatewayRestApi
+        Stage: dev

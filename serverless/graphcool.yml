@@ -1,0 +1,66 @@
+types: ./types.graphql
+functions: {}
+permissions:
+- operation: Address.read
+- operation: Address.create
+- operation: Address.update
+- operation: Address.delete
+- operation: Conference.read
+- operation: Conference.create
+- operation: Conference.update
+- operation: Conference.delete
+- operation: Notification.read
+  authenticated: true
+- operation: Notification.create
+  authenticated: true
+- operation: Notification.update
+  authenticated: true
+- operation: Notification.delete
+  authenticated: true
+- operation: ScheduleEntry.read
+- operation: ScheduleEntry.create
+- operation: ScheduleEntry.update
+- operation: ScheduleEntry.delete
+- operation: Speaker.read
+- operation: Speaker.create
+- operation: Speaker.update
+- operation: Speaker.delete
+- operation: Sponsor.read
+- operation: Sponsor.create
+- operation: Sponsor.update
+- operation: Sponsor.delete
+- operation: Subscriber.read
+  authenticated: true
+- operation: Subscriber.create
+- operation: Subscriber.update
+  authenticated: true
+- operation: Subscriber.delete
+  authenticated: true
+- operation: Talk.read
+- operation: Talk.create
+- operation: Talk.update
+- operation: Talk.delete
+- operation: TeamMember.read
+- operation: TeamMember.create
+- operation: TeamMember.update
+- operation: TeamMember.delete
+- operation: Ticket.read
+- operation: Ticket.create
+- operation: Ticket.update
+- operation: Ticket.delete
+- operation: Venue.read
+- operation: Venue.create
+- operation: Venue.update
+- operation: Venue.delete
+- operation: ConferenceScheduleEntries.*
+- operation: ConferenceSpeakers.*
+- operation: ConferenceSponsors.*
+- operation: ConferenceTalks.*
+- operation: ConferenceTeamMembers.*
+- operation: ConferenceTickets.*
+- operation: ConferenceVenue.*
+- operation: TalkSpeakers.*
+- operation: VenueAddress.*
+rootTokens:
+- prod
+- oleg
