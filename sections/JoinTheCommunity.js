@@ -18,7 +18,7 @@ const JoinTheCommunity = () => (
         <Description>
           Join the official GraphQL-Europe{' '}
           <a href="https://slack.graph.cool/">Slack channel</a>.{' '}
-          This is your chance to meet your peers, organize informal chats and activities, or ask questions about the conference or Berlin. Join us in Graphcool's Slack:​ #graphql-europe-comm.
+          This is your chance to meet your peers, organize informal chats and activities, or ask questions about the conference or Berlin. Join us in Graphcool's Slack:​ #graphql-europe.
         </Description>
       </SectionContent>
     </Container>
