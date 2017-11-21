@@ -4,6 +4,7 @@ import rem from 'utils/rem'
 import { mobile } from 'utils/media'
 import { specialRed, textLightGrey } from 'utils/colors'
 
+import SeoTitle from 'components/SeoTitle'
 import Footer from '../sections/Footer'
 import Navbar from 'components/Navbar'
 import PageTitle from 'components/PageTitle'
@@ -12,6 +13,8 @@ import SectionContent from 'components/SectionContent'
 
 export default () => (
   <div>
+    <SeoTitle prependTitle="Imprint" />
+
     <Navbar notSticky={true} />
 
     <section>

@@ -39,8 +39,6 @@ export default class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
-          <title>GraphQL Europe 2018</title>
-
           <meta charSet="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -55,14 +53,12 @@ export default class MyDocument extends Document {
 
           <meta property="og:type" content="article"/>
           <meta property="og:url" content="https://graphql-europe.org/"/>
-          <meta property="og:title" content="GraphQL-Europe - Berlin, June 15th, 2018 - Join Europe’s biggest GraphQL-dedicated conference"/>
           <meta property="og:description" content="GraphQL-Europe - Berlin, June 15th, 2018 - Join Europe’s biggest GraphQL-dedicated conference"/>
           <meta property="og:image:url" content="https://graphql-europe.org/static/GrapQL-Europe-2018-banner.jpg"/>
 
           <meta name="twitter:card" content="summary_large_image"/>
           <meta name="twitter:site" content="@graphqleu"/>
           <meta name="twitter:creator" content="@graphqleu"/>
-          <meta name="twitter:title" content="GraphQL-Europe - Join Europe’s biggest GraphQL-dedicated conference"/>
           <meta name="twitter:description" content="GraphQL-Europe - Berlin, June 15th, 2018 - Join Europe’s biggest GraphQL-dedicated conference"/>
           <meta name="twitter:image" content="https://graphql-europe.org/static/GrapQL-Europe-2018-banner.jpg"/>
 

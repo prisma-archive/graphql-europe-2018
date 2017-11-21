@@ -5,6 +5,7 @@ import { mobile } from 'utils/media'
 import { specialRed, textLightGrey } from 'utils/colors'
 import withData from 'utils/withData'
 
+import SeoTitle from 'components/SeoTitle'
 import Footer from '../sections/Footer'
 import Navbar from 'components/Navbar'
 import PageTitle from 'components/PageTitle'
@@ -69,6 +70,8 @@ const team = [
 
 export default withData(() => (
   <div>
+    <SeoTitle prependTitle="Team" />
+
     <Navbar notSticky={true} />
 
     <CoOrganizedBy noPaddingTop={false} noPaddingBottom={true} />

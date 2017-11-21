@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import Head from 'next/head'
 
 import rem from 'utils/rem'
 import { mobile } from 'utils/media'
@@ -6,6 +7,7 @@ import { specialRed, textLightGrey, textDarkGrey, textGrey } from 'utils/colors'
 import { upperCaseHeading } from 'utils/mixins'
 import withData from 'utils/withData'
 
+import SeoTitle from 'components/SeoTitle'
 import Footer from '../sections/Footer'
 import Navbar from 'components/Navbar'
 import PageTitle from 'components/PageTitle'
@@ -14,6 +16,8 @@ import SectionContent from 'components/SectionContent'
 
 export default withData(() => (
   <div>
+    <SeoTitle prependTitle="Code of Conduct" />
+
     <Navbar notSticky={true} />
 
     <section>

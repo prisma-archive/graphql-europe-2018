@@ -1,5 +1,6 @@
 import withData from 'utils/withData'
 
+import SeoTitle from 'components/SeoTitle'
 import JoinUsIntro from '../sections/JoinUsIntro'
 import JoinTheCommunity from '../sections/JoinTheCommunity'
 import Highlights from '../sections/Highlights'
@@ -14,6 +15,8 @@ import Footer from '../sections/Footer'
 
 export default withData(() => (
   <div>
+    <SeoTitle />
+
     <JoinUsIntro />
     <JoinTheCommunity />
     <Highlights />
