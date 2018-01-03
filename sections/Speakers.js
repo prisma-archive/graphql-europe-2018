@@ -20,7 +20,7 @@ const speakersList = [
   {
     imageUrl: '/static/speakers/speakers-2',
     imageFormat: 'jpg',
-    name: 'Lee Bryon',
+    name: 'Lee Byron',
     bio: 'Facebook, GraphQL co-creator',
     twitter: 'leeb',
     github: 'leebyron',
