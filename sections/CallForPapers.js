@@ -13,32 +13,27 @@ const CallForPapers = () => (
   <Wrapper id="call-for-papers">
     <Container>
       <SectionContent>
-      <FlexWrapper>
+        <FlexWrapper>
+          <ImageWrapper>
+            <img src="/static/photos/cpa.png" />
+          </ImageWrapper>
 
-        <ImageWrapper>
-          <img src="/static/photos/cpa.png" />
-        </ImageWrapper>
+          <Texts>
+            <SectionTitle spacing="medium">Want to submit a talk?</SectionTitle>
 
-        <Texts>
-          <SectionTitle spacing="medium">
-            Want to submit a talk?
-          </SectionTitle>
+            <Desc>
+              A call for papers will be opened in early 2018. Add your name to
+              our waitlist if you are interested in speaking and we will contact
+              you to let you know about the opening of the CPA.
+            </Desc>
 
-          <Desc>
-            A call for papers will be opened in early 2018. Add your name to our waitlist if you are interested in speaking and we will contact you to let you know about the opening of the CPA.
-          </Desc>
-
-          <ButtonWrapper>
-            <Button
-              isLink={true}
-              href="mailto:support@graphql-europe.org"
-            >
-              Contact Us
-            </Button>
-          </ButtonWrapper>
-        </Texts>
-
-      </FlexWrapper>
+            <ButtonWrapper>
+              <Button isLink={true} href="https://www.papercall.io/graphql-eu">
+                Submit
+              </Button>
+            </ButtonWrapper>
+          </Texts>
+        </FlexWrapper>
       </SectionContent>
     </Container>
   </Wrapper>
@@ -52,7 +47,7 @@ const Wrapper = styled.section`
 
   ${mobile(css`
     margin-left: 0;
-  `)}
+  `)};
 `
 
 const FlexWrapper = styled.div`
@@ -70,13 +65,17 @@ const Texts = styled.div`
     width: 100%;
     margin-left: 0;
     padding: ${rem(45)} 0 0 0;
-  `)}
+  `)};
 `
 
 const ImageWrapper = styled.div`
-  ${retinaImage('/static/photos/cpa', 'cover', 'png', undefined, '@2x')}
-
-  flex: 1 1 auto;
+  ${retinaImage(
+    '/static/photos/cpa',
+    'cover',
+    'png',
+    undefined,
+    '@2x',
+  )} flex: 1 1 auto;
   background-size: cover;
   text-indent: -99999px;
 
@@ -89,7 +88,7 @@ const ImageWrapper = styled.div`
   ${mobile(css`
     width: 100%;
     height: ${rem(250)};
-  `)}
+  `)};
 `
 
 const Desc = styled.p`
@@ -98,7 +97,7 @@ const Desc = styled.p`
 
   ${mobile(css`
     font-size: ${rem(18)};
-  `)}
+  `)};
 `
 
 const ButtonWrapper = styled.div`
