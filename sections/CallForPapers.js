@@ -4,6 +4,7 @@ import retinaImage from 'polished/lib/mixins/retinaImage'
 import rem from 'utils/rem'
 import { mobile } from 'utils/media'
 import { bgLightGrey } from 'utils/colors'
+import { cfpLink } from 'utils/config'
 import Container from 'components/Container'
 import SectionTitle from 'components/SectionTitle'
 import SectionContent from 'components/SectionContent'
@@ -28,7 +29,7 @@ const CallForPapers = () => (
             </Desc>
 
             <ButtonWrapper>
-              <Button isLink={true} href="https://www.papercall.io/graphql-eu">
+              <Button isLink={true} href={cfpLink}>
                 Submit
               </Button>
             </ButtonWrapper>

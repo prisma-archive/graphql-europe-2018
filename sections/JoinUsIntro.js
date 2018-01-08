@@ -4,12 +4,9 @@ import Scrollchor from 'react-scrollchor'
 import rem from 'utils/rem'
 import { textLightGrey, textGrey, specialRed } from 'utils/colors'
 import { upperCaseHeading } from 'utils/mixins'
-import {
-  navHeight,
-  mobileNavHeight,
-} from 'utils/sizes'
+import { navHeight, mobileNavHeight } from 'utils/sizes'
 import { mobile } from 'utils/media'
-import { eventbriteLink } from 'utils/config'
+import { eventbriteLink, cfpLink } from 'utils/config'
 import Navbar from 'components/Navbar'
 import GraphBg from 'components/GraphBg'
 import Container from 'components/Container'
@@ -19,7 +16,6 @@ import Button from 'components/Button'
 
 const JoinUsIntro = () => (
   <Wrapper>
-
     <GraphBgWrapper>
       <GraphBg />
     </GraphBgWrapper>
@@ -31,9 +27,17 @@ const JoinUsIntro = () => (
     <PopWrapper>
       <Container>
         <SectionContent>
-          <Title>Join us for Europe’s biggest<DesktopTextBreak /> GraphQL-<MobileTextBreak soft />dedicated conference</Title>
+          <Title>
+            Join us for Europe’s biggest<DesktopTextBreak /> GraphQL-<MobileTextBreak
+              soft
+            />dedicated conference
+          </Title>
           <Description>
-            GraphQL-Europe is a non-profit GraphQL conference in Europe with speakers from all around the world. Learn about GraphQL best practices from industry experts and become part of the thriving GraphQL community. GraphQL-Europe is organized by Graph.Cool and Honeypot.
+            GraphQL-Europe is a non-profit GraphQL conference in Europe with
+            speakers from all around the world. Learn about GraphQL best
+            practices from industry experts and become part of the thriving
+            GraphQL community. GraphQL-Europe is organized by Graph.Cool and
+            Honeypot.
           </Description>
 
           <Meta>
@@ -48,13 +52,14 @@ const JoinUsIntro = () => (
           </Meta>
 
           <ButtonWrapper>
-            <Button isLink={true} href={eventbriteLink}>Get Tickets</Button>
+            <Button isLink={true} href={eventbriteLink}>
+              Get Tickets
+            </Button>
+            <SecondaryLink href={cfpLink}>or submit talk</SecondaryLink>
           </ButtonWrapper>
-
         </SectionContent>
       </Container>
     </PopWrapper>
-
   </Wrapper>
 )
 
@@ -67,7 +72,7 @@ const Wrapper = styled.section`
 
   ${mobile(css`
     padding-top: ${rem(mobileNavHeight)};
-  `)}
+  `)};
 `
 
 const GraphBgWrapper = styled.div`
@@ -80,7 +85,7 @@ const GraphBgWrapper = styled.div`
     top: ${rem(-220)};
     right: ${rem(-310)};
     transform: scale(0.7) rotateZ(130deg) rotateX(180deg) rotateY(180deg);
-  `)}
+  `)};
 `
 
 const PopWrapper = styled.div`
@@ -103,7 +108,7 @@ const Title = styled.h1`
 
   ${mobile(css`
     font-size: ${rem(25)};
-  `)}
+  `)};
 `
 
 const Description = styled.p`
@@ -117,7 +122,7 @@ const Description = styled.p`
   ${mobile(css`
     margin-top: ${rem(25)};
     font-size: ${rem(15)};
-  `)}
+  `)};
 `
 
 const Meta = styled.div`
@@ -132,18 +137,20 @@ const MetaItem = styled.div`
   ${mobile(css`
     width: 50%;
     padding-right: 0;
-  `)}
+  `)};
 `
 
 const MetaItemKey = styled.div`
-  ${upperCaseHeading}
+  ${upperCaseHeading};
 `
 
-const MetaItemValue = styled.div`
-
-`
+const MetaItemValue = styled.div``
 
 const ButtonWrapper = styled.div`
   margin-top: ${rem(40)};
   margin-bottom: 0;
+`
+
+const SecondaryLink = styled.a`
+  margin-left: ${rem(30)};
 `

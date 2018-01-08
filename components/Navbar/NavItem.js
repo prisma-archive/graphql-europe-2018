@@ -136,6 +136,8 @@ const ButtonItem = BaseItem.extend`
     color 100ms ease-out,
     transform 100ms ease-out;
 
+  word-break: break-all;
+
   &:hover,
   &:focus {
     background: ${darken(0.15, specialRed)};
