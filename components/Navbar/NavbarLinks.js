@@ -65,7 +65,7 @@ class NavbarLinks extends Component {
 export default NavbarLinks
 
 const AnchorLinks = () => [
-  <NavItem key="1" href="https://2017.graphql-europe.org/">2017</NavItem>,
+  // <NavItem key="1" href="https://2017.graphql-europe.org/">2017</NavItem>,
   <NavItem key="3" href="#call-for-papers" isAnchor={true}>Speak</NavItem>,
   <NavItem key="4" href="#want-to-sponsor" isAnchor={true}>Sponsor</NavItem>,
   <NavItem key="5" href="/team">Team</NavItem>,
@@ -73,7 +73,7 @@ const AnchorLinks = () => [
 ]
 
 const NormalLinks = () => [
-  <NavItem key="1" href="https://2017.graphql-europe.org/">2017</NavItem>,
+  // <NavItem key="1" href="https://2017.graphql-europe.org/">2017</NavItem>,
   <NavItem key="3" href="/#call-for-papers">Speak</NavItem>,
   <NavItem key="4" href="/#want-to-sponsor">Sponsor</NavItem>,
   <NavItem key="5" href="/team">Team</NavItem>,
