@@ -42,6 +42,14 @@ const speakersList = [
     github: 'kdaigle',
   },
   {
+    imageUrl: '/static/speakers/speakers-5',
+    imageFormat: 'jpg',
+    name: 'Sara Vieira',
+    bio: 'Frontend Engineer at YLD.io',
+    twitter: 'NikkitaFTW',
+    github: 'SaraVieira',
+  },
+  {
     imageUrl: '/static/speakers/you-want-to-talk',
     imageFormat: 'jpg',
     name: 'This can be you!',
@@ -56,21 +64,20 @@ const Speakers = () => [
   <Wrapper key="1" id="speakers">
     <Container>
       <SectionContent>
-        <SectionTitle spacing="large">
-          Speakers 2018
-        </SectionTitle>
+        <SectionTitle spacing="large">Speakers 2018</SectionTitle>
 
         <Grid>
-          {GridItem => speakersList.map((v, i) => (
-            <GridItem key={i}>
-              <Person {...v} />
-            </GridItem>
-          ))}
+          {GridItem =>
+            speakersList.map((v, i) => (
+              <GridItem key={i}>
+                <Person {...v} />
+              </GridItem>
+            ))
+          }
         </Grid>
-
       </SectionContent>
     </Container>
-  </Wrapper>
+  </Wrapper>,
 ]
 
 export default Speakers
