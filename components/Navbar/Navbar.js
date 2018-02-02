@@ -30,7 +30,7 @@ const Navbar = ({ alwaysSticky = false, notSticky = false }) => (
               <Link href="/">
                 <LogoAndTitle href="/">
                   <LogoWrapper><Logo /></LogoWrapper>
-                  <Title>GraphQL-Europe</Title>
+                  <Title>GraphQL Europe</Title>
                 </LogoAndTitle>
               </Link>
             </Start>

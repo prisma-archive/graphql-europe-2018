@@ -26,7 +26,7 @@ const Footer = () => (
 
             <LogoWrapper>
               <Logo />
-              <LogoTitle>GraphQL-Europe</LogoTitle>
+              <LogoTitle>GraphQL Europe</LogoTitle>
             </LogoWrapper>
 
             <Column>

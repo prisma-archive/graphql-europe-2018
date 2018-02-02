@@ -85,7 +85,7 @@ class Highlights extends Component {
 
           <SectionContent>
             <SectionTitle spacing="large">
-              Highlights from <MobileTextBreak />GraphQL-Europe 2017
+              Highlights from <MobileTextBreak />GraphQL Europe 2017
             </SectionTitle>
 
             <Grid>
