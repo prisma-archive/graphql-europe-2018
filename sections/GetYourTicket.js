@@ -21,7 +21,7 @@ const GetYourTicket = () => [
         <Headings>
           <SectionTitle>Get your ticket!</SectionTitle>
           <Subtitle>
-            You don't want to miss out, join us for GraphQL-Europe!
+            You don't want to miss out, join us for GraphQL Europe!
           </Subtitle>
         </Headings>
 

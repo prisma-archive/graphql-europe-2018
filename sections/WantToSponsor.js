@@ -28,7 +28,7 @@ const WantToSponsor = ({ noPic = false }) => [
             </SectionTitle>
 
             <Desc>
-              GraphQL-Europe is an excellent opportunity to reach some of the best software developers in the industry. Contact our sponsor team for more information regarding sponsor packages.
+              GraphQL Europe is an excellent opportunity to reach some of the best software developers in the industry. Contact our sponsor team for more information regarding sponsor packages.
             </Desc>
 
             <ButtonWrapper noPic={noPic}>

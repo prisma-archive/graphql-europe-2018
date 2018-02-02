@@ -33,10 +33,10 @@ const JoinUsIntro = () => (
             />dedicated conference
           </Title>
           <Description>
-            GraphQL-Europe is a non-profit GraphQL conference in Europe with
+            GraphQL Europe is a non-profit GraphQL conference in Europe with
             speakers from all around the world. Learn about GraphQL best
             practices from industry experts and become part of the thriving
-            GraphQL community. GraphQL-Europe is organized by Graph.Cool and
+            GraphQL community. GraphQL Europe is organized by Graph.Cool and
             Honeypot.
           </Description>
 
