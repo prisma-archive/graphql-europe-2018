@@ -1,14 +1,13 @@
 import styled, { css } from 'styled-components'
-import Head from 'next/head'
 
 import rem from 'utils/rem'
 import { mobile } from 'utils/media'
-import { specialRed, textLightGrey, textDarkGrey, textGrey } from 'utils/colors'
+import { textDarkGrey } from 'utils/colors'
 import { upperCaseHeading } from 'utils/mixins'
 import withData from 'utils/withData'
 
 import SeoTitle from 'components/SeoTitle'
-import Footer from '../sections/Footer'
+import Footer from 'graphiconf/sections/Footer'
 import Navbar from 'components/Navbar'
 import PageTitle from 'components/PageTitle'
 import Container from 'components/Container'
@@ -110,7 +109,7 @@ const Desc = styled.p`
 
   ${mobile(css`
     font-size: ${rem(18)};
-  `)}
+  `)};
 `
 
 const Body = styled.div`
@@ -119,9 +118,7 @@ const Body = styled.div`
 
   ${mobile(css`
     margin-top: ${rem(45)};
-  `)}
-
-  p {
+  `)} p {
     max-width: ${rem(800)};
 
     margin-top: 0;
@@ -135,5 +132,5 @@ const Heading = styled.h2`
   margin-top: ${rem(30)};
   margin-bottom: ${rem(25)};
 
-  ${upperCaseHeading}
+  ${upperCaseHeading};
 `

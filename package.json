@@ -2,10 +2,9 @@
   "name": "graphql-europe-2018",
   "version": "1.0.0",
   "scripts": {
-    "dev": "node server",
-    "build":
-      "cross-env NODE_ENV=production next build && next export && cp _redirects out",
-    "start": "cross-env NODE_ENV=production node server"
+    "dev": "next dev -p 4004",
+    "build": "cross-env NODE_ENV=production next build && next export && cp _redirects out",
+    "start": "next start -p 4004"
   },
   "prettier": {
     "semi": false,
@@ -17,6 +16,7 @@
     "apollo-client": "^2.0.1",
     "apollo-link-http": "^1.0.0",
     "express": "^4.16.2",
+    "graphiconf": "^1.0.0",
     "graphql": "^0.11.7",
     "graphql-tag": "^2.5.0",
     "graphql-tools": "^2.6.1",
@@ -36,6 +36,7 @@
     "styled-components": "^3.1.6"
   },
   "devDependencies": {
+    "@weco/next-plugin-transpile-modules": "^0.0.2",
     "babel-eslint": "^8.2.1",
     "babel-plugin-module-resolver": "^2.7.1",
     "babel-plugin-polished": "^1.1.0",
@@ -45,6 +46,8 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.6.1",
+    "file-loader": "^1.1.6",
+    "next-images": "^0.9.1",
     "prettier": "^1.10.2",
     "sw-precache-webpack-plugin": "^0.11.4"
   }

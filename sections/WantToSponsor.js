@@ -17,34 +17,29 @@ const WantToSponsor = ({ noPic = false }) => [
     <Container>
       <SectionContent>
         <FlexWrapper noPic={noPic}>
-
           <ImageWrapper noPic={noPic}>
             <img src="/static/photos/sponsors.png" />
           </ImageWrapper>
 
           <Texts noPic={noPic}>
-            <SectionTitle spacing="medium">
-              Want to sponsor?
-            </SectionTitle>
+            <SectionTitle spacing="medium">Want to sponsor?</SectionTitle>
 
             <Desc>
-              GraphQL Europe is an excellent opportunity to reach some of the best software developers in the industry. Contact our sponsor team for more information regarding sponsor packages.
+              GraphQL Europe is an excellent opportunity to reach some of the
+              best software developers in the industry. Contact our sponsor team
+              for more information regarding sponsor packages.
             </Desc>
 
             <ButtonWrapper noPic={noPic}>
-              <Button
-                isLink={true}
-                href="mailto:sponsors@graphql-europe.org"
-              >
+              <Button isLink={true} href="mailto:sponsors@graphql-europe.org">
                 Contact Us
               </Button>
             </ButtonWrapper>
           </Texts>
-
         </FlexWrapper>
       </SectionContent>
     </Container>
-  </Wrapper>
+  </Wrapper>,
 ]
 
 export default WantToSponsor
@@ -55,7 +50,7 @@ const Wrapper = styled.section`
 
   ${mobile(css`
     margin-left: 0;
-  `)}
+  `)};
 `
 
 const FlexWrapper = styled.div`
@@ -63,9 +58,11 @@ const FlexWrapper = styled.div`
   align-items: stretch;
   flex-wrap: wrap;
 
-  ${p => p.noPic && css`
-    justify-content: center;
-  `}
+  ${p =>
+    p.noPic &&
+    css`
+      justify-content: center;
+    `};
 `
 
 const Texts = styled.div`
@@ -73,29 +70,35 @@ const Texts = styled.div`
   padding: ${rem(16)} 0;
   margin-left: ${rem(86)};
 
-  ${p => p.noPic && css`
-    width: 100%;
-    max-width: ${rem(735)};
-    margin-left: 0;
-    padding: 0;
-    text-align: center;
-  `}
-
-  ${mobile(css`
-    width: 100%;
-    margin-left: 0;
-    padding: ${rem(45)} 0 0 0;
-
-    ${p => p.noPic && css`
+  ${p =>
+    p.noPic &&
+    css`
+      width: 100%;
+      max-width: ${rem(735)};
+      margin-left: 0;
       padding: 0;
-    `}
-  `)}
+      text-align: center;
+    `} ${mobile(css`
+      width: 100%;
+      margin-left: 0;
+      padding: ${rem(45)} 0 0 0;
+
+      ${p =>
+        p.noPic &&
+        css`
+          padding: 0;
+        `};
+    `)};
 `
 
 const ImageWrapper = styled.div`
-  ${retinaImage('/static/photos/sponsors', 'cover', 'png', undefined, '@2x')}
-
-  flex: 1 1 auto;
+  ${retinaImage(
+    '/static/photos/sponsors',
+    'cover',
+    'png',
+    undefined,
+    '@2x',
+  )} flex: 1 1 auto;
   background-position: center center;
   background-repeat: no-repeat;
   text-indent: -99999px;
@@ -106,14 +109,14 @@ const ImageWrapper = styled.div`
     display: none;
   }
 
-  ${p => p.noPic && css`
-    display: none;
-  `}
-
-  ${mobile(css`
-    width: 100%;
-    height: ${rem(250)};
-  `)}
+  ${p =>
+    p.noPic &&
+    css`
+      display: none;
+    `} ${mobile(css`
+      width: 100%;
+      height: ${rem(250)};
+    `)};
 `
 
 const Desc = styled.p`
@@ -122,7 +125,7 @@ const Desc = styled.p`
 
   ${mobile(css`
     font-size: ${rem(18)};
-  `)}
+  `)};
 `
 
 const ButtonWrapper = styled.div`
@@ -130,12 +133,9 @@ const ButtonWrapper = styled.div`
   display: flex;
   align-items: center;
 
-  ${p => p.noPic && css`
-    justify-content: center;
-  `}
-`
-
-const OrLink = styled.a`
-  display: inline-block;
-  margin-left: ${rem(16)};
+  ${p =>
+    p.noPic &&
+    css`
+      justify-content: center;
+    `};
 `

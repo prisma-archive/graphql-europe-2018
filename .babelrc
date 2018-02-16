@@ -1,19 +1,23 @@
 {
-  "presets": [
-    "next/babel"
-  ],
+  "presets": ["next/babel"],
   "plugins": [
     "babel-plugin-polished",
-    ["styled-components", {
-      "ssr": true,
-      "displayName": true,
-      "preprocess": false
-    }],
-    ["module-resolver", {
-      "alias": {
-        "utils": "./utils",
-        "components": "./components"
+    [
+      "styled-components",
+      {
+        "ssr": true,
+        "displayName": true,
+        "preprocess": false
       }
-    }]
+    ],
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "utils": "graphiconf/utils",
+          "components": "graphiconf/components"
+        }
+      }
+    ]
   ]
 }

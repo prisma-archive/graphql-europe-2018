@@ -2,10 +2,10 @@ import styled, { css } from 'styled-components'
 
 import rem from 'utils/rem'
 import { mobile } from 'utils/media'
-import { specialRed, textLightGrey } from 'utils/colors'
+import { textLightGrey } from 'utils/colors'
 
 import SeoTitle from 'components/SeoTitle'
-import Footer from '../sections/Footer'
+import Footer from 'graphiconf/sections/Footer'
 import Navbar from 'components/Navbar'
 import PageTitle from 'components/PageTitle'
 import Container from 'components/Container'
@@ -54,15 +54,6 @@ export default () => (
     <Footer />
   </div>
 )
-
-const Desc = styled.p`
-  font-size: ${rem(25)};
-  line-height: 1.67;
-
-  ${mobile(css`
-    font-size: ${rem(18)};
-  `)};
-`
 
 const Body = styled.div`
   margin-top: ${rem(30)};

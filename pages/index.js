@@ -1,5 +1,9 @@
-import withData from 'utils/withData'
+import Footer from 'graphiconf/sections/Footer'
+import GetYourTicket from 'graphiconf/sections/GetYourTicket'
+import CoOrganizedBy from 'graphiconf/sections/CoOrganizedBy'
 
+// Local
+import withData from 'utils/withData'
 import SeoTitle from 'components/SeoTitle'
 import JoinUsIntro from '../sections/JoinUsIntro'
 import JoinTheCommunity from '../sections/JoinTheCommunity'
@@ -8,10 +12,6 @@ import CallForPapers from '../sections/CallForPapers'
 import Speakers from '../sections/Speakers'
 import WantToSponsor from '../sections/WantToSponsor'
 import TicketsGraphBgWrapper from '../sections/TicketsGraphBgWrapper'
-import GetYourTicket from '../sections/GetYourTicket'
-import CoOrganizedBy from '../sections/CoOrganizedBy'
-import Sponsors from '../sections/Sponsors'
-import Footer from '../sections/Footer'
 
 export default withData(() => (
   <div>

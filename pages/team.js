@@ -1,19 +1,12 @@
-import styled, { css } from 'styled-components'
-
-import rem from 'utils/rem'
-import { mobile } from 'utils/media'
-import { specialRed, textLightGrey } from 'utils/colors'
 import withData from 'utils/withData'
-
 import SeoTitle from 'components/SeoTitle'
-import Footer from '../sections/Footer'
+import Footer from 'graphiconf/sections/Footer'
 import Navbar from 'components/Navbar'
-import PageTitle from 'components/PageTitle'
 import Container from 'components/Container'
 import SectionContent from 'components/SectionContent'
 import Person from 'components/Person'
 import Grid from 'components/Grid'
-import CoOrganizedBy from '../sections/CoOrganizedBy'
+import CoOrganizedBy from 'graphiconf/sections/CoOrganizedBy'
 import WantToSponsor from '../sections/WantToSponsor'
 
 const team = [
@@ -79,15 +72,15 @@ export default withData(() => (
     <section>
       <Container>
         <SectionContent>
-
           <Grid>
-            {GridItem => team.map((v, i) => (
-              <GridItem key={i}>
-                <Person {...v} />
-              </GridItem>
-            ))}
+            {GridItem =>
+              team.map((v, i) => (
+                <GridItem key={i}>
+                  <Person {...v} />
+                </GridItem>
+              ))
+            }
           </Grid>
-
         </SectionContent>
       </Container>
     </section>
