@@ -3,7 +3,7 @@ import Tilt from 'react-tilt'
 import retinaImage from 'polished/lib/mixins/retinaImage'
 
 import rem from 'utils/rem'
-import { mobile, desktop } from 'utils/media'
+import { mobile } from 'utils/media'
 import { resetButton } from 'utils/reset'
 import { boxStyle } from 'utils/mixins'
 import { PlayButton } from 'components/Icons'
@@ -24,7 +24,9 @@ const VideoHighlight = ({
 
       <Overlay>
         <Content>
-          <IconWrapper><PlayButton /></IconWrapper>
+          <IconWrapper>
+            <PlayButton />
+          </IconWrapper>
           <TextsWrapper>
             <Title>{title}</Title>
             <Speaker>{description}</Speaker>
@@ -38,9 +40,7 @@ const VideoHighlight = ({
 export default VideoHighlight
 
 const Wrapper = styled.button`
-  ${resetButton}
-
-  display: block;
+  ${resetButton} display: block;
   position: relative;
   width: 100%;
   height: ${rem(332)};
@@ -49,18 +49,13 @@ const Wrapper = styled.button`
   overflow: hidden;
   background: black;
 
-  ${boxStyle(false, false)}
-
-  transform-style: preserve-3d;
+  ${boxStyle(false, false)} transform-style: preserve-3d;
   transition: opacity 150ms, box-shadow 150ms, transform 150ms ease-out;
   cursor: pointer;
 
   ${mobile(css`
     height: ${rem(251)};
-  `)}
-
-  &:hover,
-  &:focus {
+  `)} &:hover, &:focus {
     opacity: 0.9;
   }
 
@@ -79,9 +74,10 @@ const ImageWrapper = styled.div`
   width: 100%;
   text-indent: -99999px;
 
-  ${p => css`${retinaImage(p.url, 'cover', p.format, undefined, '@2x')}`}
-
-  background-position: center center;
+  ${p =>
+    css`
+      ${retinaImage(p.url, 'cover', p.format, undefined, '@2x')};
+    `} background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: ${rem(5)};
@@ -103,7 +99,11 @@ const Overlay = styled.div`
   display: flex;
   align-items: flex-end;
 
-  background-image: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.6) 100%);
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
 `
 
 const Content = styled.div`
@@ -125,7 +125,7 @@ const Content = styled.div`
 `
 
 const IconWrapper = styled.div`
-  filter: drop-shadow(${rem(1)} ${rem(1)} ${rem(1)} rgba(0, 0, 0, 0.1))
+  filter: drop-shadow(${rem(1)} ${rem(1)} ${rem(1)} rgba(0, 0, 0, 0.1));
 `
 
 const TextsWrapper = styled.div`
