@@ -13,6 +13,7 @@ import Highlights from '../sections/Highlights'
 import CallForPapers from '../sections/CallForPapers'
 import WantToSponsor from '../sections/WantToSponsor'
 import TicketsGraphBgWrapper from '../sections/TicketsGraphBgWrapper'
+import { eventbriteLink } from '../utils/config'
 
 export default withData(() => (
   <div>
@@ -27,7 +28,7 @@ export default withData(() => (
 
     <TicketsGraphBgWrapper>
       {/* These 3 section share one bg */}
-      <GetYourTicket />
+      <GetYourTicket eventbriteLink={eventbriteLink} />
       <CoOrganizedBy />
     </TicketsGraphBgWrapper>
 
