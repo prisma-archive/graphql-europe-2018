@@ -1,9 +1,8 @@
 import styled, { css } from 'styled-components'
 
 import rem from 'utils/rem'
-import { mobile, desktop } from 'utils/media'
-import Container from 'components/Container'
-import GraphBg from 'components/GraphBg'
+import { mobile } from 'utils/media'
+import GraphBg from '../components/GraphBg'
 
 const TicketsGraphBgWrapper = ({ children }) => (
   <Wrapper>
@@ -15,9 +14,7 @@ const TicketsGraphBgWrapper = ({ children }) => (
       <GraphBg />
     </LowerGraphBgWrapper>
 
-    <ContentWrapper>
-      {children}
-    </ContentWrapper>
+    <ContentWrapper>{children}</ContentWrapper>
   </Wrapper>
 )
 
@@ -38,7 +35,7 @@ const TopGraphBgWrapper = styled.div`
     top: ${rem(-240)};
     left: ${rem(-410)};
     transform: scale(0.7);
-  `)}
+  `)};
 `
 
 const LowerGraphBgWrapper = styled.div`
@@ -51,7 +48,7 @@ const LowerGraphBgWrapper = styled.div`
     top: ${rem(140)};
     right: ${rem(-300)};
     transform: scale(0.7);
-  `)}
+  `)};
 `
 
 const ContentWrapper = styled.div`
