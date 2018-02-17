@@ -7,7 +7,7 @@ import { upperCaseHeading } from 'utils/mixins'
 import withData from 'utils/withData'
 
 import SeoTitle from 'components/SeoTitle'
-import Footer from 'graphiconf/sections/Footer'
+import Footer from '../sections/Footer'
 import Navbar from '../components/Navbar'
 import PageTitle from 'components/PageTitle'
 import Container from 'components/Container'
