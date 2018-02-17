@@ -2627,9 +2627,9 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.4:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
-graphiconf@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/graphiconf/-/graphiconf-2.0.0.tgz#3788a1ca9350809f9e3ee74965c3d5295b3a09bc"
+graphiconf@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/graphiconf/-/graphiconf-2.0.1.tgz#0e158e021b790134955a94cbe58588f350eb39b6"
   dependencies:
     apollo-cache-inmemory "^1.1.9"
     apollo-client "^2.2.5"
