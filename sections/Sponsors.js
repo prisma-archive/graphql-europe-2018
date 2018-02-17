@@ -3,15 +3,12 @@ import styled, { css } from 'styled-components'
 import rem from 'utils/rem'
 import { mobile, desktop } from 'utils/media'
 import Container from 'components/Container'
-import SectionTitle from 'components/SectionTitle'
 import SectionContent from 'components/SectionContent'
-import OrganizersLogos from 'components/OrganizersLogos'
 
 const Sponsors = () => (
   <Wrapper>
     <Container>
       <SectionContent>
-
         <Grid>
           <GridItem>
             <LogoImage src="/static/logos/commercetools.png" alt="Apollo" />
@@ -39,7 +36,6 @@ const Sponsors = () => (
             <LogoImage src="/static/logos/apollo.png" alt="Apollo" />
           </GridItem>
         </Grid>
-
       </SectionContent>
     </Container>
   </Wrapper>
@@ -74,24 +70,22 @@ const GridItem = styled.div`
       border-right: 0;
     }
 
-    &:nth-last-child(-n+4) {
+    &:nth-last-child(-n + 4) {
       border-bottom: 0;
     }
-  `)}
+  `)} ${mobile(css`
+      width: 50%;
+      height: ${rem(120)};
+      line-height: ${rem(120)};
 
-  ${mobile(css`
-    width: 50%;
-    height: ${rem(120)};
-    line-height: ${rem(120)};
+      &:nth-child(2n) {
+        border-right: 0;
+      }
 
-    &:nth-child(2n) {
-      border-right: 0;
-    }
-
-    &:nth-last-child(-n+2) {
-      border-bottom: 0;
-    }
-  `)}
+      &:nth-last-child(-n + 2) {
+        border-bottom: 0;
+      }
+    `)};
 `
 
 const LogoImage = styled.img`
@@ -101,5 +95,5 @@ const LogoImage = styled.img`
 
   ${mobile(css`
     transform: scale(0.8);
-  `)}
-  `
+  `)};
+`

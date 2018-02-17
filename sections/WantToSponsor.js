@@ -78,27 +78,25 @@ const Texts = styled.div`
       margin-left: 0;
       padding: 0;
       text-align: center;
-    `} ${mobile(css`
-      width: 100%;
-      margin-left: 0;
-      padding: ${rem(45)} 0 0 0;
+    `};
 
-      ${p =>
-        p.noPic &&
-        css`
-          padding: 0;
-        `};
-    `)};
+  ${mobile(css`
+    width: 100%;
+    margin-left: 0;
+    padding: ${rem(45)} 0 0 0;
+
+    ${p =>
+      p.noPic &&
+      css`
+        padding: 0;
+      `};
+  `)};
 `
 
 const ImageWrapper = styled.div`
-  ${retinaImage(
-    '/static/photos/sponsors',
-    'cover',
-    'png',
-    undefined,
-    '@2x',
-  )} flex: 1 1 auto;
+  ${retinaImage('/static/photos/sponsors', 'cover', 'png', undefined, '@2x')};
+
+  flex: 1 1 auto;
   background-position: center center;
   background-repeat: no-repeat;
   text-indent: -99999px;
