@@ -13,6 +13,7 @@ import WantToSponsor from '../sections/WantToSponsor'
 import GetYourTicket from '../sections/GetYourTicket'
 import TicketsGraphBgWrapper from '../sections/TicketsGraphBgWrapper'
 import Footer from '../sections/Footer'
+import Sponsors from '../sections/Sponsors'
 import { eventbriteLink } from '../utils/config'
 
 export default withData(() => (
@@ -29,6 +30,7 @@ export default withData(() => (
     <TicketsGraphBgWrapper>
       {/* These 3 section share one bg */}
       <GetYourTicket eventbriteLink={eventbriteLink} />
+      <Sponsors />
       <CoOrganizedBy />
     </TicketsGraphBgWrapper>
 

@@ -4,36 +4,25 @@ import rem from 'utils/rem'
 import { mobile, desktop } from 'utils/media'
 import Container from 'components/Container'
 import SectionContent from 'components/SectionContent'
+import SectionTitle from 'components/SectionTitle'
 
 const Sponsors = () => (
   <Wrapper>
     <Container>
       <SectionContent>
+        <SectionTitle>Sponsered by</SectionTitle>
         <Grid>
           <GridItem>
-            <LogoImage src="/static/logos/commercetools.png" alt="Apollo" />
+            <a href="https://rangle.io">
+              <LogoImage src="/static/logos/rangleio.svg" alt="Rangle.io" />
+            </a>
           </GridItem>
-          <GridItem>
-            <LogoImage src="/static/logos/neo4j.png" alt="Neo4j" />
-          </GridItem>
-          <GridItem>
-            <LogoImage src="/static/logos/zalando.png" alt="Zalando" />
-          </GridItem>
-          <GridItem>
-            <LogoImage src="/static/logos/github.png" alt="Github" />
-          </GridItem>
-
-          <GridItem>
-            <LogoImage src="/static/logos/n26.png" alt="N26" />
-          </GridItem>
-          <GridItem>
-            <LogoImage src="/static/logos/intuit.png" alt="intuit" />
-          </GridItem>
-          <GridItem>
-            <LogoImage src="/static/logos/facebook.png" alt="Facebook" />
-          </GridItem>
-          <GridItem>
-            <LogoImage src="/static/logos/apollo.png" alt="Apollo" />
+        </Grid>
+        <Grid>
+          <GridItem small>
+            <a href="https://www.okgrow.com/">
+              <LogoImage small src="/static/logos/okgrow.svg" alt="OK Grow!" />
+            </a>
           </GridItem>
         </Grid>
       </SectionContent>
@@ -50,50 +39,37 @@ const Wrapper = styled.section`
 const Grid = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justifty-content: flex-start;
+  justify-content: center;
 `
 
 const GridItem = styled.div`
   flex: 1 0 auto;
-  height: ${rem(170)};
-  line-height: ${rem(170)};
+  height: ${p => (p.small ? rem(120) : rem(170))};
+  line-height: ${p => (p.small ? rem(120) : rem(170))};
 
   vertical-align: middle;
   text-align: center;
-  border-right: 1px solid #e2e8f0;
-  border-bottom: 1px solid #e2e8f0;
 
   ${desktop(css`
-    width: 24%;
+    width: ${p => (p.small ? `19%` : `24%`)};
+  `)};
 
-    &:nth-child(4n) {
-      border-right: 0;
-    }
-
-    &:nth-last-child(-n + 4) {
-      border-bottom: 0;
-    }
-  `)} ${mobile(css`
-      width: 50%;
-      height: ${rem(120)};
-      line-height: ${rem(120)};
-
-      &:nth-child(2n) {
-        border-right: 0;
-      }
-
-      &:nth-last-child(-n + 2) {
-        border-bottom: 0;
-      }
-    `)};
+  ${mobile(css`
+    width: 50%;
+    height: ${rem(120)};
+    line-height: ${rem(120)};
+  `)};
 `
 
 const LogoImage = styled.img`
   max-width: 90%;
   display: inline-block;
   vertical-align: middle;
+  transform: scale(${p => (p.small ? 0.7 : 1)});
 
   ${mobile(css`
-    transform: scale(0.8);
+    transform: scale(${p => (p.small ? 0.6 : 0.8)});
   `)};
+
+  max-width: ${rem(170)};
 `
