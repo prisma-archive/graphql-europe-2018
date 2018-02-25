@@ -22,7 +22,7 @@ export const GridItem = styled.div`
   `)};
 
   ${mobile(css`
-    width: 50%;
+    /* width: 50%; */
     height: ${rem(120)};
     line-height: ${rem(120)};
   `)};
@@ -35,7 +35,7 @@ export const LogoImage = styled.img`
   transform: scale(${p => (p.small ? 0.7 : 1.2)});
 
   ${mobile(css`
-    transform: scale(${p => (p.small ? 0.6 : 0.8)});
+    transform: scale(${p => (p.small ? 1 : 1.5)});
   `)};
 
   max-width: ${rem(170)};
