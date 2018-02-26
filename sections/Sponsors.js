@@ -9,7 +9,7 @@ const Sponsors = () => (
   <Wrapper>
     <Container>
       <SectionContent>
-        <SectionTitle>Sponsered by</SectionTitle>
+        <SectionTitle>Sponsored by</SectionTitle>
         <Grid>
           <GridItem>
             <a href="https://rangle.io">
