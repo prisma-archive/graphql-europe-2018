@@ -3,17 +3,22 @@ import styled from 'styled-components'
 import Container from 'components/Container'
 import SectionContent from 'components/SectionContent'
 import SectionTitle from 'components/SectionTitle'
-import { Grid, GridItem, LogoImage } from '../components/LogoGrid'
+import { Grid, GridItem, LogoImage } from 'components/LogoGrid'
 
 const Sponsors = () => (
   <Wrapper>
     <Container>
-      <SectionContent style={{ paddingBottom: 10 }}>
+      <SectionContent>
         <SectionTitle>Sponsered by</SectionTitle>
         <Grid>
           <GridItem>
             <a href="https://rangle.io">
               <LogoImage src="/static/logos/rangleio.svg" alt="Rangle.io" />
+            </a>
+          </GridItem>
+          <GridItem>
+            <a href="https://github.com">
+              <LogoImage src="/static/logos/github.svg" alt="Github.com" />
             </a>
           </GridItem>
         </Grid>
