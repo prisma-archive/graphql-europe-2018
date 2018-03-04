@@ -1,65 +1,69 @@
 import styled, { css } from 'styled-components'
+import { Subscribe } from 'unstated'
 
 import rem from 'utils/rem'
 import { textGrey } from 'utils/colors'
 import { upperCaseHeading } from 'utils/mixins'
 import { navHeight, mobileNavHeight } from 'utils/sizes'
 import { mobile } from 'utils/media'
-import { eventbriteLink, cfpLink } from '../utils/config'
+import { cfpLink } from '../utils/config'
 import Navbar from '../components/Navbar'
 import GraphBg from '../components/GraphBg'
 import Container from 'components/Container'
 import SectionContent from 'components/SectionContent'
 import { DesktopTextBreak, MobileTextBreak } from 'components/TextBreak'
 import Button from 'components/Button'
+import ModalContainer from '../containers/ModalContainer'
 
 const JoinUsIntro = () => (
-  <Wrapper>
-    <GraphBgWrapper>
-      <GraphBg />
-    </GraphBgWrapper>
+  <Subscribe to={[ModalContainer]}>
+    {modal => (
+      <Wrapper>
+        <GraphBgWrapper>
+          <GraphBg />
+        </GraphBgWrapper>
 
-    <NavbarFloater>
-      <Navbar />
-    </NavbarFloater>
+        <NavbarFloater>
+          <Navbar />
+        </NavbarFloater>
 
-    <PopWrapper>
-      <Container>
-        <SectionContent>
-          <Title>
-            Join us for Europe’s biggest<DesktopTextBreak /> GraphQL-<MobileTextBreak
-              soft
-            />dedicated conference
-          </Title>
-          <Description>
-            GraphQL Europe is a non-profit GraphQL conference in Europe with
-            speakers from all around the world. Learn about GraphQL best
-            practices from industry experts and become part of the thriving
-            GraphQL community. GraphQL Europe is organized by Graph.Cool and
-            Honeypot.
-          </Description>
+        <PopWrapper>
+          <Container>
+            <SectionContent>
+              <Title>
+                Join us for Europe’s biggest<DesktopTextBreak /> GraphQL-<MobileTextBreak
+                  soft
+                />dedicated conference
+              </Title>
+              <Description>
+                GraphQL Europe is a non-profit GraphQL conference in Europe with
+                speakers from all around the world. Learn about GraphQL best
+                practices from industry experts and become part of the thriving
+                GraphQL community. GraphQL Europe is organized by Graph.Cool and
+                Honeypot.
+              </Description>
 
-          <Meta>
-            <MetaItem>
-              <MetaItemKey>Date</MetaItemKey>
-              <MetaItemValue>June 15th, 2018</MetaItemValue>
-            </MetaItem>
-            <MetaItem>
-              <MetaItemKey>Location</MetaItemKey>
-              <MetaItemValue>nHow Hotel, Berlin</MetaItemValue>
-            </MetaItem>
-          </Meta>
+              <Meta>
+                <MetaItem>
+                  <MetaItemKey>Date</MetaItemKey>
+                  <MetaItemValue>June 15th, 2018</MetaItemValue>
+                </MetaItem>
+                <MetaItem>
+                  <MetaItemKey>Location</MetaItemKey>
+                  <MetaItemValue>nHow Hotel, Berlin</MetaItemValue>
+                </MetaItem>
+              </Meta>
 
-          <ButtonWrapper>
-            <Button isLink={true} href={eventbriteLink}>
-              Get Tickets
-            </Button>
-            <SecondaryLink href={cfpLink}>or submit talk</SecondaryLink>
-          </ButtonWrapper>
-        </SectionContent>
-      </Container>
-    </PopWrapper>
-  </Wrapper>
+              <ButtonWrapper>
+                <Button onClick={() => modal.show()}>Get Tickets</Button>
+                <SecondaryLink href={cfpLink}>or submit talk</SecondaryLink>
+              </ButtonWrapper>
+            </SectionContent>
+          </Container>
+        </PopWrapper>
+      </Wrapper>
+    )}
+  </Subscribe>
 )
 
 export default JoinUsIntro

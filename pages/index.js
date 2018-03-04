@@ -1,3 +1,6 @@
+import React from 'react'
+import { Provider } from 'unstated'
+
 import CoOrganizedBy from 'graphiconf/sections/CoOrganizedBy'
 import Speakers from 'graphiconf/sections/Speakers'
 
@@ -14,26 +17,40 @@ import GetYourTicket from '../sections/GetYourTicket'
 import TicketsGraphBgWrapper from '../sections/TicketsGraphBgWrapper'
 import Footer from '../sections/Footer'
 import Sponsors from '../sections/Sponsors'
+import SubscribeModal from '../components/SubscribeModal'
 import { eventbriteLink } from '../utils/config'
 
-export default withData(() => (
-  <div>
-    <SeoTitle />
+class Index extends React.Component {
+  render() {
+    return (
+      <Provider>
+        <div>
+          <SeoTitle />
 
-    <JoinUsIntro />
-    <JoinTheCommunity />
-    <Highlights />
-    <CallForPapers />
-    <Speakers speakersList={speakersList} />
-    <WantToSponsor />
+          <JoinUsIntro openModal={this.openModal} />
+          <JoinTheCommunity />
+          <Highlights />
+          <CallForPapers />
+          <Speakers speakersList={speakersList} />
+          <WantToSponsor />
 
-    <TicketsGraphBgWrapper>
-      {/* These 3 section share one bg */}
-      <GetYourTicket eventbriteLink={eventbriteLink} />
-      <Sponsors />
-      <CoOrganizedBy />
-    </TicketsGraphBgWrapper>
+          <TicketsGraphBgWrapper>
+            {/* These 3 section share one bg */}
+            <GetYourTicket
+              openModal={this.openModal}
+              eventbriteLink={eventbriteLink}
+            />
+            <Sponsors />
+            <CoOrganizedBy />
+          </TicketsGraphBgWrapper>
 
-    <Footer />
-  </div>
-))
+          <SubscribeModal />
+
+          <Footer />
+        </div>
+      </Provider>
+    )
+  }
+}
+
+export default withData(Index)

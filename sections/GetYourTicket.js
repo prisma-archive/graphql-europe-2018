@@ -1,5 +1,7 @@
 import styled from 'styled-components'
+import { Subscribe } from 'unstated'
 
+import ModalContainer from '../containers/ModalContainer'
 import Container from 'components/Container'
 import SectionTitle from 'components/SectionTitle'
 import SectionContent from 'components/SectionContent'
@@ -21,33 +23,38 @@ const GetYourTicket = ({ eventbriteLink }) => [
           </SectionSubtitleDesc>
         </Headings>
 
-        <TicketsRow.Row>
-          <TicketsRow.Item>
-            <Ticket
-              disabled={true}
-              price="199€"
-              name="Early Bird"
-              desc="Sold out!"
-            />
-          </TicketsRow.Item>
-          <TicketsRow.Item>
-            <Ticket
-              disabled={false}
-              price="299€"
-              name="Regular"
-              desc="Regular ticket price for the conference"
-              href={eventbriteLink}
-            />
-          </TicketsRow.Item>
-          <TicketsRow.Item>
-            <Ticket
-              disabled={true}
-              price="399€"
-              name="Late Bird"
-              desc="Last chance to get tickets"
-            />
-          </TicketsRow.Item>
-        </TicketsRow.Row>
+        <Subscribe to={[ModalContainer]}>
+          {modal => (
+            <TicketsRow.Row>
+              <TicketsRow.Item>
+                <Ticket
+                  disabled={true}
+                  price="199€"
+                  name="Early Bird"
+                  desc="Sold out!"
+                />
+              </TicketsRow.Item>
+              <TicketsRow.Item>
+                <Ticket
+                  disabled={false}
+                  price="299€"
+                  name="Regular"
+                  desc="Regular ticket price for the conference"
+                  href="#"
+                  onSelect={() => modal.show()}
+                />
+              </TicketsRow.Item>
+              <TicketsRow.Item>
+                <Ticket
+                  disabled={true}
+                  price="399€"
+                  name="Late Bird"
+                  desc="Last chance to get tickets"
+                />
+              </TicketsRow.Item>
+            </TicketsRow.Row>
+          )}
+        </Subscribe>
       </SectionContent>
     </Container>
   </Wrapper>,
