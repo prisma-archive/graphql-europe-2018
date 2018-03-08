@@ -1,3 +1,5 @@
+import { cfpLink } from './config'
+
 export const speakersList = [
   {
     imageUrl: '/static/speakers/speakers-1',
@@ -43,7 +45,7 @@ export const speakersList = [
     imageUrl: '/static/speakers/you-want-to-talk',
     imageFormat: 'jpg',
     name: 'This can be you!',
-    bio: 'Register today',
+    bio: () => <a href={cfpLink}>Register today</a>,
     noShadow: true,
   },
 ]
