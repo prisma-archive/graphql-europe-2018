@@ -18,7 +18,15 @@ const Sponsors = () => (
           </GridItem>
           <GridItem>
             <a href="https://github.com">
-              <LogoImage src="/static/logos/github.svg" alt="Github.com" />
+              <LogoImage src="/static/logos/github.svg" alt="Github" />
+            </a>
+          </GridItem>
+          <GridItem>
+            <a href="http://www.br.de">
+              <LogoImage
+                src="/static/logos/BR_Dachmarke.svg"
+                alt="Bayerischer Rundfunk"
+              />
             </a>
           </GridItem>
         </Grid>
