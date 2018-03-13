@@ -24,7 +24,7 @@ const Sponsors = () => (
           <GridItem>
             <a href="http://www.br.de">
               <LogoImage
-                src="/static/logos/BR_Dachmarke.svg"
+                src="/static/logos/br-next.png"
                 alt="Bayerischer Rundfunk"
               />
             </a>
