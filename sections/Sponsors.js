@@ -36,6 +36,11 @@ const Sponsors = () => (
               <LogoImage small src="/static/logos/okgrow.svg" alt="OK Grow!" />
             </a>
           </GridItem>
+          <GridItem small>
+            <a href="https://twitter.com/YLDio">
+              <LogoImage small src="/static/logos/yld_logo.png" alt="YLD.io" />
+            </a>
+          </GridItem>
         </Grid>
       </SectionContent>
     </Container>
