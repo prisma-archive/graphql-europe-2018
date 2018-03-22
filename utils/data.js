@@ -42,6 +42,14 @@ export const speakersList = [
     github: 'SaraVieira',
   },
   {
+    imageUrl: '/static/speakers/speakers-6',
+    imageFormat: 'jpg',
+    name: 'Jira Vinyoopongphan',
+    bio: 'Frontend Engineer at Capital One',
+    twitter: 'thekamahele',
+    github: 'thekamahele',
+  },
+  {
     imageUrl: '/static/speakers/you-want-to-talk',
     imageFormat: 'jpg',
     name: 'This can be you!',
