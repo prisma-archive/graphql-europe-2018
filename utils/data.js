@@ -50,6 +50,14 @@ export const speakersList = [
     github: 'thekamahele',
   },
   {
+    imageUrl: '/static/speakers/speakers-7',
+    imageFormat: 'jpg',
+    name: 'Leanne Shapton',
+    bio: 'Sogtware Engineer at Shopify',
+    twitter: 'leeshapton',
+    github: 'lshapton',
+  },
+  {
     imageUrl: '/static/speakers/you-want-to-talk',
     imageFormat: 'jpg',
     name: 'This can be you!',
