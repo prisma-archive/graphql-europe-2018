@@ -41,6 +41,11 @@ const Sponsors = () => (
               <LogoImage small src="/static/logos/yld_logo.png" alt="YLD.io" />
             </a>
           </GridItem>
+          <GridItem small>
+            <a href="https://aeb.com/">
+              <LogoImage small src="/static/logos/aeb.png" alt="AEB" />
+            </a>
+          </GridItem>
         </Grid>
       </SectionContent>
     </Container>
