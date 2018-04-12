@@ -53,7 +53,7 @@ export const speakersList = [
     imageUrl: '/static/speakers/speakers-7',
     imageFormat: 'png',
     name: 'Leanne Shapton',
-    bio: 'Sogtware Engineer at Shopify',
+    bio: 'Software Engineer at Shopify',
     twitter: 'leeshapton',
     github: 'lshapton',
   },
