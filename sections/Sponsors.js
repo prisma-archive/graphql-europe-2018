@@ -29,6 +29,15 @@ const Sponsors = () => (
               />
             </a>
           </GridItem>
+          <GridItem>
+            <a href="https://neo4j.com/">
+              <LogoImage
+                src="/static/logos/neo4j_logo.svg"
+                height="90"
+                alt="Neo4j"
+              />
+            </a>
+          </GridItem>
         </Grid>
         <Grid>
           <GridItem small>
