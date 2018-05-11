@@ -6,18 +6,21 @@ import Container from 'components/Container'
 
 const styles = {
   keynote: {
-    bg: 'rgb(240, 236, 255)',
-    color: 'rgb(51, 27, 153)',
+    bg: 'rgb(254,238,244)',
+    color: 'rgb(217,66,117)',
   },
   break: {
     bg: 'rgb(242, 242, 242)',
-    color: 'rgb(42, 53, 74)',
+    color: 'rgb(80,90,105)',
   },
   lightning: {
     bg: 'rgb(253, 243, 231)',
     color: 'rgb(242,141,34)',
   },
-  regular: {},
+  regular: {
+    bg: 'rgb(240, 236, 254)',
+    color: 'rgb(64,47,157)',
+  },
 }
 
 const scheduleList = [
@@ -30,12 +33,12 @@ const scheduleList = [
         icon: true,
       },
     ],
-    time: '0830 - 09:30',
+    time: '08:30 - 09:30',
     ...styles.break,
   },
   {
-    title: 'Coffee Break',
-    description: '',
+    title: 'Welcome speech',
+    description: 'Lee Byron',
     images: [
       {
         src: '/static/schedule/coffee.svg',
