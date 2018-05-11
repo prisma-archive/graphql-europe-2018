@@ -8,7 +8,7 @@ import SeoTitle from 'components/SeoTitle'
 import JoinUsIntro from '../sections/JoinUsIntro'
 import JoinTheCommunity from '../sections/JoinTheCommunity'
 import Highlights from '../sections/Highlights'
-import CallForPapers from '../sections/CallForPapers'
+import Schedule from '../sections/Schedule'
 import WantToSponsor from '../sections/WantToSponsor'
 import GetYourTicket from '../sections/GetYourTicket'
 import TicketsGraphBgWrapper from '../sections/TicketsGraphBgWrapper'
@@ -23,8 +23,9 @@ export default withData(() => (
     <JoinUsIntro />
     <JoinTheCommunity />
     <Highlights />
-    <CallForPapers />
+    {/* <CallForPapers /> */}
     <Speakers speakersList={speakersList} />
+    <Schedule />
     <WantToSponsor />
 
     <TicketsGraphBgWrapper>
