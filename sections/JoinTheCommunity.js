@@ -17,8 +17,10 @@ const JoinTheCommunity = () => (
         <SectionTitle>Join the community</SectionTitle>
         <Description>
           Join the official GraphQL Europe{' '}
-          <a href="https://slack.graph.cool/">Slack channel</a>.{' '}
-          This is your chance to meet your peers, organize informal chats and activities, or ask questions about the conference or Berlin. Join us in Graphcool's Slack:​ #graphql-europe.
+          <a href="https://slack.prisma.io/">Slack channel</a>. This is your
+          chance to meet your peers, organize informal chats and activities, or
+          ask questions about the conference or Berlin. Join us in Prisma's
+          Slack:​ #graphql-europe.
         </Description>
       </SectionContent>
     </Container>
@@ -36,5 +38,5 @@ const Description = styled.p`
 
   ${mobile(css`
     font-size: ${rem(18)};
-  `)}
+  `)};
 `

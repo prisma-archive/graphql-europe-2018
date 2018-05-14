@@ -11,7 +11,7 @@ import SectionContent from 'components/SectionContent'
 import Button from 'components/Button'
 
 const OpportunityTickets = () => (
-  <Wrapper id="call-for-papers">
+  <Wrapper id="opportunity">
     <Container>
       <SectionContent>
         <FlexWrapper>
