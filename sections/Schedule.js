@@ -42,7 +42,6 @@ const scheduleList = [
     images: [
       {
         src: '/static/speakers/lee-byron.jpg',
-        icon: true,
       },
     ],
     time: '09:30',
@@ -57,7 +56,7 @@ const scheduleList = [
       },
     ],
     time: '09:40',
-    ...styles.regular,
+    ...styles.keynote,
   },
   {
     title: ' Case Study: Scaling GraphQL at Shopify',
