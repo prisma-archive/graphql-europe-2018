@@ -12,6 +12,7 @@ import Schedule from '../sections/Schedule'
 import WantToSponsor from '../sections/WantToSponsor'
 import GetYourTicket from '../sections/GetYourTicket'
 import TicketsGraphBgWrapper from '../sections/TicketsGraphBgWrapper'
+import OpportunityTickets from '../sections/OpportunityTickets'
 import Footer from '../sections/Footer'
 import Sponsors from '../sections/Sponsors'
 import { eventbriteLink } from '../utils/config'
@@ -23,7 +24,7 @@ export default withData(() => (
     <JoinUsIntro />
     <JoinTheCommunity />
     <Highlights />
-    {/* <CallForPapers /> */}
+    <OpportunityTickets />
     <Speakers speakersList={speakersList} />
     <Schedule />
     <WantToSponsor />
