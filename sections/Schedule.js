@@ -41,7 +41,7 @@ const scheduleList = [
     description: 'Lee Byron',
     images: [
       {
-        src: '/static/schedule/coffee.svg',
+        src: '/static/speakers/lee-byron.jpg',
         icon: true,
       },
     ],
@@ -53,7 +53,7 @@ const scheduleList = [
     description: 'Nick Schrock',
     images: [
       {
-        src: [],
+        src: ['/static/speakers/nick-schrock.jpg'],
       },
     ],
     time: '09:40',
@@ -64,7 +64,7 @@ const scheduleList = [
     description: 'Leanne Shapton',
     images: [
       {
-        src: [],
+        src: ['/static/speakers/leanne-shapton.png'],
       },
     ],
     time: '10:00',
@@ -75,7 +75,7 @@ const scheduleList = [
     description: 'Johannes Schickling',
     images: [
       {
-        src: [],
+        src: ['/static/speakers/johannes-schickling.jpg'],
       },
     ],
     time: '10:20',
@@ -109,7 +109,7 @@ const scheduleList = [
     description: 'Olaf Hartig',
     images: [
       {
-        src: [],
+        src: ['/static/speakers/olaf-hartig.jpg'],
       },
     ],
     time: '11:30',
@@ -120,7 +120,7 @@ const scheduleList = [
     description: 'Jira Vinyoopongphan',
     images: [
       {
-        src: [],
+        src: ['/static/speakers/jira-vinyoopongphan.jpg'],
       },
     ],
     time: '11:50',
@@ -131,7 +131,7 @@ const scheduleList = [
     description: 'Jon Wong',
     images: [
       {
-        src: [],
+        src: ['/static/speakers/jon-wong.jpg'],
       },
     ],
     time: '12:00',
@@ -154,7 +154,7 @@ const scheduleList = [
     description: 'Tyler Martinez',
     images: [
       {
-        src: [],
+        src: ['/static/speakers/tyler-martinez.jpg'],
       },
     ],
     time: '13:30',
@@ -165,7 +165,7 @@ const scheduleList = [
     description: 'Sasha Solomon',
     images: [
       {
-        src: [],
+        src: ['/static/speakers/sasha-solomon.jpg'],
       },
     ],
     time: '13:50',
@@ -177,7 +177,7 @@ const scheduleList = [
     description: 'Michael Hunger',
     images: [
       {
-        src: [],
+        src: ['/static/speakers/michael-hunger.jpg'],
       },
     ],
     time: '14:10',
@@ -188,7 +188,7 @@ const scheduleList = [
     description: 'Rob Richards',
     images: [
       {
-        src: [],
+        src: ['/static/speakers/rob-richards.jpg'],
       },
     ],
     time: '14:20',
@@ -211,7 +211,7 @@ const scheduleList = [
     description: 'David Krentzlin',
     images: [
       {
-        src: [],
+        src: ['/static/speakers/david-krentzlin.jpg'],
       },
     ],
     time: '15:00',
@@ -222,7 +222,7 @@ const scheduleList = [
     description: 'Daniel Woelfel',
     images: [
       {
-        src: [],
+        src: ['/static/speakers/daniel-woelfel.jpg'],
       },
     ],
     time: '15:20',
@@ -234,7 +234,7 @@ const scheduleList = [
     description: 'Arnaud Rinquin',
     images: [
       {
-        src: [],
+        src: ['/static/speakers/arnaud-rinquin.jpg'],
       },
     ],
     time: '15:40',
@@ -245,7 +245,7 @@ const scheduleList = [
     description: 'Sara Vieira',
     images: [
       {
-        src: [],
+        src: ['static/speakers/sara-vieira.jpg'],
       },
     ],
     time: '15:50',
@@ -268,7 +268,7 @@ const scheduleList = [
     description: 'Peggy Rayzis',
     images: [
       {
-        src: [],
+        src: ['static/speakers/peggy-rayzis.jpg'],
       },
     ],
     time: '16:30',
@@ -279,7 +279,7 @@ const scheduleList = [
     description: 'Stephen Wan',
     images: [
       {
-        src: [],
+        src: ['/static/speakers/stephen-wan.jpg'],
       },
     ],
     time: '16:50',
@@ -290,7 +290,7 @@ const scheduleList = [
     description: 'Kyle Daigle',
     images: [
       {
-        src: [],
+        src: ['static/speakers/kyle-daigle.jpg'],
       },
     ],
     time: '17:10',
@@ -301,7 +301,7 @@ const scheduleList = [
     description: 'Lee Byron',
     images: [
       {
-        src: [],
+        src: ['static/speakers/lee-byron.jpg'],
       },
     ],
     time: '17:30',
