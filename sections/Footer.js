@@ -43,7 +43,7 @@ export default () => (
         </Column>
 
         <Column>
-          <LinkItem href="https://api.graphql-europe.org">API</LinkItem>
+          {/* <LinkItem href="https://api.graphql-europe.org">API</LinkItem> */}
           <LinkItem href="/code-of-conduct">Code of Conduct</LinkItem>
           <LinkItem href="/imprint">Imprint</LinkItem>
           <LinkItem href="https://github.com/graphcool/graphql-europe-2018">
