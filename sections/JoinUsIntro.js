@@ -5,7 +5,7 @@ import { textGrey } from 'utils/colors'
 import { upperCaseHeading } from 'utils/mixins'
 import { navHeight, mobileNavHeight } from 'utils/sizes'
 import { mobile } from 'utils/media'
-import { eventbriteLink, cfpLink } from '../utils/config'
+import { eventbriteLink } from '../utils/config'
 import Navbar from '../components/Navbar'
 import GraphBg from '../components/GraphBg'
 import Container from 'components/Container'
@@ -35,7 +35,7 @@ const JoinUsIntro = () => (
             GraphQL Europe is a non-profit GraphQL conference in Europe with
             speakers from all around the world. Learn about GraphQL best
             practices from industry experts and become part of the thriving
-            GraphQL community. GraphQL Europe is organized by Graph.Cool and
+            GraphQL community. GraphQL Europe is organized by Prisma and
             Honeypot.
           </Description>
 
@@ -54,7 +54,6 @@ const JoinUsIntro = () => (
             <Button isLink={true} href={eventbriteLink}>
               Get Tickets
             </Button>
-            <SecondaryLink href={cfpLink}>or submit talk</SecondaryLink>
           </ButtonWrapper>
         </SectionContent>
       </Container>
