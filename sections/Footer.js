@@ -40,9 +40,6 @@ export default () => (
           <Link href="/team">
             <LinkItem href="/team">Team</LinkItem>
           </Link>
-          <Link>
-            <LinkItem href="https://graphqlday.org">GraphQL Day</LinkItem>
-          </Link>
         </Column>
 
         <Column>
