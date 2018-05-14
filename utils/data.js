@@ -2,7 +2,7 @@ import { cfpLink } from './config'
 
 export const speakersList = [
   {
-    imageUrl: '/static/speakers/speakers-1',
+    imageUrl: '/static/speakers/peggy-rayzis.jpg',
     imageFormat: 'jpg',
     name: 'Peggy Rayzis',
     bio: 'Open Source Engineer at Apollo',
@@ -10,7 +10,7 @@ export const speakersList = [
     github: 'peggyrayzis',
   },
   {
-    imageUrl: '/static/speakers/speakers-2',
+    imageUrl: '/static/speakers/lee-byron.jpg',
     imageFormat: 'jpg',
     name: 'Lee Byron',
     bio: 'Facebook, GraphQL co-creator',
@@ -18,7 +18,7 @@ export const speakersList = [
     github: 'leebyron',
   },
   {
-    imageUrl: '/static/speakers/speakers-3',
+    imageUrl: '/static/speakers/nick-schrock.jpg',
     imageFormat: 'jpg',
     name: 'Nick Schrock',
     bio: 'Ex-Facebook Engineer, GraphQL co-creator',
@@ -26,7 +26,7 @@ export const speakersList = [
     github: 'schrockn',
   },
   {
-    imageUrl: '/static/speakers/speakers-4',
+    imageUrl: '/static/speakers/kyle-daigle.jpg',
     imageFormat: 'jpg',
     name: 'Kyle Daigle',
     bio: 'Github',
@@ -34,7 +34,7 @@ export const speakersList = [
     github: 'kdaigle',
   },
   {
-    imageUrl: '/static/speakers/speakers-5',
+    imageUrl: '/static/speakers/sara-vieira.jpg',
     imageFormat: 'jpg',
     name: 'Sara Vieira',
     bio: 'Frontend Engineer at YLD.io',
@@ -42,7 +42,7 @@ export const speakersList = [
     github: 'SaraVieira',
   },
   {
-    imageUrl: '/static/speakers/speakers-6',
+    imageUrl: '/static/speakers/jira-vinyoopongphan.jpg',
     imageFormat: 'jpg',
     name: 'Jira Vinyoopongphan',
     bio: 'Frontend Engineer at Capital One',
@@ -50,18 +50,11 @@ export const speakersList = [
     github: 'thekamahele',
   },
   {
-    imageUrl: '/static/speakers/speakers-7',
+    imageUrl: '/static/speakers/leanne-shapton.png',
     imageFormat: 'png',
     name: 'Leanne Shapton',
     bio: 'Software Engineer at Shopify',
     twitter: 'leeshapton',
     github: 'lshapton',
-  },
-  {
-    imageUrl: '/static/speakers/you-want-to-talk',
-    imageFormat: 'jpg',
-    name: 'This can be you!',
-    bio: () => <a href={cfpLink}>Register today</a>,
-    noShadow: true,
   },
 ]
