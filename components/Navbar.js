@@ -16,9 +16,6 @@ const renderAnchorLinks = NavItem => [
   <NavItem key="4" href="#want-to-sponsor" isAnchor={true}>
     Sponsor
   </NavItem>,
-  <NavItem key="5" href="https://graphqlday.org">
-    GraphQL Day
-  </NavItem>,
   <NavItem key="6" href="/team">
     Team
   </NavItem>,
@@ -33,9 +30,6 @@ const renderNormalLinks = NavItem => [
   </NavItem>,
   <NavItem key="4" href="/#want-to-sponsor">
     Sponsor
-  </NavItem>,
-  <NavItem key="5" href="https://graphqlday.org">
-    GraphQL Day
   </NavItem>,
   <NavItem key="6" href="/team">
     Team
