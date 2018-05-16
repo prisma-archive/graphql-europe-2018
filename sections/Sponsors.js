@@ -52,11 +52,7 @@ const Sponsors = () => (
               <LogoImage small src="/static/logos/okgrow.svg" alt="OK Grow!" />
             </a>
           </GridItem>
-          <GridItem small height="60px">
-            <a href="https://twitter.com/YLDio">
-              <LogoImage small src="/static/logos/yld_logo.png" alt="YLD.io" />
-            </a>
-          </GridItem>
+
           <GridItem small height="45px">
             <a href="https://aeb.com/">
               <LogoImage small src="/static/logos/aeb.png" alt="AEB" />
@@ -64,7 +60,12 @@ const Sponsors = () => (
           </GridItem>
         </Grid>
         <Grid>
-          <GridItem tiny>
+          <GridItem small height="35px">
+            <a href="https://twitter.com/YLDio">
+              <LogoImage small src="/static/logos/yld_logo.png" alt="YLD.io" />
+            </a>
+          </GridItem>
+          <GridItem small height="39px">
             <a href="https://twitter.com/">
               <LogoImage small src="/static/logos/twitter.png" alt="Twitter" />
             </a>
