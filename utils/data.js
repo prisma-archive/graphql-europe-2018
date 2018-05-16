@@ -2,7 +2,7 @@ import { cfpLink } from './config'
 
 export const speakersList = [
   {
-    imageUrl: '/static/speakers/peggy-rayzis.jpg',
+    imageUrl: '/static/speakers/peggy-rayzis',
     imageFormat: 'jpg',
     name: 'Peggy Rayzis',
     bio: 'Open Source Engineer at Apollo',
@@ -10,7 +10,7 @@ export const speakersList = [
     github: 'peggyrayzis',
   },
   {
-    imageUrl: '/static/speakers/lee-byron.jpg',
+    imageUrl: '/static/speakers/lee-byron',
     imageFormat: 'jpg',
     name: 'Lee Byron',
     bio: 'Facebook, GraphQL co-creator',
@@ -18,7 +18,7 @@ export const speakersList = [
     github: 'leebyron',
   },
   {
-    imageUrl: '/static/speakers/nick-schrock.jpg',
+    imageUrl: '/static/speakers/nick-schrock',
     imageFormat: 'jpg',
     name: 'Nick Schrock',
     bio: 'Ex-Facebook Engineer, GraphQL co-creator',
@@ -26,7 +26,7 @@ export const speakersList = [
     github: 'schrockn',
   },
   {
-    imageUrl: '/static/speakers/kyle-daigle.jpg',
+    imageUrl: '/static/speakers/kyle-daigle',
     imageFormat: 'jpg',
     name: 'Kyle Daigle',
     bio: 'Github',
@@ -34,7 +34,7 @@ export const speakersList = [
     github: 'kdaigle',
   },
   {
-    imageUrl: '/static/speakers/sara-vieira.jpg',
+    imageUrl: '/static/speakers/sara-vieira',
     imageFormat: 'jpg',
     name: 'Sara Vieira',
     bio: 'Frontend Engineer at YLD.io',
@@ -42,7 +42,7 @@ export const speakersList = [
     github: 'SaraVieira',
   },
   {
-    imageUrl: '/static/speakers/jira-vinyoopongphan.jpg',
+    imageUrl: '/static/speakers/jira-vinyoopongphan',
     imageFormat: 'jpg',
     name: 'Jira Vinyoopongphan',
     bio: 'Frontend Engineer at Capital One',
@@ -50,7 +50,7 @@ export const speakersList = [
     github: 'thekamahele',
   },
   {
-    imageUrl: '/static/speakers/leanne-shapton.png',
+    imageUrl: '/static/speakers/leanne-shapton',
     imageFormat: 'png',
     name: 'Leanne Shapton',
     bio: 'Software Engineer at Shopify',
