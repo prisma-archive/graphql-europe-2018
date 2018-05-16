@@ -10,13 +10,15 @@ const Sponsors = () => (
     <Container>
       <SectionContent>
         <SectionTitle>Sponsored by</SectionTitle>
+        <br />
+        <br />
         <Grid>
-          <GridItem>
+          <GridItem height="60px">
             <a href="https://rangle.io">
               <LogoImage src="/static/logos/rangleio.svg" alt="Rangle.io" />
             </a>
           </GridItem>
-          <GridItem>
+          <GridItem height="70px">
             <a href="https://github.com">
               <LogoImage src="/static/logos/github.svg" alt="Github" />
             </a>
@@ -38,24 +40,31 @@ const Sponsors = () => (
               />
             </a>
           </GridItem>
+          <GridItem>
+            <a href="https://contentful.com/">
+              <LogoImage src="/static/logos/contentful.png" alt="Contentful" />
+            </a>
+          </GridItem>
         </Grid>
         <Grid>
-          <GridItem small>
+          <GridItem small height="60px">
             <a href="https://www.okgrow.com/">
               <LogoImage small src="/static/logos/okgrow.svg" alt="OK Grow!" />
             </a>
           </GridItem>
-          <GridItem small>
+          <GridItem small height="60px">
             <a href="https://twitter.com/YLDio">
               <LogoImage small src="/static/logos/yld_logo.png" alt="YLD.io" />
             </a>
           </GridItem>
-          <GridItem small>
+          <GridItem small height="45px">
             <a href="https://aeb.com/">
               <LogoImage small src="/static/logos/aeb.png" alt="AEB" />
             </a>
           </GridItem>
-          <GridItem small>
+        </Grid>
+        <Grid>
+          <GridItem tiny>
             <a href="https://twitter.com/">
               <LogoImage small src="/static/logos/twitter.png" alt="Twitter" />
             </a>
