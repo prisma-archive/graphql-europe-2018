@@ -23,7 +23,7 @@ const team = [
     imageUrl: '/static/team/team-2',
     imageFormat: 'jpg',
     name: 'Johannes Schickling',
-    bio: `Johannes is a Berlin/SF-based entrepreneur  and founder of Graphcool, a flexible backend platform combining GraphQL+ AWS Lambda.  He previously built and sold the VR company “Optonaut”. Johannes studied computer science at KIT, Germany and loves cutting- edge mobile/web tech-nologies.`,
+    bio: `Johannes is a Berlin/SF-based entrepreneur  and founder of Prisma, a flexible backend platform combining GraphQL+ AWS Lambda.  He previously built and sold the VR company “Optonaut”. Johannes studied computer science at KIT, Germany and loves cutting- edge mobile/web tech-nologies.`,
     twitter: '_schickling',
     github: 'schickling',
     blackAndWhite: true,
@@ -58,6 +58,23 @@ const team = [
     bio: `Mohammad is a Software Developer, currently focused on open source work specially in Javascript. He's helping with styled-components project and he loves designing interfaces and experiences. He happily did this website w/ Next!`,
     twitter: 'morajabi',
     github: 'morajabi',
+  },
+  {
+    imageUrl: '/static/team/team-7',
+    imageFormat: 'jpg',
+    name: 'Nikolas Burk',
+    bio: `Nikolas is a GraphQL enthusiast who enjoys learning and teaching. He works at Prisma taking care of developer relations, writing tutorials, documentation, holds GraphQL workshops and is a frequent speaker at conferences.`,
+    twitter: 'nikolasburk',
+    github: 'nikolasburk',
+  },
+  {
+    imageUrl: '/static/speakers/lee-byron',
+    imageFormat: 'jpg',
+    name: 'Lee Byron',
+    bio: `As one of the creators of GraphQL and lead of the GraphQL working group, Lee is certainly one of the most knowledgeable people in the entire GraphQL space. As a co-host of GraphQL Europe, Lee is part of the review committee for selecting the talks and holds the welcome and closing speeches.`,
+    twitter: 'leeb',
+    github: 'leebyron',
+    blackAndWhite: true,
   },
 ]
 
