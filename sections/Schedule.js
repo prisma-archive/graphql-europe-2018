@@ -342,7 +342,7 @@ const scheduleList = [
 ]
 
 export default () => (
-  <Wrapper>
+  <Wrapper id="schedule">
     <Container>
       <SectionTitle>Schedule</SectionTitle>
       <List>
@@ -353,7 +353,7 @@ export default () => (
 )
 
 const Wrapper = styled.div`
-  padding-top: 0px;
+  padding-top: 60px;
   padding-bottom: 100px;
 `
 

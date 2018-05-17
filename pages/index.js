@@ -23,18 +23,17 @@ export default withData(() => (
 
     <JoinUsIntro />
     <JoinTheCommunity />
-    <Highlights />
     <OpportunityTickets />
     <Speakers speakersList={speakersList} />
-    <Schedule />
     <WantToSponsor />
-
+    <Schedule />
     <TicketsGraphBgWrapper>
       {/* These 3 section share one bg */}
       <GetYourTicket eventbriteLink={eventbriteLink} />
       <Sponsors />
       <CoOrganizedBy />
     </TicketsGraphBgWrapper>
+    <Highlights />
 
     <Footer />
   </div>
