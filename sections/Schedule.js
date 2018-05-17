@@ -125,7 +125,7 @@ const scheduleList = [
   },
   {
     title: ' Making the Case for GraphQL: A Recipe',
-    abstract: 'TBA',
+    abstract: 'So you know that GraphQL is the cool new kid on the block (or why else are you here), but how do you get everyone else excited enough to hop on the bandwagon with you? Fear not, this talk will provide you with a simple guide based on how I personally convinced my team to adopt GraphQL (or anything really).',
     description: 'Jira Vinyoopongphan',
     images: [
       {
