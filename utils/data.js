@@ -117,7 +117,7 @@ export const speakersList = [
     imageUrl: '/static/speakers/olaf-hartig',
     imageFormat: 'jpg',
     name: 'Olaf Hartig',
-    bio: 'Assisstant Professor for CS @ Linköping University',
+    bio: 'Assistant Professor for CS @ Linköping University',
     twitter: 'olafhartig',
     github: 'hartig',
   },
