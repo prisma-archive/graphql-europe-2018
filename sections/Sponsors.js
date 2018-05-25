@@ -70,6 +70,15 @@ const Sponsors = () => (
               <LogoImage small src="/static/logos/twitter.png" alt="Twitter" />
             </a>
           </GridItem>
+          <GridItem small height="31px">
+            <a href="https://facebook.com/">
+              <LogoImage
+                small
+                src="/static/logos/facebook.png"
+                alt="Facebook"
+              />
+            </a>
+          </GridItem>
         </Grid>
       </SectionContent>
     </Container>
