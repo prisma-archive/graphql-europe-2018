@@ -45,6 +45,11 @@ const Sponsors = () => (
               <LogoImage src="/static/logos/contentful.png" alt="Contentful" />
             </a>
           </GridItem>
+          <GridItem height="95px">
+            <a href="https://www.shopify.com/">
+              <LogoImage src="/static/logos/shopify.svg" alt="shopify" />
+            </a>
+          </GridItem>
         </Grid>
         <Grid>
           <GridItem small height="60px">
@@ -77,6 +82,11 @@ const Sponsors = () => (
                 src="/static/logos/facebook.png"
                 alt="Facebook"
               />
+            </a>
+          </GridItem>
+          <GridItem small height="31px">
+            <a href="https://www.apollographql.com">
+              <LogoImage small src="/static/logos/apollo.png" alt="apollo" />
             </a>
           </GridItem>
         </Grid>
