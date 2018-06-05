@@ -16,7 +16,7 @@
     "apollo-client": "^2.0.1",
     "apollo-link-http": "^1.0.0",
     "express": "^4.16.2",
-    "graphiconf": "^2.3.3",
+    "graphiconf": "^2.3.5",
     "graphql": "^0.11.7",
     "graphql-tag": "^2.5.0",
     "graphql-tools": "^2.6.1",

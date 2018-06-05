@@ -1,8 +1,10 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import ScheduleRow from 'components/ScheduleRow'
+import ScheduleTag from 'components/ScheduleTag'
 import SectionTitle from 'components/SectionTitle'
 import Container from 'components/Container'
+import { mobile } from 'utils/media'
 
 const styles = {
   keynote: {
@@ -22,6 +24,25 @@ const styles = {
     color: 'rgb(64,47,157)',
   },
 }
+
+const colorTags = [
+  {
+    title: 'Keynote',
+    ...styles.keynote,
+  },
+  {
+    title: 'Breaks',
+    ...styles.break,
+  },
+  {
+    title: 'Lightning Talks',
+    ...styles.lightning,
+  },
+  {
+    title: 'Regular Talks',
+    ...styles.regular,
+  },
+]
 
 const scheduleList = [
   {
@@ -127,7 +148,7 @@ const scheduleList = [
   },
   {
     title: ' Making the Case for GraphQL: A Recipe',
-    abstract: 'TBA',
+    abstract: 'So you know that GraphQL is the cool new kid on the block (or why else are you here), but how do you get everyone else excited enough to hop on the bandwagon with you? Fear not, this talk will provide you with a simple guide based on how I personally convinced my team to adopt GraphQL (or anything really).',
     description: 'Jira Vinyoopongphan',
     images: [
       {
@@ -346,7 +367,12 @@ const scheduleList = [
 export default () => (
   <Wrapper id="schedule">
     <Container>
-      <SectionTitle>Schedule</SectionTitle>
+      <ScheduleHeader>
+        <SectionTitle>Schedule</SectionTitle>
+        <Tags>
+          {colorTags.map((row, i) => <ScheduleTag key={i} {...row} />)}
+        </Tags>
+      </ScheduleHeader>
       <List>
         {scheduleList.map((row, i) => <ScheduleRow key={i} {...row} />)}
       </List>
@@ -361,4 +387,25 @@ const Wrapper = styled.div`
 
 const List = styled.div`
   padding-top: 30px;
+`
+
+const ScheduleHeader = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  ${mobile(css`
+    flex-direction: column;
+  `)};
+`
+const Tags = styled.div`
+  flex-grow: 0;
+  display: flex;
+  justify-content: flex-end;
+  /* to cover extra margin on the right */
+  margin-right: -15px;
+
+  ${mobile(css`
+    justify-content: space-between;
+    flex-wrap: wrap;
+  `)};
 `

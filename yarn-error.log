@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js install graphiconf
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js add graphiconf@2.3.5
 
 PATH: 
   /Users/mohammad/Documents/google-cloud-sdk/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mohammad/Documents/sdk/tools:/Users/mohammad/Documents/sdk/platform-tools
@@ -32,7 +32,7 @@ npm manifest:
       "apollo-client": "^2.0.1",
       "apollo-link-http": "^1.0.0",
       "express": "^4.16.2",
-      "graphiconf": "^2.3.0",
+      "graphiconf": "^2.3.4",
       "graphql": "^0.11.7",
       "graphql-tag": "^2.5.0",
       "graphql-tools": "^2.6.1",
@@ -136,6 +136,12 @@ Lockfile:
   "@types/async@2.0.47":
     version "2.0.47"
     resolved "https://registry.yarnpkg.com/@types/async/-/async-2.0.47.tgz#f49ba1dd1f189486beb6e1d070a850f6ab4bd521"
+  
+  "@types/react@>=15":
+    version "16.3.14"
+    resolved "https://registry.yarnpkg.com/@types/react/-/react-16.3.14.tgz#f90ac6834de172e13ecca430dcb6814744225d36"
+    dependencies:
+      csstype "^2.2.0"
   
   "@types/zen-observable@0.5.3", "@types/zen-observable@^0.5.3":
     version "0.5.3"
@@ -1488,6 +1494,10 @@ Lockfile:
     version "0.3.3"
     resolved "https://registry.yarnpkg.com/circular-json/-/circular-json-0.3.3.tgz#815c99ea84f6809529d2f45791bdf82711352d66"
   
+  classnames@^2.2.5:
+    version "2.2.5"
+    resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
+  
   cli-boxes@^1.0.0:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/cli-boxes/-/cli-boxes-1.0.0.tgz#4fa917c3e59c94a004cd61f8ee509da651687143"
@@ -1742,6 +1752,10 @@ Lockfile:
       css-color-keywords "^1.0.0"
       fbjs "^0.8.5"
       postcss-value-parser "^3.3.0"
+  
+  csstype@^2.2.0:
+    version "2.5.2"
+    resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.5.2.tgz#4534308476ceede8fbe148b9b99f9baf1c80fa06"
   
   currently-unhandled@^0.4.1:
     version "0.4.1"
@@ -2702,9 +2716,9 @@ Lockfile:
     version "4.1.11"
     resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
   
-  graphiconf@^2.3.0:
-    version "2.3.0"
-    resolved "https://registry.yarnpkg.com/graphiconf/-/graphiconf-2.3.0.tgz#d1903f8ca75f6bda9da342434c034968a1bdff20"
+  graphiconf@^2.3.4:
+    version "2.3.4"
+    resolved "https://registry.yarnpkg.com/graphiconf/-/graphiconf-2.3.4.tgz#2ea9397c5d7f1f34d026aae42929958320986109"
     dependencies:
       apollo-cache-inmemory "^1.1.9"
       apollo-client "^2.2.5"
@@ -2719,6 +2733,7 @@ Lockfile:
       polished "^1.9.2"
       prop-types "^15.6.0"
       react "^16.2.0"
+      react-animate-height "^1.0.2"
       react-apollo "^2.0.4"
       react-dom "^16.2.0"
       react-onclickout "^2.0.8"
@@ -4375,6 +4390,15 @@ Lockfile:
       minimist "^1.2.0"
       strip-json-comments "~2.0.1"
   
+  react-animate-height@^1.0.2:
+    version "1.0.2"
+    resolved "https://registry.yarnpkg.com/react-animate-height/-/react-animate-height-1.0.2.tgz#700e4a0c8d8b07882af4c23e09cde0fbdbe525b2"
+    dependencies:
+      classnames "^2.2.5"
+      prop-types "^15.5.8"
+    optionalDependencies:
+      "@types/react" ">=15"
+  
   react-apollo@^2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/react-apollo/-/react-apollo-2.0.0.tgz#c9cbda2956585d422800f1686d870258637170f8"
@@ -5745,10 +5769,4 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/zen-observable/-/zen-observable-0.7.1.tgz#f84075c0ee085594d3566e1d6454207f126411b3"
 
 Trace: 
-  Error: `install` has been replaced with `add` to add new dependencies. Run "yarn add graphiconf" instead.
-      at new MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
-      at Object.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:21987:13)
-      at Generator.next (<anonymous>)
-      at step (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:98:30)
-      at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:109:13
-      at <anonymous>
+  Error: ENOENT: no such file or directory, lstat '/Users/mohammad/Documents/dev/prisma/graphql-europe-2018/node_modules/graphiconf/node_modules/apollo-cache-inmemory/node_modules'

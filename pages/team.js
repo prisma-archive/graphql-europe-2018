@@ -71,7 +71,7 @@ const team = [
     imageUrl: '/static/speakers/lee-byron',
     imageFormat: 'jpg',
     name: 'Lee Byron',
-    bio: `As one of the creators of GraphQL and lead of the GraphQL working group, Lee is certainly one of the most knowledgeable people in the entire GraphQL space. As a co-host of GraphQL Europe, Lee is part of the review committee for selecting the talks and holds the welcome and closing speeches.`,
+    bio: `As one of the creators of GraphQL and lead of the GraphQL working group, Lee is certainly one of the most knowledgeable people in the entire GraphQL space. As a co-host of GraphQL Europe, Lee is part of the review committee for selecting the talks and holds the welcome and closing speeches. He works at Robinhood where helps lead web engineering and previously worked on open source at Facebook.`,
     twitter: 'leeb',
     github: 'leebyron',
     blackAndWhite: true,
