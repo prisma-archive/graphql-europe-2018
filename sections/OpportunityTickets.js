@@ -21,19 +21,22 @@ const OpportunityTickets = () => (
 
           <Texts>
             <SectionTitle spacing="medium">
-              Apply for opportunity tickets?
+              Node.JS & Prisma Workshop
             </SectionTitle>
 
             <Desc>
-              We strongly encourage and support attendance and participation
-              from individuals who consider themselves underrepresented at
-              technical conferences. Want to learn more about our free-of-charge
-              opportunity tickets?
+              Thursday evening before the conference, there will be a practical
+              workshop exclusively for GraphQL Europe attendees. It teaches how
+              to build GraphQL servers using a modern stack based on Node.JS,
+              Prisma and GraphQL bindings.
             </Desc>
 
             <ButtonWrapper>
-              <Button isLink={true} href={opportunityTicketsLink}>
-                Learn More
+              <Button
+                isLink={true}
+                href="https://www.meetup.com/graphql-berlin/events/251440436/"
+              >
+                Register
               </Button>
             </ButtonWrapper>
           </Texts>
