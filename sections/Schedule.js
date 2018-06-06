@@ -343,10 +343,10 @@ const scheduleList = [
     title: "Fast, Slow, Beautiful, Ugly: Building GitHub's Platform",
     abstract:
       "GitHub has had a REST API for almost 10 years and it's powered hundreds of thousands of integrations. In the last 2 years, GitHub has been reinvesting in its platform and brought a new, public GraphQL API to market. Additionally, GitHub's engineers build, maintain, and use their own GraphQL APIs to power GitHub.com itself. In this talk, Kyle will share why GitHub is enabling integrators to build more powerful integrations, why GraphQL is an important part of the strategy, and all the joy, tears, bad code, and amazing accomplishments of our journey.",
-    description: 'Kyle Daigle',
+    description: 'Nicholas Van Wiggeren',
     images: [
       {
-        src: ['static/speakers/kyle-daigle.jpg'],
+        src: ['static/speakers/nicholas-van-wiggeren.jpeg'],
       },
     ],
     time: '17:10',
@@ -362,6 +362,18 @@ const scheduleList = [
     ],
     time: '17:30',
     ...styles.keynote,
+  },
+  {
+    title: 'After Party',
+    description: 'Grab some drinks and chat about GraphQL',
+    images: [
+      {
+        src: '/static/schedule/cocktail.svg',
+        icon: true,
+      },
+    ],
+    time: '18:30',
+    ...styles.break,
   },
 ]
 

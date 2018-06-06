@@ -34,12 +34,12 @@ export const speakersList = [
     github: 'schickling',
   },
   {
-    imageUrl: '/static/speakers/kyle-daigle',
-    imageFormat: 'jpg',
-    name: 'Kyle Daigle',
+    imageUrl: '/static/speakers/nicholas-van-wiggeren',
+    imageFormat: 'jpeg',
+    name: 'Nicholas Van Wiggeren',
     bio: 'Github',
-    twitter: 'kdaigle',
-    github: 'kdaigle',
+    twitter: 'NickVanWig',
+    github: 'nickvanw',
   },
   {
     imageUrl: '/static/speakers/sara-vieira',
