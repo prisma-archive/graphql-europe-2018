@@ -37,7 +37,7 @@ export const speakersList = [
     imageUrl: '/static/speakers/nicholas-van-wiggeren',
     imageFormat: 'jpeg',
     name: 'Nicholas Van Wiggeren',
-    bio: 'Github',
+    bio: 'Manager Ecosystem Engineering @ Github',
     twitter: 'NickVanWig',
     github: 'nickvanw',
   },

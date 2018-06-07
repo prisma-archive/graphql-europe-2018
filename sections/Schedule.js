@@ -225,9 +225,9 @@ const scheduleList = [
     ...styles.lightning,
   },
   {
-    title: 'Write your own GraphQL Client ',
+    title: 'Data Masking in GraphQL Clients',
     abstract:
-      'Have you ever asked "why do I need a library like Apollo or Relay to use GraphQL?" They can seem complex and intimidating. In this talk we will build our own client from the ground up to get a deep understanding of the advanced features these libraries offer.',
+      'Data masking is an advanced feature found in some GraphQL clients like Relay. This talk will give you a deep understanding of this feature by explaining both why it is useful, as well as how it is implemented.',
     description: 'Rob Richard',
     images: [
       {
@@ -315,8 +315,9 @@ const scheduleList = [
     ...styles.break,
   },
   {
-    title: 'TBA',
-    abstract: 'TBA',
+    title: 'The future of GraphQL servers',
+    abstract:
+      "GraphQL is all about enabling frontend developers to build products faster. With Apollo Server 2.0, we've made GraphQL server development more approachable for product developers, thanks to a simpler API that works in every environment.In this talk, you'll not only learn about Apollo Server 2.0's exciting new features, you'll also hear Apollo's vision for the future of GraphQL servers, including a sneak peek of what's beyond 2.0.",
     description: 'Peggy Rayzis',
     images: [
       {
@@ -342,7 +343,7 @@ const scheduleList = [
   {
     title: "Fast, Slow, Beautiful, Ugly: Building GitHub's Platform",
     abstract:
-      "GitHub has had a REST API for almost 10 years and it's powered hundreds of thousands of integrations. In the last 2 years, GitHub has been reinvesting in its platform and brought a new, public GraphQL API to market. Additionally, GitHub's engineers build, maintain, and use their own GraphQL APIs to power GitHub.com itself. In this talk, Kyle will share why GitHub is enabling integrators to build more powerful integrations, why GraphQL is an important part of the strategy, and all the joy, tears, bad code, and amazing accomplishments of our journey.",
+      "GitHub has had a REST API for almost 10 years and it's powered hundreds of thousands of integrations. In the last 2 years, GitHub has been reinvesting in its platform and brought a new, public GraphQL API to market. Additionally, GitHub's engineers build, maintain, and use their own GraphQL APIs to power GitHub.com itself. In this talk, Nick will share why GitHub is enabling integrators to build more powerful integrations, why GraphQL is an important part of the strategy, and all the joy, tears, bad code, and amazing accomplishments of our journey.",
     description: 'Nicholas Van Wiggeren',
     images: [
       {
