@@ -54,7 +54,21 @@ const scheduleList = [
         icon: true,
       },
     ],
-    time: '08:30',
+    time: '08:15',
+    ...styles.break,
+  },
+  {
+    title: 'GraphQL Yoga (RSVP required)',
+    description: `A 45min Yoga-session to start the conference with a fresh & relaxed mind`,
+    abstract:
+      'Start the day with an energizing Vinyasa Flow class, connecting yourself with your body and your breath - meditation in movement! \nFind more info and RSVP here: https://www.meetup.com/graphql-berlin/events/251550870/',
+    images: [
+      {
+        src: '/static/schedule/yoga.svg',
+        icon: true,
+      },
+    ],
+    time: '08:15',
     ...styles.break,
   },
   {
