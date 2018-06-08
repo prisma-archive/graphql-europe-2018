@@ -23,6 +23,10 @@ const styles = {
     bg: 'rgb(240, 236, 254)',
     color: 'rgb(64,47,157)',
   },
+  satellite: {
+    bg: 'rgb(235,255,249)',
+    color: 'rgb(19,168,125)',
+  },
 }
 
 const colorTags = [
@@ -41,6 +45,10 @@ const colorTags = [
   {
     title: 'Regular Talks',
     ...styles.regular,
+  },
+  {
+    title: 'Satellite Events',
+    ...styles.satellite,
   },
 ]
 
@@ -69,7 +77,7 @@ const scheduleList = [
       },
     ],
     time: '08:15',
-    ...styles.break,
+    ...styles.satellite,
   },
   {
     title: 'Welcome',
@@ -388,7 +396,7 @@ const scheduleList = [
       },
     ],
     time: '18:30',
-    ...styles.break,
+    ...styles.satellite,
   },
 ]
 
