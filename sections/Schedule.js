@@ -62,7 +62,7 @@ const scheduleList = [
         icon: true,
       },
     ],
-    time: '08:15',
+    time: '08:00',
     ...styles.break,
   },
   {
