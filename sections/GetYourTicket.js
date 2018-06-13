@@ -32,19 +32,19 @@ const GetYourTicket = ({ eventbriteLink }) => [
           </TicketsRow.Item>
           <TicketsRow.Item>
             <Ticket
-              disabled={false}
+              disabled={true}
               price="299€"
               name="Regular"
               desc="Regular ticket price for the conference"
-              href={eventbriteLink}
             />
           </TicketsRow.Item>
           <TicketsRow.Item>
             <Ticket
-              disabled={true}
+              disabled={false}
               price="399€"
               name="Late Bird"
               desc="Last chance to get tickets"
+              href={eventbriteLink}
             />
           </TicketsRow.Item>
         </TicketsRow.Row>
