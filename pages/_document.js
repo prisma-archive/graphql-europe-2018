@@ -10,6 +10,7 @@ injectGlobal`
   body {
     margin: 0;
     padding: 0;
+    background-color: #ffffff;
     font-family: "proxima-nova", sans-serif;
     font-size: 18px;
     overflow-x: hidden;
