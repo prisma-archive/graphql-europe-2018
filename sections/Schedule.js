@@ -87,7 +87,7 @@ const scheduleList = [
         src: '/static/speakers/lee-byron.jpg',
       },
     ],
-    time: '09:30',
+    time: '10:00',
     ...styles.keynote,
   },
   {
@@ -101,7 +101,7 @@ const scheduleList = [
         src: ['/static/speakers/nick-schrock.jpg'],
       },
     ],
-    time: '09:40',
+    time: '10:10',
     ...styles.regular,
   },
   {
@@ -114,7 +114,7 @@ const scheduleList = [
         src: ['/static/speakers/leanne-shapton.png'],
       },
     ],
-    time: '10:00',
+    time: '10:30',
     ...styles.regular,
   },
   {
@@ -126,7 +126,7 @@ const scheduleList = [
         src: ['/static/speakers/johannes-schickling.jpg'],
       },
     ],
-    time: '10:20',
+    time: '10:50',
     ...styles.regular,
   },
   {
@@ -139,7 +139,7 @@ const scheduleList = [
         icon: true,
       },
     ],
-    time: '10:40',
+    time: '11:10',
     ...styles.break,
   },
   {
@@ -152,7 +152,7 @@ const scheduleList = [
         src: ['/static/speakers/mike-solomon.jpg'],
       },
     ],
-    time: '11:10',
+    time: '11:40',
     ...styles.regular,
   },
   {
@@ -165,7 +165,7 @@ const scheduleList = [
         src: ['/static/speakers/olaf-hartig.jpg'],
       },
     ],
-    time: '11:30',
+    time: '12:00',
     ...styles.regular,
   },
   {
@@ -178,7 +178,7 @@ const scheduleList = [
         src: ['/static/speakers/jira-vinyoopongphan.jpg'],
       },
     ],
-    time: '11:50',
+    time: '12:20',
     ...styles.lightning,
   },
   {
@@ -191,7 +191,7 @@ const scheduleList = [
         src: ['/static/speakers/jon-wong.jpg'],
       },
     ],
-    time: '12:00',
+    time: '12:30',
     ...styles.lightning,
   },
   {
@@ -203,7 +203,7 @@ const scheduleList = [
         icon: true,
       },
     ],
-    time: '12:10',
+    time: '12:40',
     ...styles.break,
   },
   {
@@ -216,7 +216,7 @@ const scheduleList = [
         src: ['/static/speakers/tyler-martinez.jpg'],
       },
     ],
-    time: '13:30',
+    time: '14:00',
     ...styles.regular,
   },
   {
@@ -229,7 +229,7 @@ const scheduleList = [
         src: ['/static/speakers/sasha-solomon.jpg'],
       },
     ],
-    time: '13:50',
+    time: '14:20',
     ...styles.regular,
   },
   {
@@ -243,7 +243,7 @@ const scheduleList = [
         src: ['/static/speakers/michael-hunger.jpg'],
       },
     ],
-    time: '14:10',
+    time: '14:40',
     ...styles.lightning,
   },
   {
@@ -256,7 +256,7 @@ const scheduleList = [
         src: ['/static/speakers/rob-richard.jpg'],
       },
     ],
-    time: '14:20',
+    time: '14:50',
     ...styles.lightning,
   },
   {
@@ -268,7 +268,7 @@ const scheduleList = [
         icon: true,
       },
     ],
-    time: '14:30',
+    time: '15:20',
     ...styles.break,
   },
   {
@@ -281,7 +281,7 @@ const scheduleList = [
         src: ['/static/speakers/david-krentzlin.jpg'],
       },
     ],
-    time: '15:00',
+    time: '15:30',
     ...styles.regular,
   },
   {
@@ -294,7 +294,7 @@ const scheduleList = [
         src: ['/static/speakers/daniel-woelfel.jpg'],
       },
     ],
-    time: '15:20',
+    time: '15:50',
     ...styles.regular,
   },
   {
@@ -308,7 +308,7 @@ const scheduleList = [
         src: ['/static/speakers/arnaud-rinquin.jpg'],
       },
     ],
-    time: '15:40',
+    time: '16:10',
     ...styles.lightning,
   },
   {
@@ -321,7 +321,7 @@ const scheduleList = [
         src: ['static/speakers/sara-vieira.jpg'],
       },
     ],
-    time: '15:50',
+    time: '16:20',
     ...styles.lightning,
   },
   {
@@ -333,7 +333,7 @@ const scheduleList = [
         icon: true,
       },
     ],
-    time: '16:00',
+    time: '16:30',
     ...styles.break,
   },
   {
@@ -346,7 +346,7 @@ const scheduleList = [
         src: ['static/speakers/peggy-rayzis.jpg'],
       },
     ],
-    time: '16:30',
+    time: '17:00',
     ...styles.regular,
   },
   {
@@ -359,7 +359,7 @@ const scheduleList = [
         src: ['/static/speakers/stephen-wan.jpg'],
       },
     ],
-    time: '16:50',
+    time: '17:20',
     ...styles.regular,
   },
   {
@@ -372,7 +372,7 @@ const scheduleList = [
         src: ['static/speakers/nicholas-van-wiggeren.jpeg'],
       },
     ],
-    time: '17:10',
+    time: '17:40',
     ...styles.regular,
   },
   {
@@ -383,7 +383,7 @@ const scheduleList = [
         src: ['static/speakers/lee-byron.jpg'],
       },
     ],
-    time: '17:30',
+    time: '18:00',
     ...styles.keynote,
   },
   {
