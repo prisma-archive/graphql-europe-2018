@@ -45,11 +45,6 @@ const Sponsors = () => (
               <LogoImage src="/static/logos/contentful.png" alt="Contentful" />
             </a>
           </GridItem>
-          <GridItem height="95px">
-            <a href="https://www.shopify.com/">
-              <LogoImage src="/static/logos/shopify.svg" alt="shopify" />
-            </a>
-          </GridItem>
         </Grid>
         <Grid>
           <GridItem small height="60px">
@@ -61,6 +56,12 @@ const Sponsors = () => (
           <GridItem small height="45px">
             <a href="https://aeb.com/">
               <LogoImage small src="/static/logos/aeb.png" alt="AEB" />
+            </a>
+          </GridItem>
+
+          <GridItem height="50px" style={{ marginBottom: 50 }}>
+            <a href="https://www.shopify.com/">
+              <LogoImage src="/static/logos/shopify.svg" alt="shopify" />
             </a>
           </GridItem>
         </Grid>
