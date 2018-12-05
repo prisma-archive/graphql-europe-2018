@@ -33,9 +33,7 @@ const JoinUsIntro = () => (
       <Container>
         <SectionContent>
           <Title>
-            Join us for Europe’s biggest<DesktopTextBreak /> GraphQL-<MobileTextBreak
-              soft
-            />dedicated conference
+            Europe’s biggest<DesktopTextBreak /> GraphQL conference in 2018
           </Title>
           <Description>
             GraphQL Europe is a non-profit GraphQL conference in Europe with
