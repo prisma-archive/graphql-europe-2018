@@ -4,10 +4,12 @@ import Container from 'components/Container'
 import SectionContent from 'components/SectionContent'
 import Person from 'components/Person'
 import Grid from 'components/Grid'
+import TopBanner from 'graphiconf/components/TopBanner'
 import Navbar from '../components/Navbar'
 import CoOrganizedBy from 'graphiconf/sections/CoOrganizedBy'
 import WantToSponsor from '../sections/WantToSponsor'
 import Footer from '../sections/Footer'
+import { graphqlConfLink } from '../utils/config'
 
 const team = [
   {
@@ -23,7 +25,7 @@ const team = [
     imageUrl: '/static/team/team-2',
     imageFormat: 'jpg',
     name: 'Johannes Schickling',
-    bio: `Johannes is a Berlin/SF-based entrepreneur  and founder of Prisma, a flexible backend platform combining GraphQL+ AWS Lambda.  He previously built and sold the VR company “Optonaut”. Johannes studied computer science at KIT, Germany and loves cutting- edge mobile/web tech-nologies.`,
+    bio: `Johannes is a Berlin/SF-based entrepreneur and founder of Prisma, a flexible backend platform combining GraphQL+ AWS Lambda. He previously built and sold the VR company “Optonaut”. Johannes studied computer science at KIT, Germany and loves cutting- edge mobile/web tech-nologies.`,
     twitter: '_schickling',
     github: 'schickling',
     blackAndWhite: true,
@@ -82,7 +84,11 @@ export default withData(() => (
   <div>
     <SeoTitle prependTitle="Team" />
 
-    <Navbar notSticky={true} />
+    <Navbar />
+    <TopBanner
+      href={graphqlConfLink}
+      bullet="Heads up!"
+      children={<span>You're viewing an old version of our website. Get <strong>redirected</strong> to the new page.</span>} />
 
     <CoOrganizedBy noPaddingTop={false} noPaddingBottom={true} />
 

@@ -4,7 +4,9 @@ import rem from 'utils/rem'
 import { mobile } from 'utils/media'
 import { textDarkGrey } from 'utils/colors'
 import { upperCaseHeading } from 'utils/mixins'
+import { graphqlConfLink } from '../utils/config'
 import withData from 'utils/withData'
+import TopBanner from 'graphiconf/components/TopBanner'
 
 import SeoTitle from 'components/SeoTitle'
 import Footer from '../sections/Footer'
@@ -18,6 +20,11 @@ export default withData(() => (
     <SeoTitle prependTitle="Code of Conduct" />
 
     <Navbar notSticky={true} />
+
+    <TopBanner
+      href={graphqlConfLink}
+      bullet="Heads up!"
+      children={<span>You're viewing an old version of our website. Get <strong>redirected</strong> to the new page.</span>} />
 
     <section>
       <Container>

@@ -1,8 +1,9 @@
 import Navbar from 'components/Navbar'
 import { eventbriteLink } from '../utils/config'
 
-export default () => (
+export default props => (
   <Navbar
+    {...props}
     renderNormalLinks={renderNormalLinks}
     renderAnchorLinks={renderAnchorLinks}
   />

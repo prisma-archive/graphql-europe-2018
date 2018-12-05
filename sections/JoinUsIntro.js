@@ -5,13 +5,14 @@ import { textGrey } from 'utils/colors'
 import { upperCaseHeading } from 'utils/mixins'
 import { navHeight, mobileNavHeight } from 'utils/sizes'
 import { mobile } from 'utils/media'
-import { eventbriteLink } from '../utils/config'
+import { eventbriteLink, graphqlConfLink } from '../utils/config'
 import Navbar from '../components/Navbar'
 import GraphBg from '../components/GraphBg'
 import Container from 'components/Container'
 import SectionContent from 'components/SectionContent'
 import { DesktopTextBreak, MobileTextBreak } from 'components/TextBreak'
 import Button from 'components/Button'
+import TopBanner from 'graphiconf/components/TopBanner'
 
 const JoinUsIntro = () => (
   <Wrapper>
@@ -22,6 +23,11 @@ const JoinUsIntro = () => (
     <NavbarFloater>
       <Navbar />
     </NavbarFloater>
+
+    <TopBanner
+      href={graphqlConfLink}
+      bullet="Heads up!"
+      children={<span>You're viewing an old version of our website. Get <strong>redirected</strong> to the new page.</span>} />
 
     <PopWrapper>
       <Container>
