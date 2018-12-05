@@ -24,7 +24,7 @@ export default withData(() => (
     <TopBanner
       href={graphqlConfLink}
       bullet="Heads up!"
-      children={<span>You're viewing an old version of our website. Get <strong>redirected</strong> to the new page.</span>} />
+      children={<span>GraphQL Europe is coming back in 2019 as <strong>GraphQL Conf</strong>. Click here to learn more.</span>} />
 
     <section>
       <Container>
